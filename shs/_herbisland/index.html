@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>허브아일랜드</title>
+    <script src="./script/jquery-3.6.4.js"></script>
+    <script src="./script/jquery-ui.js"></script>
+    <script src="./script/hb.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link href="./css/index.css" rel="stylesheet" type="text/css">
+    <link href="./css/hb_pc.css" rel="stylesheet" type="text/css">
+    <link href="./css/hb_tab.css" rel="stylesheet" type="text/css">
+    <link href="./css/hb_mo.css" rel="stylesheet" type="text/css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> -->
+    <link href="./css/hbsw.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 그리드사용 -->
+    <header>
+        <h1 class="main_logo">
+            <img src="./images/main_logo.png" alt="메인로고">
+        </h1>
+        <nav class="menu_wrap">
+            <div class="main_menu_wrap">
+                <a href="http://herbisland.co.kr/19" class="main_menu">이용안내</a>
+                <a href="http://herbisland.co.kr/20" class="main_menu">존소개</a>
+                <a href="http://herbisland.co.kr/32" class="main_menu">축제&이벤트</a>
+                <a href="http://herbisland.co.kr/37" class="main_menu">허브아일랜드</a>
+                <a href="http://herbisland.co.kr/41" class="main_menu">허브박물관</a>
+            </div>
+            <div class="sub_menu_wrap">
+                <div class="sub_menu_top">
+                    <div class="sub_menu_box">
+                        <div class="sub_menu_main">이용안내</div>
+                        <div class="sub_menu_inwrap">
+                            <a href="http://herbisland.co.kr/24" class="sub_menu">운영&요금안내</a>
+                            <a href="http://herbisland.co.kr/99" class="sub_menu">단체 패키지</a>
+                            <a href="http://herbisland.co.kr/132" class="sub_menu">F&B</a>
+                            <a href="http://herbisland.co.kr/25" class="sub_menu">찾아오시는 길</a>
+                            <a href="http://herbisland.co.kr/26" class="sub_menu">투어 맵</a>
+                            <a href="http://herbisland.co.kr/27" class="sub_menu">추천 코스</a>
+                        </div>
+
+                    </div>
+                    <div class="sub_menu_box">
+                        <div class="sub_menu_main">존소개</div>
+                        <div class="sub_menu_inwrap">
+                            <a href="http://herbisland.co.kr/28" class="sub_menu">힐링존</a>
+                            <a href="http://herbisland.co.kr/29" class="sub_menu">산타존</a>
+                            <a href="http://herbisland.co.kr/30" class="sub_menu">베네치아존</a>
+                            <a href="http://herbisland.co.kr/31" class="sub_menu">향기존</a>
+                        </div>
+
+                    </div>
+                    <div class="sub_menu_box">
+                        <div class="sub_menu_main">축제&이벤트</div>
+                        <div class="sub_menu_inwrap">
+                            <a href="http://herbisland.co.kr/32" class="sub_menu">사계절 축제</a>
+                            <a href="http://herbisland.co.kr/33" class="sub_menu">진행중 이벤트</a>
+                            <a href="http://herbisland.co.kr/34" class="sub_menu">종료된 이벤트</a>
+                            <a href="http://herbisland.co.kr/35" class="sub_menu">공지사항</a>
+                        </div>
+
+
+                    </div>
+                    <div class="sub_menu_box">
+                        <div class="sub_menu_main">허브아일랜드</div>
+                        <div class="sub_menu_inwrap">
+                            <a href="http://herbisland.co.kr/37" class="sub_menu">소개</a>
+                            <a href="http://herbisland.co.kr/136" class="sub_menu">4계절</a>
+                            <a href="http://herbisland.co.kr/38" class="sub_menu">History</a>
+                            <a href="http://herbisland.co.kr/39" class="sub_menu">CI / BI</a>
+                            <a href="http://herbisland.co.kr/95" class="sub_menu">언론&뉴스</a>
+                            <a href="http://herbisland.co.kr/40" class="sub_menu">멀티미디어</a>
+                        </div>
+
+                    </div>
+                    <div class="sub_menu_box">
+                        <div class="sub_menu_main">허브박물관</div>
+                        <div class="sub_menu_inwrap">
+                            <a href="http://herbisland.co.kr/41" class="sub_menu">박물관 소개</a>
+                            <a href="http://herbisland.co.kr/42" class="sub_menu">기증 안내</a>
+                            <a href="http://herbisland.co.kr/43" class="sub_menu">박물관 구성</a>
+                            <a href="http://herbisland.co.kr/44" class="sub_menu">History</a>
+                            <a href="http://herbisland.co.kr/45" class="sub_menu">식물도감</a>
+                        </div>
+
+                    </div>
+                    <div class="open_info_mo">
+                        <div class="open_main_text_mo">TODAY OPEN TIME</div>
+                        <div class="date_en_mo">2023.08.03.THUDAY</div>
+                        <div class="date_ko_mo">08월 03일 (목)요일</div>
+                        <div class="time_mo">운영시간:OPEN AM10:00~CLOSED PM09:00</div>
+                        <div class="time_mo">점등시간:PM7:00</div>
+                        <div class="o_info_mo">매주 수요일 정기휴무.(공휴일,설날,추석 연휴 운영)
+                            * 단체방문 예약고객 AM9:00 입장가능.
+                        </div>
+                    </div>
+                </div>
+                <div class="sub_menu_bottom">
+                    <div class="sub_img_box_wrap">
+                        <div class="sub_img_box"></div>
+                        <div class="sub_img_box"></div>
+                        <div class="sub_img_box"></div>
+                        <div class="sub_img_box"></div>
+                    </div>
+                    <div class="sub_join_wrap">
+                        <button class="sub_join_but">로그인</button>
+                        <button class="sub_join_but">회원가입</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="join_wrap">
+            <div class="join_box">로그인</div>
+            <div class="join_box">회원가입</div>
+            <div class="all_menu">
+                <img src="./images/ham_o.png" alt="전체메뉴">
+            </div>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="open_info">
+            <div class="open_main_text">TODAY OPEN TIME</div>
+            <div class="date_en">2023.08.03.THUDAY</div>
+            <div class="date_ko">08월 03일 (목)요일</div>
+            <div class="time">운영시간:OPEN AM10:00~CLOSED PM09:00</div>
+            <div class="time">점등시간:PM7:00</div>
+            <div class="o_info">매주 수요일 정기휴무.(공휴일,설날,추석 연휴 운영)
+                * 단체방문 예약고객 AM9:00 입장가능.
+            </div>
+        </div>
+    </div>
+    <div class="content_wrap">
+        <div class="content">
+            <div class="content_topic">
+                <div class="topic">
+                    향기로운 허브향기가 가득한 섬 <span>- HERBISLAND -</span>
+                </div>
+                <div class="topic_detail">향기, 자연, 추억</div>
+            </div>
+            <div class="content_con info_content">
+                <div class="info_img_wrap">
+                    <img src="./images/herb_um.jpg" alt="우산">
+                </div>
+                <div class="info_text_wrap">
+                    <div class="info_main_text">
+                        허브아일랜드는<br>
+                        허브로 행복한 세상을 만들고자 합니다.<br><br>
+                    </div>
+                    <div class="info_sub_text">
+                        허브의 원산지인 지중해의 생활을 테마로 이색적이며 다양한 볼거리와 즐길거리가 있으며
+                        세계최초의 허브식물박물관이 운영되고 있습니다.
+                        일년내내 허브를 구경하며 몸과 마음의 휴식을 가져가실 수 있는 곳에서
+                        아름답고 향기로운 추억의 시간을 만끽하시기 바랍니다.<br><br>
+                        허브에 관한 모든 것이 있기에 허브로 행복한 세상을 만들어가고 있습니다.
+                        아름답고 향기로우며 건강해지고 힐링 하실 수 있는 공간으로 최선을 다해 만들어가겠습니다.
+                        부디 많이 사랑해주십시오. 감사하고 고맙고 행복합니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content ex_con">
+            <div class="content_topic">
+                <div class="topic">
+                    체험프로그램안내 <span>- EXPERIENCE PROGRAM -</span>
+                </div>
+                <div class="topic_detail">다양한 경험, 특별한 체험을 허브아일랜드에서 누려보세요!</div>
+            </div>
+            <div class="content_con ex_back">
+                <div class="ex_box ex_box_1">
+                    <a href="http://www.herbisland.co.kr/48" class="ex_img_box">
+                        <img src="./images/ex_1.png" alt="체험_아로마">
+                        <img src="./images/ex_te_1.png" alt="아로마텍스트">
+                    </a>
+                </div>
+                <div class="ex_box ex_box_2">
+                    <a href="http://www.herbisland.co.kr/000000000" class="ex_img_box">
+                        <img src="./images/ex_2.png" alt="체험_기차">
+                        <img src="./images/ex_te_2.png" alt="기차텍스트">
+                    </a>
+                </div>
+                <div class="ex_box ex_box_3">
+                    <a href="http://www.herbisland.co.kr/69" class="ex_img_box">
+                        <img src="./images/ex_3.png" alt="체험_공룡">
+                        <img src="./images/ex_te_3.png" alt="공룡텍스트">
+                    </a>
+                </div>
+                <div class="ex_box ex_box_4">
+                    <a href="http://www.herbisland.co.kr/74" class="ex_img_box">
+                        <img src="./images/ex_4.png" alt="체험_비누">
+                        <img src="./images/ex_te_4.png" alt="비누텍스트">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 관광안내 영역 -->
+        <div class="content">
+            <div class="content_topic">
+                <div class="topic">
+                    관광안내 <span>- TOUR INFORMATION -</span>
+                </div>
+                <div class="topic_detail">4가지 구역으로 쉽게 허브아일랜드를 즐겨보세요!</div>
+            </div>
+            <div class="content_con tour_con">
+                <div class="tour_info_wrap">
+                    <a href="http://herbisland.co.kr/28" class="tour_info tour_info_1">
+                        <div class="ti_box_1">
+                            <img src="./images/ti_1.png" alt="관광안내1">
+                        </div>
+                        <div class="ti_box_2">
+                            <img src="./images/ti_5.png" alt="관광안내5">
+                        </div>
+                    </a>
+                    <a href="http://herbisland.co.kr/29" class="tour_info tour_info_2">
+                        <div class="ti_box_1">
+                            <img src="./images/ti_2.png" alt="관광안내2">
+                        </div>
+                        <div class="ti_box_2">
+                            <img src="./images/ti_6.png" alt="관광안내6">
+                        </div>
+                    </a>
+                    <a href="http://herbisland.co.kr/30" class="tour_info tour_info_3">
+                        <div class="ti_box_1">
+                            <img src="./images/ti_3.png" alt="관광안내3">
+                        </div>
+                        <div class="ti_box_2">
+                            <img src="./images/ti_7.png" alt="관광안내7">
+                        </div>
+                    </a>
+                    <a href="http://herbisland.co.kr/31" class="tour_info tour_info_4">
+                        <div class="ti_box_1">
+                            <img src="./images/ti_4.png" alt="관광안내4">
+                        </div>
+                        <div class="ti_box_2">
+                            <img src="./images/ti_8.png" alt="관광안내8">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_topic">
+                <div class="topic">
+                    축제소개 <span>- FESTIVAL -</span>
+                </div>
+            </div>
+            <div class="content_con fes_con">
+                <a href="http://herbisland.co.kr/32" class="fes fes_1">
+                    <img src="./images/f2.png" alt="축제봄">
+                </a>
+                <a href="http://herbisland.co.kr/32" class="fes fes_2">
+                    <img src="./images/f3.png" alt="축제여름">
+                </a>
+                <a href="http://herbisland.co.kr/32" class="fes fes_3">
+                    <img src="./images/f4.png" alt="축제가을">
+                </a>
+                <a href="http://herbisland.co.kr/32" class="fes fes_4">
+                    <img src="./images/f1.png" alt="축제겨울">
+                </a>
+            </div>
+        </div>
+        <!-- 이벤트 영역 -->
+        <div class="content">
+            <div class="content_topic">
+                <div class="topic">
+                    이벤트 <span>- EVENT -</span>
+                </div>
+            </div>
+            <div class="content_con">
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./images/opp.png" alt="8월운영시간" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/fume_1.png" alt="향기축제1" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/fume_2.png" alt="향기축제2" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/muse_1.png" alt="그향과삶1" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/muse_2.png" alt="그향과삶2" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/light_1.png" alt="불빛정원1" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/light_2.png" alt="불빛정원2" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/car_2.png" alt="자동차극장1" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/car_1.png" alt="자동차극장2" />
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-scrollbar"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+  <script src="./script/hbsw.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      centeredSlides: false,
+      slidesPerGroupSkip: 1,
+      grabCursor: true,
+      keyboard: {
+        enabled: true,
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+            </div>
+        </div>
+    </div>
+    <!-- 푸터 영역 -->
+    <footer>
+        <div class="b_logo">
+            <img src="./images/main_logo.png" alt="하위로고">
+        </div>
+        <div class="f_line_wrap">
+            허브아일랜드 대표 : 임옥<br>
+            사업자 등록번호 : 127-11-87351 개인정보책임관리자 : 임옥 webmaster@herbisland.co.kr 사업자 주소 : 경기도 포천시 신북면 청신로 947번길 35<br>
+            안내전화 : 031.535.6494 허브힐링센터 상담전화 : 1644-1997 패키지 상품 전용 상담전화 : 070.4070.3702<br>
+            <br>
+            이용약관 | 개인정보처리방침<br>
+            <br>
+            COPYRIGHT 2014 HERBISLAND. ALL RIGHT RESERVED.<br>
+        </div>
+        <div class="sns_wrap"></div>
+
+    </footer>
+</body>
+</html>

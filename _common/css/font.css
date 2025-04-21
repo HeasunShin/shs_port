@@ -1,0 +1,61 @@
+/* 노토 산스 글꼴 */
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("../font/NotoSansKR/NotoSansKR-Thin.woff2") format("woff2"),
+    url("../font/NotoSansKR/NotoSansKR-Thin.woff") format("woff");
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("../font/NotoSansKR/NotoSansKR-DemiLight.woff2") format("woff2"),
+    url("../font/NotoSansKR/NotoSansKR-DemiLight.woff") format("woff");
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("../font/NotoSansKR/NotoSansKR-Light.woff2") format("woff2"),
+    url("../font/NotoSansKR/NotoSansKR-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("../font/NotoSansKR/NotoSansKR-Regular.woff2") format("woff2"),
+    url("../font/NotoSansKR/NotoSansKR-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("../font/NotoSansKR/NotoSansKR-Medium.woff2") format("woff2"),
+    url("../font/NotoSansKR/NotoSansKR-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("../font/NotoSansKR/NotoSansKR-Bold.woff2") format("woff2"),
+    url("../font/NotoSansKR/NotoSansKR-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("../font/NotoSansKR/NotoSansKR-Black.woff2") format("woff2"),
+    url("../font/NotoSansKR/NotoSansKR-Black.woff") format("woff");
+  font-style: normal;
+  font-weight: 900;
+}
+
+* {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+}

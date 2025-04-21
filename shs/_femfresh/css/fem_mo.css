@@ -1,0 +1,941 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@font-face {
+    font-family: 'KyoboHandwriting2021sjy';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KyoboHandwriting2021sjy.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@media (max-width:1024px){
+    #wrap{
+        display: none;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        color: #666666;
+    }
+    html,body{
+        overflow-x: hidden;
+        font-size: 20px;
+    }
+    ul,li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: #666666;
+        display: block;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    #wrap_mo{
+        width: 100%;
+        overflow: hidden;
+    }
+    video{
+        width: 100%;
+        position: fixed;
+        top:0;
+        left: 0;
+        z-index: -99;
+        transform: scale(1.2);
+    }
+    section{
+        width: 100%;
+        height: 200vw;
+        /* background: #666666; */
+        /* border: 2px solid black; */
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    /* 메인 영역 */
+    .main_logo{
+        width: 100%;
+        height: 15vw;
+        position: relative;
+        /* padding-bottom: 2.5%;
+        padding-top: 2.5%; */
+        background: rgba(105, 105, 105,0.7);
+        box-sizing: border-box;
+    }
+    .main_logo>a{
+        width: 30%;
+        /* height: 60%; */
+        position: absolute;
+        left: 50%;
+        margin-left: -15%;
+        top: 18%;
+
+    }
+    .all_menu{
+        width: 18%;
+        height: 15vw;
+        /* height: 120px; */
+        cursor: pointer;
+        position: fixed;
+        right: 0;
+        top: 0;
+        padding: 3% 4%;
+        box-sizing: border-box;
+    }
+    .ham{
+        /* margin-top: 15%; */
+        width: 100%;
+        height: 100%;
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -27%;
+        margin-left: -35%; */
+    }
+    .ham>img{
+        width: 100%;
+        height: 100%;
+        color:white;
+    }
+    .bottom_menu_wrap{
+        width: 100%;
+        height: 65%;
+        /* height: 0; */
+        background: white;
+        position: fixed;
+        top: 15vw;
+        left: 0;
+        display: none;
+
+
+    }
+
+    .bottom_menu_box_mo{
+        width: 100%;
+        height: 25%;
+        box-sizing: border-box;
+        float: left;
+        border: 1px solid #666666;
+        position: relative;
+        padding-top: 2%;
+    }
+    .bottom_menu_box_mo:hover{
+        background: rgba(214, 206, 206, 0.5);
+    }
+
+    .bg_img_mo{
+        opacity: 0.7;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        z-index: -99;
+    }
+    .menu_text{
+        /* position: absolute; */
+        /* background: rebeccapurple; */
+
+    }
+
+    .menu{
+        width: 30%;
+        height: 20%;
+        /* text-align: center; */
+        font-size: 1.3rem;
+        font-weight: 900;
+        /* margin-top: 300px; */
+        /* margin-bottom: 35px; */
+        margin-left: 5%;
+        margin-top: 2%;
+
+    }
+    .menu>a{
+        color: white;
+        text-shadow: 3px 3px 1px black;
+        cursor: pointer;
+    }
+    .sub_menu{
+        width: 45%;
+        height: 5%;
+        /* height: 40px; */
+        /* text-align: center; */
+        font-size: 0.8rem;
+        /* font-weight: 700; */
+        /* margin-top: 5px; */
+        float: left;
+        margin-left: 3%;
+        /* background: tan; */
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 1%;
+    }
+    .sub_menu>a{
+        color: rgb(53, 53, 53);
+        cursor: pointer; 
+        /* text-shadow: 3px 3px 1px white; */
+    }
+    .femfresh{
+        width: 100%;
+        height: 9%;
+        margin-top: 120%;
+        font-family: 'Kaushan Script', cursive;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 900;
+        color: white;
+        margin-left: -2%;
+    }
+    /* 인포 영역 */
+    .different{
+        width: 100%;
+        height: 30%;
+    }
+    .di_main_text{
+        width: 100%;
+        height: 80%;
+        font-weight: 900;
+        color: white;
+        font-family: 'Kaushan Script', cursive;
+        font-size: 3rem;
+        text-align: center;
+        padding-top: 20%;
+        box-sizing: border-box;
+    }
+    .di_sub_text{
+        width: 100%;
+        height: 20%;
+        font-weight: 700;
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .b_overview{
+        width: 100%;
+        height: 50%;
+    }
+    .overview_wrap{
+        width: 100%;
+        height: 50%;
+        background-image: url(../img/brand_overview.jpg);
+        background-size: 120%;
+        background-repeat: no-repeat;
+        padding: 10px 10px;
+        box-sizing: border-box;
+
+    }
+    .overview{
+        width: 100%;
+        height: 13%;
+        color: black;
+        text-align: center;
+        font-weight: 900;
+        font-size: 1.5rem;
+        margin-top: 5%;
+    }
+    .b_o_line{
+        width: 0.2%;
+        height: 20%;
+        background: black;
+        margin: 0 auto;
+    }
+    .b_o_di{
+        width: 100%;
+        height: 10%;
+        color: black;
+        text-align: center;
+        font-weight: 900;
+        font-size: 1rem;
+    }
+    .di_fem{
+        width: 100%;
+        height: 7%;
+        color: black;
+        text-align: center;
+        font-weight: 900;
+        font-size: 0.7rem;
+    }
+    .di_fem_text_1{
+        width: 100%;
+        height: 5%;
+        font-weight: 900;
+        text-align: center;
+        color: black;
+        font-size: 0.6rem;
+    }
+    .di_fem_text_2{
+        width: 100%;
+        height: 10%;
+        color: black;
+        text-align: center;
+        font-weight: 900;
+        font-size: 0.5rem;
+    }
+    .b_s_plus{
+        width: 80%;
+        height: 11%;
+        margin-left: 18%;
+
+    }
+    .plus_img{
+        width: 18%;
+        height: 92%;
+        float: left;
+        border: 5px dashed white;
+        box-sizing: border-box;
+        border-radius: 50%;
+        font-size: 3rem;
+        text-align: center;
+        color: white;
+        line-height: 2.4rem;
+    }
+    .brand_story{
+        width: 75%;
+        height: 100%;
+        color: white;
+        float: right;
+        font-weight: 700;
+        text-align: left;
+        font-size: 1.2rem;
+        margin-left: 5%;
+        margin-top: 0;
+        line-height: 3rem;
+    }
+    /* 베스트제품 영역 */
+    section:nth-child(3){
+        height: 300vw;
+    }
+    .b_product_text{
+        width: 100%;
+        height: 15%;
+    }
+    .b_pro_main_text{
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 900;
+        color: white;
+        font-family: 'Kaushan Script', cursive;
+    }
+    .b_pro_sub_text{
+        width: 100%;
+        height: 30%;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+    }
+    .b_product_img_wrap{
+        width: 100%;
+        height: 80%;
+        position: relative;
+        box-sizing: border-box;
+
+    }
+    .product_img{
+        width: 40%;
+        height: 32%;
+        background: rgb(130, 202, 231);
+        border-radius: 30px;
+        position: absolute;
+    }
+    .product_img:nth-child(1){
+        top: 0;
+        left: 5%;
+    }
+    .product_img:nth-child(2){
+        top: 15%;
+        right: 5%;
+    }
+    .product_img:nth-child(3){
+        top: 47%;
+        left: 5%;
+    }
+    .product_img:nth-child(4){
+        top: 61%;
+        right: 5%;
+    }
+    .pro_img{
+        width: 100%;
+        height: 40%;
+        background-size: 70% 100%;
+        background-repeat: no-repeat;
+        margin-left: 13%;
+
+    }
+
+    .product_img:nth-child(1)>.pro_img{
+        background-image: url(../img/best_1.png);
+    }
+    .product_img:nth-child(2)>.pro_img{
+        background-image: url(../img/best_2.png);
+    }
+    .product_img:nth-child(3)>.pro_img{
+        background-image: url(../img/best_3.png);
+    }
+    .product_img:nth-child(4)>.pro_img{
+        background-image: url(../img/best_4.png);
+    }
+    .en_main_text{
+        width: 100%;
+        height: 14%;
+        text-align: center;
+        font-size: 0.7rem;
+        margin-top: 20%;
+        color: black;
+    }
+    .ko_main_text{
+        width: 100%;
+        height: 10%;
+        text-align: center;
+        font-size: 0.6rem;
+        color: black;
+    }
+    .sub_text{
+        width: 100%;
+        height: 15%;
+        text-align: center;
+    }
+
+    .pro_info{
+        width: 100%;
+        height: 16%;
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    .b_s_plus_2{
+        width: 80%;
+        height: 5%;
+        margin-left: 10%;
+
+    }
+    .plus_img_2{
+        width: 18%;
+        height: 92%;
+        float: left;
+        border: 5px dashed white;
+        box-sizing: border-box;
+        border-radius: 50%;
+        font-size: 3rem;
+        text-align: center;
+        color: white;
+        margin-left: 15%;
+        line-height: 2.2rem;
+
+    }
+    .more_product{
+        width: 60%;
+        height: 100%;
+        color: white;
+        float: right;
+        font-weight: 700;
+        text-align: left;
+        font-size: 1.5rem;
+        margin-left: 2%;
+        margin-top: 3%;
+    }
+    /* 인사이드 영역 */
+    section:nth-child(4){
+        height: 300vw;
+    }
+    .inside{
+        width: 100%;
+        height: 13%;
+        margin-top: 50%;
+        font-size: 3rem;
+        font-weight: 900;
+        color: white;
+        font-family: 'Kaushan Script', cursive;
+        text-align: center;
+        line-height: 100%;
+
+    }
+    .in_main_flower{
+        width: 100%;
+        height: 50%;
+        background: rgba(255, 255, 255, 0.7);
+        margin-top: 10%;
+    }
+    .in_main_text{
+        width: 100%;
+        height: 10%;
+        font-weight: 700;
+        text-align: center;
+        font-size: 1rem;
+        color: black;
+    }
+    .flower_wrap_mo{
+        width: 40%;
+        height: 55%;
+        margin-top: 15%;
+    }
+    .ing_img_wrap{
+        width: 30%;
+        height: 100%;
+    }
+    .ing_con,.ing_con_2{
+        width: 100%;
+        height: 25%;
+        padding-left: 25%;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    .ing_con>img{
+        width: 60%;
+        height: 60%;
+    }
+    .ing_con_2>img{
+        width: 60%;
+        height: 60%;
+
+    }
+    .ing_con_name{
+        width: 60%;
+        height: 15%;
+        text-align: center;
+        font-size: 0.5rem;
+        cursor: pointer;
+    }
+    .in_img_mo{
+        width: 100%;
+        height: 75%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .in_img_mo>img{
+        width: 100%;
+    }
+    .in_sub_text{
+        width: 100%;
+        height: 15%;
+        text-align: center;
+    }
+    .flower_name{
+        width: 100%;
+        height: 50%;
+        color: black;
+        font-size: 0.7rem;
+    }
+    .flower_info{
+        width: 100%;
+        height: 60%;
+        font-size: 0.6em;
+        color: black;
+    }
+    .inside_con_wrap{
+        width: 100%;
+        height: 5%;
+        margin-top: 3%;
+        background: rgba(255, 255, 255, 0.7);
+    }
+    .inside_con{
+        width: 100%;
+        height: 24%;
+
+        margin-top: 1%;
+        display: grid;
+        grid-template-columns: 20% 40% 40%;
+        grid-template-rows: 75% 25%;
+    }
+    .inside_con>div{
+        margin: 2%;
+    }
+    .in_pro_img{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .main_ing_1{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .main_ing_2{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .ing_img{
+        width: 30%;
+        height: 80%;
+        float: left;
+        color: black;
+        text-align: center;
+    }
+    .ing_text{
+        width: 70%;
+        height: 100%;
+        float: right;
+        color: black;
+    }
+    .sub_ing{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+    }
+    .ing_con_info_wrap{
+        width: 100%;
+        height: 12%;
+        margin-top: 1%;
+        position: relative;
+    }
+    .ing_con_info{
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        padding: 5%;
+        box-sizing: border-box;
+    }
+    .ing_con_info:nth-child(1){
+        display: block;
+    }
+    .ing_con_info_2{
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        padding: 5%;
+        box-sizing: border-box;
+    }
+    .ing_con_info_name{
+        width: 100%;
+        height: 30%;
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    .ing_con_info_text{
+        width: 100%;
+        height: 68%;
+        text-align: center;
+        font-size: 0.6rem;
+        margin-top: 2%;
+    }
+
+    .big_dot{
+        animation: big 3s infinite;
+    }
+    @keyframes big{
+        
+        0%{
+            transform: scale(1.0)
+        }
+        50%{
+            transform: scale(1.1)
+        }
+        100%{
+            transform: scale(1.0)
+        }
+    
+    }
+    
+    /* 리뷰영역 */
+    .review_wrap{
+        /* height: 125vw; */
+        height: 670px;
+        position: relative;
+        margin-bottom: 150px;
+    }
+    .review{
+        width: 100%;
+        height: 100px;
+        margin-top: 5%;
+        font-weight: 900;
+        color: white;
+        font-family: 'Kaushan Script', cursive;
+        font-size: 3rem;
+        text-align: center;
+
+    }
+    .review_inbox{
+        width: 100%;
+        height: 515px;
+        /* height: 1030px; */
+        overflow: hidden;
+
+    }
+    .review_con{
+        width: 96%;
+        height: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50%;
+        grid-template-rows: 27%;
+
+    }
+    .per_review{
+        margin: 5px;
+        border: 2px solid white;
+    }
+    .review_plus{
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+
+    }
+    .arrow_box{
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    .arrow_box>img{
+        rotate: 90deg;
+    }
+    .per_review:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background: white;
+    }
+    .per_review:nth-child(2){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background: white;
+    }
+    .per_review:nth-child(3){
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background: white;
+    }
+    .per_review:nth-child(4){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background: white;
+    }
+    .per_review:nth-child(5){
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background: white;
+    }
+    .per_review:nth-child(6){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background: white;
+    }
+    .per_review:nth-child(7){
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        background: white;
+    }
+    .per_review:nth-child(8){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        background: white;
+    }
+    .per_review{
+        position: relative;
+        border-radius: 40px;
+    }
+    .per_review>img{
+        border-radius: 40px;
+    }
+    .per_review_con{
+        width: 70%;
+        height: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -40%;
+        margin-left: -35%;
+        background: rgba(0, 0, 0, 0.4);
+        text-align: center;
+    }
+    .reviewer_name{
+        width: 100%;
+        height: 25%;
+        color: white;
+        font-size: 0.6rem;
+    }
+    .review_text{
+        width: 100%;
+        height: 50%;
+        color: white;
+        font-family: 'KyoboHandwriting2021sjy';
+        font-size: 0.6rem;
+    }
+    .review_tag{
+        width: 100%;
+        height: 25%;
+        color: white;
+        font-size: 0.5rem;
+    }
+
+
+
+
+    /* 비즈니스 영역 */
+    .business{
+        width: 100%;
+        height: 25%;
+        margin-top: 5%;
+        color: white;
+        font-weight: 900;
+        font-family: 'Kaushan Script', cursive;
+        font-size: 3rem;
+        text-align: center;
+    }
+    .business_con_wrap{
+        width: 90%;
+        height: 60%;
+        margin: 5% auto;
+
+    }
+    .business_con{
+        width: 100%;
+        height: 30%;
+        margin-top: 2%;
+        background: rgba(247, 202, 209, 0.7);
+        border-radius: 30px;
+    }
+    .business_icon{
+        width: 25%;
+        height: 100%;
+        float: left;
+    }
+    .business_text{
+        width: 75%;
+        height: 93%;
+        float: right;
+        text-align: center;
+        padding-top: 10%;
+        box-sizing: border-box;
+    }
+    .b_t_main{
+        width: 100%;
+        height: 40%;
+        font-size: 1rem;
+    }
+    .b_t_in{
+        width: 100%;
+        height: 60%;
+        font-size: 0.6rem;
+    }
+    /* 푸터 영역 */
+    footer{
+        width: 100%;
+        height: 40vw;
+        border-top: 1px solid white;
+        background:rgba(214, 206, 206, 0.5);
+    }
+    .com_info_wrap{
+        width: 100%;
+        height: 90%;
+
+    }
+    .com_info{
+        width: 65%;
+        height: 100%;
+        float: left;
+        padding-top: 3%;
+        box-sizing: border-box;
+    }
+
+    .bottom_logo{
+        width: 100%;
+        height: 35%;
+        display: flex;
+        justify-content: left;
+    }
+    .bottom_logo>img{
+        width: 40px;
+        height: 40px;
+        margin-left: 5%;
+
+    }
+    .footer_txt1{
+        width: 12%;
+        font-size: 1rem;
+        text-align: right;
+        margin-top: 2%;
+    }
+    .footer_txt2{
+        width: 75%;
+        line-height: 200%;
+        font-size: 0.7rem;
+        margin-top: 2.5%;
+    }
+    .bottom_menu{
+        width: 100%;
+        height: 20%;
+        font-size: 0.5rem;
+    }
+    .bottom_menu>a{
+        display: inline;
+        font-size: 0.5rem;
+    }
+    .com_address{
+        width: 100%;
+        height: 20%;
+        font-size: 0.5rem;
+    }
+    .contact{
+        width: 100%;
+        height: 20%;
+        font-size: 0.5rem;
+    }
+    .com_sns{
+        width: 15%;
+        height: 100%;
+        float: right;
+        position: relative;
+    }
+    .sns_wrap{
+        width: 90%;
+        height: 95%;
+        position: absolute;
+        top: 3%;
+        left: 5%;
+    }
+    .sns_con{
+        width: 100%;
+        height: 33%;
+        margin-top: 1%;
+    }
+    .sns_con>a{
+        width: 90%;
+        height: 90%;
+    }
+    .under{
+        width: 100%;
+        height: 10%;
+        border-top: 1px solid white;
+        text-align: center;
+        font-size: 0.5rem;
+    }
+
+} /* 끝 */
+
+/* @media (max-width:470px){
+    .inside_con_wrap{
+        display: none;
+    }
+} */
+
