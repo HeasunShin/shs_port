@@ -1,0 +1,79 @@
+// 색상 영역
+// $color-main: #161618;
+$color-main: #121212;
+$color-main-transparent: #f7c53b4d;
+$color-main-light: #e4e2dc;
+$color-main-dark: #dda408;
+$color-devider: #ededed;
+
+* {
+  padding: 0;
+  margin: 0;
+  color: #333;
+}
+img {
+  display: block;
+}
+// 헤더 영역
+.header {
+  padding: 20px 0;
+  background-color: $color-main;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: ease 0.4s;
+  z-index: 999;
+  &.scrolled {
+    height: 40px;
+  }
+
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    .header__logo {
+      .header__logo-link {
+        font-size: 2em;
+        font-weight: 700;
+        color: $color-main-light;
+        text-shadow: 3px 1px 0 $color-main-dark;
+      }
+    }
+    .header__nav {
+      .header__nav-list {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        .header__nav-item {
+          a {
+            text-decoration: none;
+            color: $color-main-light;
+
+            &:hover {
+              color: $color-main-dark;
+            }
+          }
+        }
+      }
+    }
+    .header__nav_mo {
+      display: none;
+    }
+  }
+}
+// 푸터 영역
+.footer {
+  padding: 20px;
+  text-align: center;
+  // background-color: $color-main-dark;
+  background-color: $color-main-light;
+
+  p {
+    // color: $color-main-light;
+  }
+}

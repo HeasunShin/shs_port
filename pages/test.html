@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pinterest Style Masonry Test</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #f7f7f7;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .masonry {
+        column-count: 4; /* 열 개수 */
+        column-gap: 16px; /* 열 간격 */
+      }
+
+      .item {
+        background: #fff;
+        margin-bottom: 16px;
+        display: inline-block; /* 중요: column 내에서 분리 */
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .item img {
+        width: 100%;
+        display: block;
+      }
+
+      @media (max-width: 1024px) {
+        .masonry {
+          column-count: 3;
+        }
+      }
+      @media (max-width: 768px) {
+        .masonry {
+          column-count: 2;
+        }
+      }
+      @media (max-width: 480px) {
+        .masonry {
+          column-count: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pinterest Style Masonry Layout</h1>
+    <div class="masonry">
+      <div class="item">
+        <img src="https://picsum.photos/400/300" alt="랜덤 이미지" />
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/600" alt="랜덤 이미지" />
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/500" alt="랜덤 이미지" />
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/350" alt="랜덤 이미지" />
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/450" alt="랜덤 이미지" />
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/700" alt="랜덤 이미지" />
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/400" alt="랜덤 이미지" />
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/550" alt="랜덤 이미지" />
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/370" alt="랜덤 이미지" />
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/620" alt="랜덤 이미지" />
+      </div>
+    </div>
+  </body>
+</html>

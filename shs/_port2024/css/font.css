@@ -1,0 +1,18 @@
+/* 전체폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* 타이틀폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    font-family: "Noto Sans KR", sans-serif;
+    /* font-size: 18px; */
+}
+
+.title{
+    font-family: "Noto Sans", sans-serif;
+    font-family: "Nunito", sans-serif;
+    font-family: "Oswald", sans-serif;
+}

@@ -1,0 +1,46 @@
+main .inner .content-wrap {
+  border: 3px solid rgb(23, 110, 38);
+  background-color: rgb(224, 255, 224);
+}
+main .inner .content-wrap .content-flex-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 40px;
+}
+main .inner .content-wrap .content-flex-area .content {
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+}
+main .inner .content-wrap .content-flex-area .content .img-box {
+  width: 250px;
+  height: 100px;
+  background-color: rgb(242, 253, 246);
+  border-radius: 10px;
+}
+main .inner .content-wrap .content-flex-area .content .tag-box .tag {
+  color: #fff;
+  padding: 0 5px;
+  font-size: 0.85em;
+  display: inline-block;
+}
+main .inner .content-wrap .content-flex-area .content .tag-box .tag.gsap {
+  background-color: green;
+}
+main .inner .content-wrap .content-flex-area .content .tag-box .tag.scrolltrigger {
+  background-color: rgb(255, 208, 0);
+}
+main .inner .content-wrap .content-flex-area .content .tag-box .tag.scrollspy {
+  background-color: rgb(89, 201, 195);
+}
+main .inner .content-wrap .content-flex-area .content .tag-box .tag.text {
+  background-color: rgb(243, 86, 209);
+}
+main .inner .content-wrap .content-flex-area .content .tag-box .tag.grid {
+  background-color: rgb(255, 123, 0);
+}
+main .inner .content-wrap .content-flex-area .content .tag-box .tag.figma {
+  background-color: rgb(130, 132, 248);
+}/*# sourceMappingURL=main.css.map */

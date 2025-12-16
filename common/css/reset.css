@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  /* // html에 본문 폰트 사이즈에 패밀리를 보통 준다. */
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* // 전체, html, body 세 번에 걸쳐서 한 이유는 종종 font-family가 안먹히는 경우가 있어서
+// 확실하게 해주기 위해 강력히 세팅해 놓는 것 */
+
+h1 {
+  margin: 0;
+}
+
+/* // normalize.css를 그대로 쓰면 h1에 마진 값이 0.67em 0로 세팅되어 있는 것을 볼 수 있다.
+// 그래서 여기서 추가적으로 margin 0을 선언해서 margin을 0으로 변경해줘야함 */
+
+/* // **그런데 왜 위에다가 margin:0을 했는데 또 하는가?
+// 전체를 선택하는 "*" (아스테리스크 또는 공통선택자)는 선택자 우선순위 계산에서 가장 낮다 (값=0)
+// 그러므로 먼저 normalize.css에 선택자 우위계산에서 더 높은 점수를 가진 "h1" (태그선택자, 값=1)를 선언해서 줘야 바뀜 */
+
+a {
+  color: inherit;
+  /* // anchor에 속해있는 것의 값을 상속받겠다는 이야기
+  // ex) p태그 (파란색) 안에 감싸져있으면 a도 파란색 */
+  text-decoration: none;
+  /* // a태그 디폴트인 '밑줄' 제거 */
+}
+
+button,
+input,
+textarea,
+select {
+  background-color: transparent;
+  /* // 버튼이나 셀렉트 배경 삭제 */
+  border: 0;
+
+  /* // 폼 요소 태그는 border와 background가 너무 ugly함
+  // 그래서 이 두 가지를 세팅해주는 것이 보기에 좋음 */
+
+  &:focus {
+    outline: none;
+    box-shadow: 0;
+  }
+  /* // 포커스 했을 떄 생기는 테두리까지 없애는 방법 */
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* // 마우스 갖다 댔을 때 커서 표시 */
+
+ul,
+ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* // 리스트 역시 기본 스타일이 현재 아무도 안 쓰는 스타일, 안 멋진 점이 앞에 항상 있음
+// 또한 ul이 가지고 있는 기본적 padding-left값을 0으로 리셋해줘야 함 */

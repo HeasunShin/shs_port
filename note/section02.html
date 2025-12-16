@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가로 스크롤 horizontal scrolling</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/page.css" />
+  </head>
+  <body>
+    <section class="section02">
+      <section class="con01">
+        <div class="textBox">
+          <h1 class="logo">
+            <a href="#"><img src="./images/section02/item01.png" alt="" /></a>
+            <p class="title">축제</p>
+            <p class="txt">2025.06.21 ~ 2025.06.24</p>
+          </h1>
+        </div>
+      </section>
+      <section class="portfolio">
+        <div class="textBox">
+          <h2>Photo album</h2>
+          <p>THIS IS A FESTIVAL PHOTO</p>
+        </div>
+        <ul class="list">
+          <li class="a">
+            <div class="box">
+              <img src="./images/section02/item02.png" alt="" />
+            </div>
+          </li>
+          <li class="b">
+            <div class="box">
+              <img src="./images/section02/item02.png" alt="" />
+            </div>
+          </li>
+          <li class="c">
+            <div class="box">
+              <img src="./images/section02/item02.png" alt="" />
+            </div>
+          </li>
+          <li class="b">
+            <div class="box">
+              <img src="./images/section02/item02.png" alt="" />
+            </div>
+          </li>
+          <li class="c">
+            <div class="box">
+              <img src="./images/section02/item02.png" alt="" />
+            </div>
+          </li>
+          <li class="a">
+            <div class="box">
+              <img src="./images/section02/item02.png" alt="" />
+            </div>
+          </li>
+          <li class="c">
+            <div class="box">
+              <img src="./images/section02/item02.png" alt="" />
+            </div>
+          </li>
+          <li class="a">
+            <div class="box">
+              <img src="./images/section02/item02.png" alt="" />
+            </div>
+          </li>
+          <li class="b">
+            <div class="box">
+              <img src="./images/section02/item02.png" alt="" />
+            </div>
+          </li>
+          <li class="c">
+            <div class="box">
+              <img src="./images/section02/item02.png" alt="" />
+            </div>
+          </li>
+          <li class="b">
+            <div class="box">
+              <img src="./images/section02/item02.png" alt="" />
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="con03">
+        <div class="textBox">
+          <h2>thank you</h2>
+        </div>
+      </section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+    <!-- <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        let list = gsap.utils.toArray(".portfolio .list li");
+        let listA = gsap.utils.toArray(".portfolio .list .a");
+        let listB = gsap.utils.toArray(".portfolio .list .b");
+        let listC = gsap.utils.toArray(".portfolio .list .c");
+
+        let scrollTween = gsap.to(list, {
+          xPercent: -100 * (list.length - 1),
+          ease: "none",
+          ScrollTrigger: {
+            trigger: ".portfolio",
+            pin: true,
+            scrub: 1,
+            // start: "center center",
+            start: "top top",
+            // end: "200%",
+            end: "+=3000",
+            markers: true,
+          },
+        });
+
+        gsap.to(listA, {
+          y: 50,
+          rotation: 10,
+          scrollTrigger: {
+            trigger: ".portfolio",
+            scrub: 2,
+            end: "200%",
+          },
+        });
+        gsap.to(listB, {
+          y: -50,
+          rotation: 20,
+          scrollTrigger: {
+            trigger: ".portfolio",
+            scrub: 2,
+            end: "200%",
+          },
+        });
+        gsap.to(listC, {
+          y: -50,
+          x: 20,
+          rotation: -10,
+          scrollTrigger: {
+            trigger: ".portfolio",
+            scrub: 2,
+            end: "200%",
+          },
+        });
+      });
+    </script> -->
+    <!-- <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 전체 리스트를 감싸는 ul
+        const listWrapper = document.querySelector(".portfolio .list");
+        // 각각의 li 항목
+        const listItems = gsap.utils.toArray(".portfolio .list li");
+
+        // li의 개별 클래스별로 나누기
+        const listA = gsap.utils.toArray(".portfolio .list .a");
+        const listB = gsap.utils.toArray(".portfolio .list .b");
+        const listC = gsap.utils.toArray(".portfolio .list .c");
+
+        // 전체 ul 리스트를 왼쪽으로 이동
+        gsap.to(listWrapper, {
+          x: () =>
+            -(
+              (listItems.length - 1) * listItems[0].offsetWidth +
+              30 * (listItems.length - 1)
+            ), // 30은 margin-right 값
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".portfolio",
+            pin: true,
+            scrub: 1,
+            start: "top top",
+            end: "+=3000",
+            // markers: true,
+          },
+        });
+
+        // li.a 개별 애니메이션
+        gsap.to(listA, {
+          y: 50,
+          rotation: 10,
+          scrollTrigger: {
+            trigger: ".portfolio",
+            scrub: 2,
+            // end: "200%",
+            end: "+=3000",
+          },
+        });
+
+        // li.b 개별 애니메이션
+        gsap.to(listB, {
+          y: -50,
+          rotation: 20,
+          scrollTrigger: {
+            trigger: ".portfolio",
+            scrub: 2,
+            // end: "200%",
+            end: "+=3000",
+          },
+        });
+
+        // li.c 개별 애니메이션
+        gsap.to(listC, {
+          y: -50,
+          x: 20,
+          rotation: -10,
+          scrollTrigger: {
+            trigger: ".portfolio",
+            scrub: 2,
+            // end: "200%",
+            end: "+=3000",
+          },
+        });
+      });
+    </script> -->
+    <!-- <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 리스트 래퍼와 항목 선택
+        const listWrapper = document.querySelector(".portfolio .list");
+        const listItems = gsap.utils.toArray(".portfolio .list li");
+
+        const listA = gsap.utils.toArray(".portfolio .list .a");
+        const listB = gsap.utils.toArray(".portfolio .list .b");
+        const listC = gsap.utils.toArray(".portfolio .list .c");
+
+        // 리스트 전체 너비 계산 (각 li: 400px + 마진 30px)
+        const itemWidth = listItems[0].offsetWidth;
+        const itemGap = 30; // li 간격이 margin-right일 경우
+        const totalScrollWidth = (itemWidth + itemGap) * (listItems.length - 1);
+
+        // 전체 리스트를 왼쪽으로 스크롤 이동
+        gsap.to(listWrapper, {
+          x: () => -totalScrollWidth,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".portfolio",
+            pin: true,
+            scrub: 1,
+            start: "top top",
+            end: () => `+=${totalScrollWidth}`,
+            markers: true, // 디버깅용, 완성 후 제거 가능
+          },
+        });
+
+        // 개별 li 클래스별 애니메이션 (스크롤 범위 맞춰 적용)
+        const scrollSettings = {
+          trigger: ".portfolio",
+          scrub: 2,
+          end: () => `+=${totalScrollWidth}`,
+        };
+
+        gsap.to(listA, {
+          y: 50,
+          rotation: 10,
+          scrollTrigger: scrollSettings,
+        });
+
+        gsap.to(listB, {
+          y: -50,
+          rotation: 20,
+          scrollTrigger: scrollSettings,
+        });
+
+        gsap.to(listC, {
+          y: -50,
+          x: 20,
+          rotation: -10,
+          scrollTrigger: scrollSettings,
+        });
+      });
+    </script> -->
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const listWrapper = document.querySelector(".portfolio .list");
+        const listItems = gsap.utils.toArray(".portfolio .list li");
+
+        const listA = gsap.utils.toArray(".portfolio .list .a");
+        const listB = gsap.utils.toArray(".portfolio .list .b");
+        const listC = gsap.utils.toArray(".portfolio .list .c");
+
+        const itemWidth = listItems[0].offsetWidth;
+        const itemGap = 30;
+        const totalScrollWidth = (itemWidth + itemGap) * (listItems.length - 1);
+
+        // 👉 끝에 요소까지 애니메이션 적용되도록 거리 여유 주기
+        const scrollDistance = totalScrollWidth + window.innerWidth; // ← 핵심!
+
+        gsap.to(listWrapper, {
+          x: () => -totalScrollWidth,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".portfolio",
+            pin: true,
+            scrub: 1,
+            start: "top top",
+            end: () => `+=${scrollDistance}`,
+            markers: true, // 개발 중 디버깅용
+          },
+        });
+
+        const scrollSettings = {
+          trigger: ".portfolio",
+          scrub: 2,
+          end: () => `+=${scrollDistance}`,
+        };
+
+        gsap.to(listA, {
+          y: 50,
+          rotation: 10,
+          scrollTrigger: scrollSettings,
+        });
+
+        gsap.to(listB, {
+          y: -50,
+          rotation: 20,
+          scrollTrigger: scrollSettings,
+        });
+
+        gsap.to(listC, {
+          y: -50,
+          x: 20,
+          rotation: -10,
+          scrollTrigger: scrollSettings,
+        });
+      });
+    </script>
+  </body>
+</html>

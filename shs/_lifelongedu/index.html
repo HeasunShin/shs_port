@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>늘배움</title>
+    <link href="./css/bu.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="./script/jquery-3.6.4.js"></script>
+    <script src="./script/jquery-ui.js"></script>
+    <script src="./script/bu.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo_wrap">
+                <h1 class="main_logo">
+                    <a href="./index.html">
+                        <img src="./images/logo_default.png" alt="메인로고">
+                    </a>
+                </h1>
+                <div class="ham_wrap">
+                    <div class="serch_wrap">
+                        <img src="./images/icon_search.png" alt="돋보기">
+                    </div>
+                    <div class="ham_menu_wrap">
+                        <img src="./images/icon_menu.png" alt="전체메뉴">
+
+                    </div>
+
+                </div>
+                <div class="q_wrap">
+                    <div class="q_topic">늘배움 통합검색</div>
+                    <div class="q_box">
+                        <div class="q_box_text"> &nbsp; 무엇을 배우고 싶으신가요?</div>
+                        <div class="q_box_icon">
+                            <img src="./images/ico_search.png" alt="돋보기2">
+                        </div>
+                    </div>
+                    <div class="popular_topic_wrap">
+                        <div class="popular_topic">
+                            <div class="popular_topic_icon">
+                                <img src="./images/ico_star.png" alt="인기검색어별">
+                            </div>
+                            <div class="popular_topic_text">인기 검색어</div>
+                        </div>
+                        <div class="popular_hash">#일본  #컴퓨터  #소비  #중국어  #직장 내 성희롱예방교육  #스마트폰  #프랑스어  #일어  #러시아어  #영어</div>
+                    </div>
+                </div>
+                <div class="all_menu">
+                    <div class="close_but_wrap">
+                        <div class="close_but">
+                            <img src="./images/icon_close.png" alt="전체메뉴 닫기">
+                        </div>
+                    </div>
+                    <div class="menu_box_wrap">
+                        <div class="menu_box box1">
+                            <div class="menu_box_main">온라인 학습</div>
+                            <div class="menu_box_sub">맞춤 강좌 찾기</div>
+                            <div class="menu_box_sub">동영상 강좌
+                                <div class="menu_inbox">- 전체 강좌</div>
+                                <div class="menu_inbox">- 증명서 발급 강좌</div>
+                            </div>
+                            <div class="menu_box_sub">YouTubeㆍTED</div>
+                        </div>
+                        <div class="menu_box box2">
+                            <div class="menu_box_main">오프라인 교육정보</div>
+                            <div class="menu_box_sub">우리동네 강좌</div>
+                            <div class="menu_box_sub">우리동네 기관</div>
+                        </div>
+                        <div class="menu_box box3">
+                            <div class="menu_box_main">평생교육자료</div>
+                            <div class="menu_box_sub">학술자료
+                                <div class="menu_inbox">- 평생교육 학술자료</div>
+                                <div class="menu_inbox">- RISS 학술자료</div>
+                            </div>
+                            <div class="menu_box_sub">통계자료</div>
+                            <div class="menu_box_sub">정책자료</div>
+                        </div>
+                        <div class="menu_box box4">
+                            <div class="menu_box_main">늘배움 알림</div>
+                            <div class="menu_box_sub">공지사항</div>
+                            <div class="menu_box_sub">이벤트 참여</div>
+                            <div class="menu_box_sub">소식지</div>
+                        </div>
+                        <div class="menu_box box5">
+                            <div class="menu_box_main">늘배움 소개</div>
+                            <div class="menu_box_sub">늘배움이란?</div>
+                            <div class="menu_box_sub">홍보자료</div>
+                            <div class="menu_box_sub">연계정보
+                                <div class="menu_inbox">- 연계기관</div>
+                                <div class="menu_inbox">- 연계절차 안내</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_box_wrap">
+                        <div class="menu_line">
+                            <div class="line_main">나의 학습방</div>
+                            <div class="line_sub">
+                                <div class="ls_each">학습이력</div>
+                                <div class="ls_each">관심강좌</div>
+                            </div>
+                        </div>
+                        <div class="menu_line">
+                            <div class="line_main">나의 정보관리</div>
+                            <div class="line_sub">
+                                <div class="ls_each">정보수정</div>
+                                <div class="ls_each">문의내역</div>
+                            </div>
+                        </div>
+                        <div class="menu_line">
+                            <div class="line_main">이용 도우미</div>
+                            <div class="line_sub">
+                                <div class="ls_each">이용 가이드</div>
+                                <div class="ls_each">자주 묻는 질문</div>
+                                <div class="ls_each">문의하기</div>
+                            </div>
+                        </div>
+                        <div class="menu_line">
+                            <div class="line_main">홈페이지 안내</div>
+                            <div class="line_sub">
+                                <div class="ls_each">홈페이지 이용약관</div>
+                                <div class="ls_each">개인정보처리방침</div>
+                                <div class="ls_each">저작권보호정책</div>
+                                <div class="ls_each">이메일무단수집거부</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu_wrap">
+                <a href="#" class="main_menu">온라인 학습</a>
+                <a href="#" class="main_menu">오프라인 교육정보</a>
+                <a href="#" class="main_menu">평생교육자료</a>
+                <a href="#" class="main_menu">늘배움 알림</a>
+                <a href="#" class="main_menu">늘배움 소개</a>
+            </div>
+        </header>
+        <div class="content_wrap">
+            <!-- 영역 96.9% -->
+            <div class="banner_wrap">
+                <div class="banner">
+                    <div class="ban_move_box">
+                        <div class="ban">
+                            <img src="./images/main_banner_01.png" alt="배너1">
+                        </div>
+                        <div class="ban">
+                            <img src="./images/main_banner_02.png" alt="배너2">
+                        </div>
+                        <div class="ban">
+                            <img src="./images/main_banner_03.png" alt="배너3">
+                        </div>
+                    </div>
+                </div>
+                <div class="banner">
+                    <div class="adult_main_text">어르신용 강좌모드 보기</div>
+                    <div class="adult_sub_text">
+                        어르신용 강좌모드는 보다 큰 화면으로 보기 편한 화면을 제공합니다.
+                    </div>
+                    <img src="./images/adult.png" class="adult" alt="어르신">
+                </div>
+            </div>
+            <div class="shorts_wrap">
+                <div class="shorts">
+                    <div class="s_img_wrap">
+                        <img src="./images/main_icon_01.png" alt="바로가기1">
+                    </div>
+
+                    <div class="shorts_text">맞춤 강좌 찾기</div>
+                </div>
+                <div class="shorts">
+                    <div class="s_img_wrap">
+                        <img src="./images/main_icon_02.png" alt="바로가기2">
+                    </div>
+
+                    <div class="shorts_text">증명서 발급 강좌</div>
+                </div>
+                <div class="shorts">
+                    <div class="s_img_wrap">
+                        <img src="./images/main_icon_03.png" alt="바로가기3">
+                    </div>
+
+                    <div class="shorts_text">성인 문해 강좌</div>
+                </div>
+                <div class="shorts">
+                    <div class="s_img_wrap">
+                        <img src="./images/main_icon_04.png" alt="바로가기4">
+                    </div>
+
+                    <div class="shorts_text">이력 담기/증명서</div>
+                </div>
+                <div class="shorts">
+                    <div class="s_img_wrap">
+                        <img src="./images/main_icon_05.png" alt="바로가기5">
+                    </div>
+
+                    <div class="shorts_text">우리동네 기관</div>
+                </div>
+            </div>
+            <div class="class_wrap">
+                <a href="#" class="life_long_edu_class">늘배움 추천강좌 ></a>
+                <div class="each_class_wrap">
+                    <div class="class">
+                        <div class="class_img_wrap">
+                            <img src="./images/recommend_1.png" alt="추천강좌1">
+                        </div>
+                        <div class="class_text_wrap">
+                            <div class="class_info">
+                                <div class="info">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_rating.png" alt="별">
+                                    </div>
+                                    <div class="interest_text">5(1명)</div>
+                                </div>
+                                <div class="info_m">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_calendar.png" alt="달력">
+                                    </div>
+                                    <div class="interest_text_day">2022-06-02</div>
+                                </div>
+                                <div class="info">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_list.png" alt="리스트">
+                                    </div>
+                                    <div class="interest_text">1회차</div>
+                                </div>
+                            </div>
+                            <div class="class_explanation">
+                                웹 브라우저 이해와 활용(기초)<br>
+                                한국지능정보사회진흥원
+                            </div>
+                            <div class="class_but_wrap">
+                                <div class="class_but">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_heart_on.png" alt="하트">
+                                    </div>
+                                    <div class="interest_text_add">관심강좌담기</div>
+                                </div>
+                                <div class="class_but">학습하기</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class">
+                        <div class="class_img_wrap">
+                            <img src="./images/recommend_2.jpg" alt="추천강좌2">
+                        </div>
+                        <div class="class_text_wrap">
+                            <div class="class_info">
+                                <div class="info">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_rating.png" alt="별">
+                                    </div>
+                                    <div class="interest_text">0(0명)</div>
+                                </div>
+                                <div class="info_m">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_calendar.png" alt="달력">
+                                    </div>
+                                    <div class="interest_text_day">2023-04-28</div>
+                                </div>
+                                <div class="info">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_list.png" alt="리스트">
+                                    </div>
+                                    <div class="interest_text">1회차</div>
+                                </div>
+                            </div>
+                            <div class="class_explanation">
+                                스마트하게 여행하기(생활<br>
+                                디지털배움터
+                            </div>
+                            <div class="class_but_wrap">
+                                <div class="class_but">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_heart_on.png" alt="하트">
+                                    </div>
+                                    <div class="interest_text_add">관심강좌담기</div>
+                                </div>
+                                <div class="class_but">학습하기</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class">
+                        <div class="class_img_wrap">
+                            <img src="./images/recommend_3.jpg" alt="추천강좌3">
+                        </div>
+                        <div class="class_text_wrap">
+                            <div class="class_info">
+                                <div class="info">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_rating.png" alt="별">
+                                    </div>
+                                    <div class="interest_text">4(5명)</div>
+                                </div>
+                                <div class="info_m">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_calendar.png" alt="달력">
+                                    </div>
+                                    <div class="interest_text_day">2022-10-12</div>
+                                </div>
+                                <div class="info">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_list.png" alt="리스트">
+                                    </div>
+                                    <div class="interest_text">2회차</div>
+                                </div>
+                            </div>
+                            <div class="class_explanation">
+                                세계시민교육 속 장애인 인권<br>
+                                한국장애인개발원
+                            </div>
+                            <div class="class_but_wrap">
+                                <div class="class_but">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_heart_on.png" alt="하트">
+                                    </div>
+                                    <div class="interest_text_add">관심강좌담기</div>
+                                </div>
+                                <div class="class_but">학습하기</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class">
+                        <div class="class_img_wrap">
+                            <img src="./images/recommend_4.png" alt="추천강좌4">
+                        </div>
+                        <div class="class_text_wrap">
+                            <div class="class_info">
+                                <div class="info">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_rating.png" alt="별">
+                                    </div>
+                                    <div class="interest_text">4(21명)</div>
+                                </div>
+                                <div class="info_m">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_calendar.png" alt="달력">
+                                    </div>
+                                    <div class="interest_text_day">2020-02-05</div>
+                                </div>
+                                <div class="info">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_list.png" alt="리스트">
+                                    </div>
+                                    <div class="interest_text">1회차</div>
+                                </div>
+                            </div>
+                            <div class="class_explanation">
+                                [시니어교육-디지털금융교육] QR코드의 모든 것<br>
+                                서민금융진흥원
+                            </div>
+                            <div class="class_but_wrap">
+                                <div class="class_but">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_heart_on.png" alt="하트">
+                                    </div>
+                                    <div class="interest_text_add">관심강좌담기</div>
+                                </div>
+                                <div class="class_but">학습하기</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class">
+                        <div class="class_img_wrap">
+                            <img src="./images/recommend_5.jpg" alt="추천강좌5">
+                        </div>
+                        <div class="class_text_wrap">
+                            <div class="class_info">
+                                <div class="info">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_rating.png" alt="별">
+                                    </div>
+                                    <div class="interest_text">5(1명)</div>
+                                </div>
+                                <div class="info_m">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_calendar.png" alt="달력">
+                                    </div>
+                                    <div class="interest_text_day">2015-11-06</div>
+                                </div>
+                                <div class="info">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_list.png" alt="리스트">
+                                    </div>
+                                    <div class="interest_text">37회차</div>
+                                </div>
+                            </div>
+                            <div class="class_explanation">
+                                일반물리의 이해<br>
+                                지에듀컴
+                            </div>
+                            <div class="class_but_wrap">
+                                <div class="class_but">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_heart_on.png" alt="하트">
+                                    </div>
+                                    <div class="interest_text_add">관심강좌담기</div>
+                                </div>
+                                <div class="class_but">학습하기</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class">
+                        <div class="class_img_wrap">
+                            <img src="./images/recommend_5.png" alt="추천강좌6">
+                        </div>
+                        <div class="class_text_wrap">
+                            <div class="class_info">
+                                <div class="info">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_rating.png" alt="별">
+                                    </div>
+                                    <div class="interest_text">4(1명)</div>
+                                </div>
+                                <div class="info_m">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_calendar.png" alt="달력">
+                                    </div>
+                                    <div class="interest_text_day">2021-05-21</div>
+                                </div>
+                                <div class="info">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_list.png" alt="리스트">
+                                    </div>
+                                    <div class="interest_text">1회차</div>
+                                </div>
+                            </div>
+                            <div class="class_explanation">
+                                9. 앱 개발 이해하기(심화)<br>
+                                한국지능정보사회진흥원
+                            </div>
+                            <div class="class_but_wrap">
+                                <div class="class_but">
+                                    <div class="interest_icon">
+                                        <img src="./images/ico_heart_on.png" alt="하트">
+                                    </div>
+                                    <div class="interest_text_add">관심강좌담기</div>
+                                </div>
+                                <div class="class_but">학습하기</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more_class">더 많은 강좌 보기 -></div>
+            </div>
+            <div class="news_wrap">
+                <div class="life_long_edu_news">
+                    <div class="news_main_text">늘배움 새소식</div>
+                    <!-- <div class="news_arrow_wrap">
+                        <div class="arrow l_arrow"><</div>
+                        <div class="arrow r_arrow">></div>
+                    </div> -->
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide_1 s_info">Slide 1</div>
+                        <div class="swiper-slide slide_2 s_info">Slide 2</div>
+                        <div class="swiper-slide slide_3 s_info">Slide 3</div>
+                        <div class="swiper-slide slide_4 s_info">Slide 4</div>
+                        <div class="swiper-slide slide_5 s_info">Slide 5</div>
+                        <div class="swiper-slide slide_6 s_info">Slide 6</div>
+                        <div class="swiper-slide slide_7 s_con">Slide 7</div>
+                        <div class="swiper-slide slide_8 s_con">Slide 8</div>
+                        <div class="swiper-slide slide_9 s_con">Slide 9</div>
+                        <div class="swiper-slide slide_10 s_con">Slide 1</div>
+                        <div class="swiper-slide slide_11 s_con">Slide 2</div>
+                        <div class="swiper-slide slide_12 s_con">Slide 3</div>
+                        <div class="swiper-slide slide_13 s_event">Slide 4</div>
+                        <div class="swiper-slide slide_14 s_event">Slide 5</div>
+                        <div class="swiper-slide slide_15 s_event">Slide 6</div>
+                        <div class="swiper-slide slide_16 s_event">Slide 7</div>
+                        <div class="swiper-slide slide_17 s_event">Slide 8</div>
+                        <div class="swiper-slide slide_18 s_event">Slide 9</div>
+                    </div>
+                </div>
+                <div class="news_but_wrap">
+                    <div class="news_but news_but_1"></div>
+                    <div class="news_but news_but_2"></div>
+                    <div class="news_but news_but_3"></div>
+                    <div class="p">00</div>
+                </div>
+
+            </div>
+            <div class="partner_wrap"></div>
+        </div>
+        <footer>
+            <div class="top_footer">
+                <a href="#">이용가이드</a>
+                <a href="#">원격도우미</a>
+                <a href="#">자주 묻는 질문</a><br>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">저작권보호정책</a>
+                <a href="#">이메일무단수집거부</a><br>
+                <div class="time">상담시간 평일 09시 ~ 17시 (점심12시 ~ 13시) * 주말 및 공휴일 휴무</div>
+                <button>문의하기</button>
+                <div class="footer_line"></div>
+            </div>
+            <div class="bottom_footer">
+                <div class="b_f_l_side">
+                    <div class="sns_wrap">
+                        <div class="sns">
+                            <img src="./images/ico_bottom_01.png" alt="늘배움소식지">
+                        </div>
+                        <div class="sns">
+                            <img src="./images/ico_bottom_05.png" alt="인스타그램">       
+                        </div>
+                        <div class="sns">
+                            <img src="./images/ico_bottom_02.png" alt="네이버블로그">       
+                        </div>
+                        <div class="sns">
+                            <img src="./images/ico_bottom_03.png" alt="유튜브">       
+                        </div>
+                        <div class="sns">
+                            <img src="./images/ico_bottom_04.png" alt="늘배움모바일">       
+                        </div>
+                    </div>
+                    <div class="b_logo">
+                        <img src="./images/footer_nile.png" alt="푸터로고">
+                    </div>
+                    <div class="c_info">
+                        04520 서울특별시 중구 청계천로 14 | 늘배움 파트너<br>
+                        대표전화 02)3780-9958<br><br>
+                        ⓒNATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS RESERVED.
+                        
+                    </div>
+                </div>
+                <div class="b_f_r_side">
+                    <select onchange="window.open(value, '_blank')">
+                        <option>가족사이트</option>
+                        <option value="https://www.naver.com">국가평생교육진흥원</option>
+                        <option>검정고시지원센터</option>
+                    </select>
+                    <select>
+                        <option>다모아평생교육정보망</option>
+                        <option>서울특별시 평생학습포털</option>
+                        <option>부산평생교육정보망</option>
+                    </select>
+                </div>
+            </div>
+        </footer>
+        <div class="bottom_fix_menu">fix</div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        watchSlidesProgress: true,
+        slidesPerView: "auto",
+        // slidesPerView: 2.5,
+        spaceBetween: 16
+        });
+    </script>
+
+    <!-- 그리드 or 플로트래프트 -->
+
+    <!-- 팝업 -->
+    <div class="pop_up">
+        <button>close</button>
+    </div>
+    
+</body>
+</html>

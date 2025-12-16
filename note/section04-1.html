@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Flip Plugin</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/page.css" />
+  </head>
+  <body>
+    <section class="section04-1">
+      <nav>
+        <ul class="nav-links">
+          <div class="nav-item">
+            <li><a href="#" data-tab="story">Our Story</a></li>
+            <div class="active-nav"></div>
+          </div>
+          <div class="nav-item">
+            <li><a href="#" data-tab="projects">Projects</a></li>
+          </div>
+          <div class="nav-item">
+            <li><a href="#" data-tab="portfolio">Portfolio</a></li>
+          </div>
+        </ul>
+      </nav>
+
+      <section class="card-container">
+        <div class="card-group active" data-tab="story">
+          <div class="card">
+            <h2>Our Story 1</h2>
+            <p>우리는 이렇게 시작했습니다.</p>
+          </div>
+          <div class="card">
+            <h2>Our Story 2</h2>
+            <p>팀워크와 창의력으로 성장해 왔습니다.</p>
+          </div>
+        </div>
+        <div class="card-group" data-tab="projects">
+          <div class="card">
+            <h2>Projects 1</h2>
+            <p>진행 중인 주요 프로젝트입니다.</p>
+          </div>
+          <div class="card">
+            <h2>Projects 2</h2>
+            <p>미래를 위한 기획 프로젝트입니다.</p>
+          </div>
+        </div>
+        <div class="card-group" data-tab="portfolio">
+          <div class="card">
+            <h2>Portfolio 1</h2>
+            <p>이전 작업물의 대표 사례입니다.</p>
+          </div>
+          <div class="card">
+            <h2>Portfolio 2</h2>
+            <p>고객과 함께 만든 성공 사례입니다.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/Flip.min.js"></script>
+    <script>
+      gsap.registerPlugin(Flip);
+
+      const links = document.querySelectorAll(".nav-item a");
+      const activeNav = document.querySelector(".active-nav");
+      const cardGroups = document.querySelectorAll(".card-group");
+
+      links.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          // 링크 색상 처리
+          gsap.to(links, { color: "#252525" });
+          gsap.to(link, { color: "#385ae0" });
+
+          // active-nav 이동
+          const navState = Flip.getState(activeNav);
+          link.appendChild(activeNav);
+          Flip.from(navState, {
+            duration: 1.25,
+            ease: "elastic.out(1, 0.5)",
+          });
+
+          // 카드 전환
+          const selectedTab = link.dataset.tab;
+          const newActive = document.querySelector(
+            `.card-group[data-tab="${selectedTab}"]`
+          );
+          const currentActive = document.querySelector(".card-group.active");
+
+          if (newActive && currentActive !== newActive) {
+            const cardsState = Flip.getState(currentActive);
+
+            currentActive.classList.remove("active");
+            newActive.classList.add("active");
+
+            Flip.from(cardsState, {
+              duration: 0.75,
+              ease: "power1.inOut",
+            });
+          }
+        });
+      });
+
+      // 카드 클릭 시 상세 보기
+      document.querySelectorAll(".card").forEach((card, index, cards) => {
+        card.addEventListener("click", () => {
+          const state = Flip.getState(cards);
+
+          const isActive = card.classList.contains("active");
+          cards.forEach((c) => {
+            c.classList.remove("active", "is-inactive");
+          });
+
+          if (!isActive) {
+            card.classList.add("active");
+            cards.forEach((c) => {
+              if (c !== card) c.classList.add("is-inactive");
+            });
+          }
+
+          Flip.from(state, {
+            duration: 1,
+            ease: "expo.out",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

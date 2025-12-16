@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Flip Plugin</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/page.css" />
+  </head>
+  <body>
+    <section class="section04">
+      <nav>
+        <ul class="nav-links">
+          <div class="nav-item">
+            <li><a href="#">Our Story</a></li>
+            <div class="active-nav"></div>
+          </div>
+          <div class="nav-item">
+            <li><a href="#">Projects</a></li>
+          </div>
+          <div class="nav-item">
+            <li><a href="#">Portfolio</a></li>
+          </div>
+        </ul>
+      </nav>
+      <section>
+        <div class="card">
+          <h2>Awesome sauce 🫙</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            minus, nam pariatur veniam consequuntur animi ex quas quidem quasi
+            rem?
+          </p>
+        </div>
+        <div class="card">
+          <h2>Pretty card 🔖</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            minus, nam pariatur veniam consequuntur animi ex quas quidem quasi
+            rem?
+          </p>
+        </div>
+        <div class="card">
+          <h2>Animation 🌠</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            minus, nam pariatur veniam consequuntur animi ex quas quidem quasi
+            rem?
+          </p>
+        </div>
+        <div class="card">
+          <h2>Crazy stuff 🔥</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            minus, nam pariatur veniam consequuntur animi ex quas quidem quasi
+            rem?
+          </p>
+        </div>
+      </section>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"
+      integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/Flip.min.js"
+      integrity="sha512-w7q/Mq+pfxzeeUjhZVM9lsH9PTHj7wFAev1wwJN7BzZdgENWNkDxzu8NdtHDVOwnoYb9x/hJZkysbYKj1QU/sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      gsap.registerPlugin(Flip);
+
+      const links = document.querySelectorAll(".nav-item a");
+      const activeNav = document.querySelector(".active-nav");
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          gsap.to(links, { color: "#252525" });
+
+          if (document.activeElement === link) {
+            gsap.to(link, { color: "#385ae0" });
+          }
+
+          const state = Flip.getState(activeNav);
+          link.appendChild(activeNav);
+
+          Flip.from(state, {
+            duration: 1.25,
+            absolute: true,
+            ease: "elastic.out(1, 0.5)",
+          });
+        });
+      });
+
+      const cards = document.querySelectorAll(".card");
+
+      cards.forEach((card, index) => {
+        card.addEventListener("click", () => {
+          const state = Flip.getState(cards);
+
+          const isCardActive = card.classList.contains("active");
+          cards.forEach((otherCard, otherIdx) => {
+            otherCard.classList.remove("active");
+            otherCard.classList.remove("is-inactive");
+            if (!isCardActive && index !== otherIdx) {
+              otherCard.classList.add("is-inactive");
+            }
+          });
+
+          if (!isCardActive) card.classList.add("active");
+
+          Flip.from(state, {
+            duration: 1,
+            ease: "expo.out",
+            absolute: true,
+            /*           onComplete: () => {
+              gsap.to(".card p", {y: 500})
+            } */
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

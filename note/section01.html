@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>landing page</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/page.css" />
+  </head>
+  <body>
+    <section class="section01">
+      <div class="menu">
+        <nav>
+          <ul>
+            <li class="active"><a href="./section01.html">HOME</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="row">
+        <div class="col-md-1">
+          <div class="details">
+            <h2>
+              A special gift <br />
+              to you
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nam
+              facere quasi vitae pariatur eligendi nemo voluptate, ex deserunt
+              corporis, fugit asperiores quidem obcaecati suscipit minus numquam
+              veniam, consequuntur dolores eius nihil esse recusandae
+              temporibus? Blanditiis at rerum tempore debitis tenetur error
+              molestias similique, quaerat quidem odit, hic unde aut, soluta
+              minima adipisci ea incidunt! Similique beatae assumenda quaerat,
+              laudantium nostrum in ea nesciunt laborum dolores. Quibusdam,
+              aspernatur.
+            </p>
+            <a href="#">CLICK</a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <img src="./images/section01/gift-img.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script>
+      gsap.from("section", 1, {
+        y: -800,
+        opacity: 0,
+        stagger: 0.2,
+      });
+      gsap.from(".col-md-2 img", 1, {
+        delay: 0.7,
+        x: 800,
+        opacity: 0,
+        stagger: 0.2,
+      });
+      gsap.from("nav ul li", 1, {
+        delay: 0.8,
+        y: -100,
+        opacity: 0,
+        stagger: 0.2,
+      });
+      gsap.from(".details h2", 1, {
+        delay: 1.1,
+        x: -400,
+        opacity: 0,
+        stagger: 0.2,
+      });
+      gsap.from(".details p", 1, {
+        delay: 1.5,
+        x: -300,
+        opacity: 0,
+        stagger: 0.2,
+      });
+      gsap.from(".details a", 1, {
+        delay: 1.7,
+        x: -300,
+        opacity: 0,
+        stagger: 0.2,
+      });
+    </script>
+    <script>
+      const items = document.querySelectorAll("li");
+
+      items.forEach((item) => {
+        item.addEventListener("click", () => {
+          // 기존 active 클래스 제거
+          items.forEach((i) => i.classList.remove("active"));
+          // 현재 클릭된 항목에 active 클래스 추가
+          item.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
