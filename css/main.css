@@ -44,10 +44,13 @@ main.main section .inner .content-area {
 main.main section .inner .content-area .con-title {
   font-size: 2em;
   font-weight: 700;
+  line-height: 1.2;
 }
 main.main section .inner .content-area .con-title .small-title {
   font-size: 0.5em;
   display: block;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 main.main section .inner .content-area .con-box ul {
   margin-top: 15px;
@@ -402,14 +405,13 @@ main.main section.personal-project .inner .content-area .content {
 }
 main.main section.personal-project .inner .content-area .content .flex-area {
   display: flex;
-  justify-content: space-between;
   align-items: stretch;
   width: 100%;
   gap: 40px;
   flex-wrap: wrap;
 }
 main.main section.personal-project .inner .content-area .content .flex-area .flex-box {
-  width: calc((100% - 80px) / 2);
+  width: calc((100% - 80px) / 3);
   display: flex;
   flex-direction: column;
 }
