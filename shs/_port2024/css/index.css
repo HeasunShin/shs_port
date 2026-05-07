@@ -2,7 +2,6 @@
 body {
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: #344e41;
 }
 body .color1 {
   color: #344e41;
@@ -29,6 +28,9 @@ body button {
 }
 body button:hover {
   background-color: #ebb875;
+}
+body {
+  background-color: #344e41;
 }
 body header#parallax__title {
   height: auto;
@@ -406,7 +408,6 @@ body main.main section.inbox_3 .swiper .swiper-pagination-bullet-active {
 body main.main .horizontal {
   background-color: rgb(228, 225, 223);
   padding-top: 1px;
-  position: relative;
 }
 body main.main .horizontal .sub_title {
   line-height: 0.9em;
@@ -417,6 +418,9 @@ body main.main .horizontal .sub_title {
 }
 body main.main .horizontal .sub_title .sub_title_ko {
   font-size: 0.4em;
+}
+body main.main .horizontal {
+  position: relative;
 }
 body main.main .horizontal section::before {
   content: "";
@@ -486,9 +490,6 @@ body main.main .horizontal #section7 .stroke_font {
   color: #adc7ac;
   text-shadow: -1px -1px 1px #80947f;
 }
-body main.main #horizontal {
-  position: relative;
-}
 body main.main #horizontal .sub_title {
   position: fixed;
   z-index: 999;
@@ -499,6 +500,9 @@ body main.main #horizontal .sub_title {
 }
 body main.main #horizontal .sub_title .sub_title_ko {
   font-size: 0.4em;
+}
+body main.main #horizontal {
+  position: relative;
 }
 body main.main #horizontal section::before {
   content: "";

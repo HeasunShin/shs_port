@@ -821,13 +821,6 @@ footer .footerInwrap .sns_wrap {
     margin: 0 auto;
     margin-top: 5.2vw;
   }
-  /* 소개 영역 */
-  /* 체험영역 */
-  /* 관광안내 영역 */
-  /* 관광안내 내용 */
-  /* 축제 영역 */
-  /* 이벤트 영역 */
-  /* 푸터 영역 */
 }
 @media (max-width: 1024px) and (min-width: 1501px) and (max-width: 1700px) {
   .content {
@@ -873,6 +866,9 @@ footer .footerInwrap .sns_wrap {
     width: 100%;
     position: relative;
   }
+}
+@media all and (max-width: 1024px) {
+  /* 소개 영역 */
   .info_content {
     width: 100%;
   }
@@ -902,9 +898,12 @@ footer .footerInwrap .sns_wrap {
   .info_sub_text {
     font-size: 1.5vw;
   }
+  /* 체험영역 */
   .ex_img_box {
     height: 40vw;
   }
+  /* 관광안내 영역 */
+  /* 관광안내 내용 */
   .ti_box_1 {
     width: 100%;
     height: 100%;
@@ -922,6 +921,8 @@ footer .footerInwrap .sns_wrap {
   .tour_info:hover .ti_box_2 {
     display: block;
   }
+  /* 축제 영역 */
+  /* 이벤트 영역 */
   .swiper {
     width: 100%;
     height: 100%;
@@ -969,6 +970,7 @@ footer .footerInwrap .sns_wrap {
   }
 }
 @media all and (max-width: 1024px) {
+  /* 푸터 영역 */
   footer {
     border-top: 1px solid rgb(189, 189, 189);
     box-sizing: border-box;
@@ -1242,13 +1244,6 @@ footer .footerInwrap .sns_wrap {
     margin: 0 auto;
     margin-top: 20vw;
   }
-  /* 소개 영역 */
-  /* 체험영역 */
-  /* 관광안내 영역 */
-  /* 관광안내 내용 */
-  /* 축제 영역 */
-  /* 이벤트 영역 */
-  /* 푸터 영역 */
 }
 @media (max-width: 768px) and (min-width: 1501px) and (max-width: 1700px) {
   .content {
@@ -1292,6 +1287,9 @@ footer .footerInwrap .sns_wrap {
     width: 100%;
     margin-top: 20px;
   }
+}
+@media all and (max-width: 768px) {
+  /* 소개 영역 */
   .info_img_wrap {
     width: 50%;
     overflow: hidden;
@@ -1337,6 +1335,7 @@ footer .footerInwrap .sns_wrap {
   }
 }
 @media all and (max-width: 768px) {
+  /* 체험영역 */
   .ex_back {
     display: flex;
     flex-wrap: nowrap;
@@ -1346,6 +1345,7 @@ footer .footerInwrap .sns_wrap {
   .ex_box {
     width: 50%;
   }
+  /* 관광안내 영역 */
   .tour_con {
     height: 170vw;
   }
@@ -1388,6 +1388,7 @@ footer .footerInwrap .sns_wrap {
     grid-row-start: 2;
     grid-row-end: 3;
   }
+  /* 관광안내 내용 */
   .ti_box_1 {
     width: 100%;
     height: 100%;
@@ -1400,6 +1401,7 @@ footer .footerInwrap .sns_wrap {
     overflow: hidden;
     display: block;
   }
+  /* 축제 영역 */
   .fes_con {
     padding: 0 25px;
     box-sizing: border-box;
@@ -1442,6 +1444,7 @@ footer .footerInwrap .sns_wrap {
     grid-row-start: 4;
     grid-row-end: 5;
   }
+  /* 이벤트 영역 */
   .swiper {
     width: 100%;
     height: 100%;
@@ -1489,6 +1492,7 @@ footer .footerInwrap .sns_wrap {
   }
 }
 @media all and (max-width: 768px) {
+  /* 푸터 영역 */
   footer {
     border-top: 1px solid rgb(189, 189, 189);
     box-sizing: border-box;
