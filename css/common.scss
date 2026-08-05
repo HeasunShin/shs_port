@@ -10,20 +10,38 @@ $color-devider: #ededed;
   padding: 0;
   margin: 0;
   color: #333;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 img {
   display: block;
 }
+
+// 공통 영역
+// 줄바꿈
+.pcBr {
+  display: block;
+}
+.moBr {
+  display: none;
+}
+.pcNone {
+  display: none;
+}
+.moNone {
+  display: block;
+}
+
 // 헤더 영역
 .header {
-  padding: 20px 0;
+  // padding: 20px 0;
   background-color: $color-main;
   height: 80px;
   position: fixed;
   width: 100%;
   left: 0;
   top: 0;
-  transition: ease 0.4s;
+  // transition: ease 0.4s;
   z-index: 999;
   &.scrolled {
     height: 40px;
@@ -32,16 +50,18 @@ img {
   .header__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: end;
-    padding: 0 20px;
+    align-items: center;
+    padding: 20px;
     margin: 0 auto;
+    height: 100%;
 
     .header__logo {
       .header__logo-link {
         font-size: 2em;
         font-weight: 700;
+        line-height: 1;
         color: $color-main-light;
-        text-shadow: 3px 1px 0 $color-main-dark;
+        // text-shadow: 3px 1px 0 $color-main-dark;
       }
     }
     .header__nav {
@@ -66,6 +86,7 @@ img {
     }
   }
 }
+
 // 푸터 영역
 .footer {
   padding: 20px;
@@ -75,5 +96,22 @@ img {
 
   p {
     // color: $color-main-light;
+  }
+}
+
+@media all and (max-width: 425px) {
+  // 공통 영역
+  // 줄바꿈
+  .pcBr {
+    display: none;
+  }
+  .moBr {
+    display: block;
+  }
+  .pcNone {
+    display: block;
+  }
+  .moNone {
+    display: none;
   }
 }

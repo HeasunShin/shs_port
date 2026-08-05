@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>port</title>
+    <title>-</title>
     <link rel="stylesheet" href="./common/css/normalize.css" />
     <link rel="stylesheet" href="./common/css/reset.css" />
 
@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/main.css" />
     <!-- 폰트 -->
     <link rel="stylesheet" href="./common/css/font.css" />
+    <link rel="stylesheet" href="./css/font.css" />
     <!-- 스와이퍼 -->
     <link
       rel="stylesheet"
@@ -20,64 +21,8 @@
   <body>
     <div class="container">
       <!-- 헤더 영역 -->
-      <header class="header">
-        <div class="header__wrapper">
-          <h1 class="header__logo">
-            <a href="./index.html" class="header__logo-link">SHS</a>
-          </h1>
-          <nav class="header__nav">
-            <ul class="header__nav-list">
-              <li class="header__nav-item">
-                <a href="#introduce" class="header__nav-link">INTRODUCE</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#work" class="header__nav-link">WORK</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#personal-project" class="header__nav-link"
-                  >PERSONAL PROJECT</a
-                >
-              </li>
-              <li class="header__nav-item">
-                <a href="#team-project" class="header__nav-link"
-                  >TEAM PROJECT</a
-                >
-              </li>
-              <li class="header__nav-item">
-                <a href="#contact" class="header__nav-link">CONTACT</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="header__nav_mo">
-            <div class="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <ul class="header__nav-list_mo">
-              <li class="header__nav-item">
-                <a href="#introduce" class="header__nav-link">INTRODUCE</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#work" class="header__nav-link">WORK</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#personal-project" class="header__nav-link"
-                  >PERSONAL PROJECT</a
-                >
-              </li>
-              <li class="header__nav-item">
-                <a href="#team-project" class="header__nav-link"
-                  >TEAM PROJECT</a
-                >
-              </li>
-              <li class="header__nav-item">
-                <a href="#contact" class="header__nav-link">CONTACT</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <div data-include="common/include/header.html"></div>
+
       <!-- 메인 콘텐츠 영역 -->
       <main class="main">
         <section class="banner">
@@ -196,6 +141,12 @@
                       <li class="item" data-index="3">
                         <span>JAVA<br />SCRIPT</span>
                       </li>
+                      <li class="item">
+                        <span>GSAP</span>
+                      </li>
+                      <li class="item">
+                        <span>word<br />press</span>
+                      </li>
                       <li class="item" data-index="4"><span>JQUERY</span></li>
                       <li class="item" data-index="5"><span>NOTION</span></li>
                       <li class="item" data-index="6"><span>FIGMA</span></li>
@@ -245,6 +196,166 @@
               <div class="content">
                 <div class="flex-area">
                   <div class="flex-box">
+                    <div class="title-btn">
+                      <div class="con-title">
+                        <span class="small-title">회사 홈페이지</span>
+                        반디컴
+                      </div>
+                      <div class="con-button">
+                        <a
+                          href="https://www.bandicom.com/home/mainPage.php"
+                          target="_blank"
+                          class="button button2"
+                          >View Site</a
+                        >
+                      </div>
+                    </div>
+                    <div class="img-con">
+                      <div class="img-box">
+                        <img src="./images/work_6.png" alt="반디컴" />
+                      </div>
+                      <div class="con-box">
+                        <ul>
+                          <li>
+                            <strong>작업내용</strong>
+                            외부 개발자와의 협업을 통한 반디컴<br
+                              class="pcBr"
+                            />홈페이지 리뉴얼
+                          </li>
+                          <li>
+                            <strong>담당</strong>회사소개 · 클라이언트 ·
+                            Contact<br class="pcBr" />
+                            페이지
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 반디컴 홈페이지 end -->
+                  <div class="flex-box">
+                    <div class="title-btn">
+                      <div class="con-title">
+                        <span class="small-title">한국수자원공사 웹진</span>
+                        물, 자연 그리고 사람
+                      </div>
+                      <div class="con-button">
+                        <!-- <a href="javascript:void(0);" class="button button2"
+                          >기획서</a
+                        > -->
+                        <a
+                          href="http://k-waterwebzine.com/data/202607_ko/index.html"
+                          target="_blank"
+                          class="button button2"
+                          >View Site</a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="img-con">
+                      <div class="img-box">
+                        <img src="./images/work_2.png" alt="한국수자원공사" />
+                      </div>
+                      <div class="con-box">
+                        <ul>
+                          <li>
+                            <strong>작업내용</strong>
+                            기존 PHP · SQL 기반 구조 활용한
+                            <br class="pcBr" />검색기능 적용 <br />월별 웹진
+                            제작 및 운영
+                          </li>
+                          <li>
+                            <strong>담당</strong> 2026 서브페이지 리뉴얼 및
+                            <br class="pcBr" />전체 페이지 레이아웃 구성
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 한국수자원공사 end -->
+
+                  <div class="flex-box">
+                    <div class="title-btn">
+                      <div class="con-title">
+                        <span class="small-title">국립농업박물관 웹진</span>
+                        농업박물관 소식
+                      </div>
+                      <div class="con-button">
+                        <a
+                          href="https://www.namuk.or.kr/sites/kr/magazine/no.14/index.html"
+                          target="_blank"
+                          class="button button2"
+                          >View Site</a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="img-con">
+                      <div class="img-box">
+                        <img
+                          src="./images/work_1.png"
+                          alt="경력_농업박물관소식"
+                        />
+                      </div>
+                      <div class="con-box">
+                        <ul>
+                          <li>
+                            <strong>작업내용</strong>
+                            분기별 웹진 제작 및 운영 <br />
+                            e-book제작 · 스티비 뉴스레터 제작
+                            <br />방문자유입검토 · 인터넷서점 업로드
+                          </li>
+                          <li>
+                            <strong>담당</strong>
+                            2026 웹진 메인페이지 리뉴얼
+                            <br />2025 웹진 서브페이지 리뉴얼<br />2024 웹진
+                            전체 리뉴얼
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 농업박물관소식 end -->
+                  <div class="flex-box">
+                    <div class="title-btn">
+                      <div class="con-title">
+                        <span class="small-title">용산구청 웹페이지</span>
+                        우리동네소식
+                      </div>
+                      <div class="con-button">
+                        <a
+                          href="https://www.yongsantown.com/home/index.html"
+                          target="_blank"
+                          class="button button2"
+                          >View Site</a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="img-con">
+                      <div class="img-box">
+                        <img
+                          src="./images/work_5.png"
+                          alt="경력_용산우리동네소식"
+                        />
+                      </div>
+                      <div class="con-box">
+                        <ul>
+                          <li>
+                            <strong>작업내용</strong>
+                            구민 대상 정보 페이지 제작 <br />
+                            페이지 퍼블리싱 및 콘텐츠 업데이트
+                          </li>
+                          <li>
+                            <strong>담당</strong> 서브페이지 및 디테일페이지
+                            구현 <br />네이버 애널리틱스 기반 방문자 데이터 확인
+                            및 자료 전달
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 우리동네소식 end -->
+                  <!-- <div class="flex-box">
                     <div class="con-title">
                       <span class="small-title">한국장애인개발원 웹진</span>
                       디딤돌
@@ -261,106 +372,33 @@
                     </div>
                     <div class="con-box">
                       <ul>
-                        <li><strong>담당</strong><br />2025년 분기별 웹진</li>
                         <li>
-                          <strong>작업내용</strong><br />
-                          분기별 웹진 제작 <br />
+                          <strong>담당</strong> 2025 분기별 웹진 제작 및 운영
+                        </li>
+                        <li>
+                          <strong>작업내용</strong>
+                          분기별 웹진 제작 및 운영 <br />
                           인터넷서점(밀리의서재) 업로드<br />구독자 뉴스레터
                           발송(메일링크) <br />방문자유입검토(네이버애널리틱스)
                         </li>
                       </ul>
                       <div class="button-wrap">
-                        <!-- <a href="javascript:void(0);" class="button button2"
-                          >기획서</a
-                        > -->
                         <a
                           href="https://www.koddi.or.kr/webzine/didimdol/vol304/"
                           target="_blank"
                           class="button button2"
-                          >사이트보기</a
+                          >View Site</a
                         >
                       </div>
                     </div>
-                  </div>
-                  <!-- 포트폴리오 2024 end -->
-                  <div class="flex-box">
-                    <div class="con-title">
-                      <span class="small-title">국립농업박물관 웹진</span>
-                      농업박물관 소식
-                    </div>
-                    <div class="img-box">
-                      <img
-                        src="./images/work_1.png"
-                        alt="경력_농업박물관소식"
-                      />
-                    </div>
-                    <div class="con-box">
-                      <ul>
-                        <li>
-                          <strong>담당</strong><br />2024~2025 분기별 웹진
-                          <br />2025년 웹진 서브페이지 리뉴얼<br />2024년 웹진
-                          전체 리뉴얼
-                        </li>
-                        <li>
-                          <strong>작업내용</strong><br />
-                          분기별 웹진 제작 <br />
-                          인터넷서점(밀리의서재) 업로드<br />구독자 뉴스레터
-                          제작(스티비) <br />방문자유입검토(네이버애널리틱스)
-                          <br />이북프로그램을 이용한 e-book제작
-                        </li>
-                      </ul>
-                      <div class="button-wrap">
-                        <!-- <a href="javascript:void(0);" class="button button2"
-                          >기획서</a
-                        > -->
-                        <a
-                          href="https://www.namuk.or.kr/sites/kr/magazine/no.11/index.html"
-                          target="_blank"
-                          class="button button2"
-                          >사이트보기</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <!-- 포트폴리오 2023 end -->
-                  <div class="flex-box">
-                    <div class="con-title">
-                      <span class="small-title">용산구청 웹페이지</span>
-                      우리동네소식
-                    </div>
-                    <div class="img-box">
-                      <img
-                        src="./images/work_5.png"
-                        alt="경력_용산우리동네소식"
-                      />
-                    </div>
-                    <div class="con-box">
-                      <ul>
-                        <li>
-                          <strong>담당</strong><br />2025년 페이지 내용 업데이트
-                          <br />서브페이지 및 디테일페이지 구현
-                        </li>
-                        <li>
-                          <strong>작업내용</strong><br />
-                          월별 페이지 업데이트
-                          <br />방문자유입검토(네이버애널리틱스) 및 자료 전달
-                        </li>
-                      </ul>
-                      <div class="button-wrap">
-                        <a
-                          href="https://www.yongsantown.com/home/index.html"
-                          target="_blank"
-                          class="button button2"
-                          >사이트보기</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <!-- 웨딩의여신 end -->
+                  </div> -->
+                  <!-- 디딤돌 end -->
                 </div>
               </div>
               <div class="button-wrap">
-                <a class="more-button" href="./pages/work.html">더보기 +</a>
+                <a class="more-button" href="./pages/work.html"
+                  >View All Works</a
+                >
               </div>
             </div>
           </div>
@@ -377,90 +415,153 @@
               <!-- GSAP ZONE -->
               <div class="content">
                 <div class="flex-area">
-                  <div class="flex-box">
+                  <div class="flex-box wordpress" data-project="wordpress">
                     <div class="con-title">
-                      <span class="small-title"
-                        >Automated Screenshot System</span
-                      >
-                      Git auto-screenshot
+                      <span class="small-title">WordPress</span>
+                      WordPress Magazine CMS
                     </div>
+
+                    <div class="img-box">
+                      <img
+                        src="./images/personal_project_4.png"
+                        alt="WordPress Magazine CMS"
+                      />
+                    </div>
+
+                    <div class="con-box">
+                      <div class="project-info">
+                        <span class="status live">LIVE</span>
+
+                        <p class="summary">기업형 웹진 CMS 구축 프로젝트</p>
+
+                        <div class="tech-stack">
+                          <span class="label">Tech Stack</span>
+
+                          <p>
+                            WordPress · PHP · ACF · JavaScript · SCSS · Swiper
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="button-wrap">
+                        <a
+                          href="https://wordpress-n.infinityfree.me"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="button primary"
+                        >
+                          View Site
+                        </a>
+
+                        <a href="#" class="more-link" id="openProjectModal">
+                          More
+                          <span class="arrow">→</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- wordpress project end -->
+                  <div class="flex-box" data-project="autoscreenshot">
+                    <div class="con-title">
+                      <span class="small-title">Automation</span>
+                      Automated Screenshot System
+                    </div>
+
                     <div class="img-box">
                       <img
                         src="https://raw.githubusercontent.com/HeasunShin/auto-screenshot/main/screenshot.png"
                         alt="자동 캡처 이미지"
                       />
                     </div>
-                    <div class="con-box">
-                      <ul>
-                        <li><strong>기술스택</strong><br />Javascript</li>
 
-                        <li>
-                          <strong>개발환경(AI도구활용)</strong><br />Git / Linux
-                          / Node.js
-                        </li>
-                        <li>
-                          <strong>Goal</strong><br />
-                          Git auto-screenshot 기능을 활용하여 현재 작업중인
-                          화면의 진행상황을 자동으로 포트폴리오에 업데이트
-                          <br />* 현재 react 프로젝트 진행중
-                        </li>
-                      </ul>
+                    <div class="con-box">
+                      <div class="project-info">
+                        <span class="status progress">IN PROGRESS</span>
+
+                        <p class="summary">
+                          GitHub Actions 기반 자동 스크린샷 시스템
+                        </p>
+
+                        <div class="tech-stack">
+                          <span class="label"> Tech Stack </span>
+
+                          <p>
+                            JavaScript · Node.js · GitHub Actions · Puppeteer
+                          </p>
+                        </div>
+                        <div class="project-current">
+                          <p>* React + Tailwind 포트폴리오 개발 중</p>
+                        </div>
+                      </div>
+
                       <div class="button-wrap">
-                        <!-- <a href="javascript:void(0);" class="button button2"
-                          >기획서</a
-                        > -->
                         <a
-                          href="https://project1-react-app.vercel.app"
+                          href="https://project1-react-app.vercel.app/"
+                          class="button primary"
                           target="_blank"
-                          class="button button2"
-                          >사이트보기</a
+                          rel="noopener noreferrer"
                         >
+                          View Site
+                        </a>
+
+                        <a href="#" class="more-link">
+                          More
+                          <span class="arrow">→</span>
+                        </a>
                       </div>
                     </div>
                   </div>
                   <!-- auto-screenshot end -->
-                  <div class="flex-box">
+
+                  <div class="flex-box" data-project="gsap">
                     <div class="con-title">
-                      <span class="small-title">RESPONSIVE WEBSITE</span>
-                      GSAP CLONE
+                      <span class="small-title">Frontend Animation</span>
+                      GSAP Clone
                     </div>
+
                     <div class="img-box">
                       <img
                         src="./images/personal_project_3.png"
-                        alt="미에로화이바 메인 이미지"
+                        alt="GSAP Clone"
                       />
                     </div>
-                    <div class="con-box">
-                      <ul>
-                        <li>
-                          <strong>기술스택</strong><br />HTML, CSS, Javascript
-                        </li>
-                        <li>
-                          <strong>UI/UX 구현 도구</strong><br />Swiper.js / GSAP
-                          (with ScrollTrigger, SplitText, Flip)
-                        </li>
 
-                        <li>
-                          <strong>Goal</strong><br />
-                          GSAP CLONE 코딩 및 코드 변경을 통한 GSAP 학습
-                        </li>
-                      </ul>
+                    <div class="con-box">
+                      <div class="project-info">
+                        <span class="status completed"> COMPLETED </span>
+
+                        <p class="summary">
+                          GSAP Animation Library 학습을 위한 웹사이트 클론 코딩
+                          프로젝트
+                        </p>
+
+                        <div class="tech-stack">
+                          <span class="label"> Tech Stack </span>
+
+                          <p>HTML · SCSS · JavaScript · GSAP · ScrollTrigger</p>
+                        </div>
+                      </div>
+
                       <div class="button-wrap">
-                        <!-- <a href="javascript:void(0);" class="button button2"
-                          >기획서</a
-                        > -->
                         <a
                           href="https://heasunshin.github.io/gsap_ddeok/"
                           target="_blank"
-                          class="button button2"
-                          >사이트보기</a
+                          rel="noopener noreferrer"
+                          class="button primary"
                         >
+                          View Site
+                        </a>
+
+                        <a href="#" class="more-link">
+                          More
+                          <span class="arrow">→</span>
+                        </a>
                       </div>
                     </div>
                   </div>
                   <!-- gsap-ddeok end -->
 
-                  <div class="flex-box">
+                  <!-- <div class="flex-box">
                     <div class="con-title">
                       <span class="small-title">ADAPTIVE WEBSITE</span>
                       PORTFOLIO 2024
@@ -488,9 +589,6 @@
                         </li>
                       </ul>
                       <div class="button-wrap">
-                        <!-- <a href="javascript:void(0);" class="button button2"
-                          >기획서</a
-                        > -->
                         <a
                           href="./shs/_port2024/index.html"
                           target="_blank"
@@ -499,84 +597,107 @@
                         >
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- 포트폴리오 2024 end -->
-                  <div class="flex-box">
+                  <div class="flex-box" data-project="portfolio2023">
                     <div class="con-title">
                       <span class="small-title">RESPONSIVE WEBSITE</span>
                       PORTFOLIO 2023
                     </div>
+
                     <div class="img-box">
                       <img
                         src="./images/personal_project_2.png"
-                        alt="개인프로젝트_2023포트폴리오"
+                        alt="Portfolio 2023"
                       />
                     </div>
+
                     <div class="con-box">
-                      <ul>
-                        <li>
-                          <strong>기술스택</strong><br />HTML, CSS, Javascript,
-                          Jquery
-                        </li>
-                        <li><strong>UI/UX 구현 도구</strong><br />Swiper.js</li>
-                        <li>
-                          <strong>Goal</strong><br />
-                          달을 통해 개인의 아이덴티티를 나타내고 이를 사이트
-                          처음부터 끝까지 끌고감으로서 흥미를 유발
-                        </li>
-                      </ul>
+                      <div class="project-info">
+                        <span class="status completed"> COMPLETED </span>
+
+                        <p class="summary">
+                          개인 아이덴티티를 표현한 반응형 포트폴리오 사이트 제작
+                        </p>
+
+                        <div class="tech-stack">
+                          <span class="label"> Tech Stack </span>
+
+                          <p>HTML · CSS · JavaScript · jQuery · Swiper</p>
+                        </div>
+                      </div>
+
                       <div class="button-wrap">
-                        <!-- <a href="javascript:void(0);" class="button button2"
-                          >기획서</a
-                        > -->
                         <a
                           href="./shs/index.html"
                           target="_blank"
-                          class="button button2"
-                          >사이트보기</a
+                          rel="noopener noreferrer"
+                          class="button primary"
                         >
+                          View Site
+                        </a>
+
+                        <a href="#" class="more-link">
+                          More
+                          <span class="arrow">→</span>
+                        </a>
                       </div>
                     </div>
                   </div>
                   <!-- 포트폴리오 2023 end -->
-                  <div class="flex-box">
+
+                  <div class="flex-box" data-project="wedqueen">
                     <div class="con-title">
-                      <span class="small-title">NON-RESPONSIVE WEBSITE</span>
+                      <span class="small-title">WEBSITE RENEWAL</span>
                       WEDQUEEN
                     </div>
+
                     <div class="img-box">
                       <img
                         src="./images/personal_project_1.png"
-                        alt="개인프로젝트_웨딩의여신"
+                        alt="WEDQUEEN"
                       />
                     </div>
-                    <div class="con-box">
-                      <ul>
-                        <li>
-                          <strong>기술스택</strong><br />HTML, CSS, Javascript,
-                          Jquery
-                        </li>
-                        <li><strong>UI/UX 구현 도구</strong><br />Swiper.js</li>
 
-                        <li>
-                          <strong>Goal</strong><br />기존사이트에서 홍보하고
-                          있는 애플리케이션 컨셉에 맞추어 기존 사이트를 온라인
-                          웨딩 박람회 콘셉트로 리뉴얼
-                        </li>
-                      </ul>
+                    <div class="con-box">
+                      <div class="project-info">
+                        <span class="status completed"> COMPLETED </span>
+
+                        <p class="summary">
+                          기존 웨딩 플랫폼 사이트를 온라인 웨딩 박람회 콘셉트로
+                          리뉴얼
+                        </p>
+
+                        <div class="tech-stack">
+                          <span class="label"> Tech Stack </span>
+
+                          <p>HTML · CSS · JavaScript · jQuery · Swiper</p>
+                        </div>
+                      </div>
+
                       <div class="button-wrap">
                         <a
                           href="./shs/_wedqueen/proposal/wedqueen_proposal.pdf"
                           target="_blank"
-                          class="button button2"
-                          >기획서</a
+                          rel="noopener noreferrer"
+                          class="button primary"
                         >
+                          Planning
+                        </a>
+
                         <a
                           href="./shs/_wedqueen/index.html"
                           target="_blank"
-                          class="button button2"
-                          >사이트보기</a
+                          rel="noopener noreferrer"
+                          class="button primary"
                         >
+                          View Site
+                        </a>
+
+                        <a href="#" class="more-link">
+                          More
+                          <span class="arrow">→</span>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -667,11 +788,11 @@
                 <div class="con-box">
                   <ul>
                     <li>
-                      <strong>기술스택</strong><br />HTML, CSS, Javascript,
+                      <strong>Tech Stack</strong><br />HTML, CSS, Javascript,
                       Jquery
                     </li>
                     <li>
-                      <strong>참여도</strong>
+                      <strong>Participation</strong>
                       <p>25%</p>
                     </li>
                     <li>
@@ -686,13 +807,14 @@
                       href="./shs/_ferrari/proposal/ferrari_proposal.pdf"
                       target="_blank"
                       class="button button2"
-                      >기획서</a
+                      >Planning</a
                     >
                     <a
                       href="./shs/_ferrari/index.html"
                       target="_blank"
                       class="button button2"
-                      >사이트보기</a
+                    >
+                      View Site</a
                     >
                   </div>
                 </div>
@@ -710,11 +832,11 @@
                 <div class="con-box">
                   <ul>
                     <li>
-                      <strong>기술스택</strong><br />HTML, CSS, Javascript,
+                      <strong>Tech Stack</strong><br />HTML, CSS, Javascript,
                       Jquery
                     </li>
                     <li>
-                      <strong>참여도</strong>
+                      <strong>Participation</strong>
                       <p>50%</p>
                     </li>
                     <li>
@@ -728,13 +850,13 @@
                       href="./shs/_digitalidea/proposal/digitalideal_proposal.pdf"
                       target="_blank"
                       class="button button2"
-                      >기획서</a
+                      >Planning</a
                     >
                     <a
                       href="./shs/_digitalidea/loading/index.html"
                       target="_blank"
                       class="button button2"
-                      >사이트보기</a
+                      >View Site</a
                     >
                   </div>
                 </div>
@@ -752,11 +874,11 @@
                 <div class="con-box">
                   <ul>
                     <li>
-                      <strong>기술스택</strong><br />HTML, CSS, Javascript,
+                      <strong>Tech Stack</strong><br />HTML, CSS, Javascript,
                       Jquery
                     </li>
                     <li>
-                      <strong>참여도</strong>
+                      <strong>Participation</strong>
                       <p>65%</p>
                     </li>
                     <li>
@@ -770,13 +892,13 @@
                       href="./shs/_femfresh/proposal/femfresh_proposal.pdf"
                       target="_blank"
                       class="button button2"
-                      >기획서</a
+                      >Planning</a
                     >
                     <a
                       href="./shs/_femfresh/index.html"
                       target="_blank"
                       class="button button2"
-                      >사이트보기</a
+                      >View Site</a
                     >
                   </div>
                 </div>
@@ -796,11 +918,13 @@
               <div class="content contact-list-wrap">
                 <ul class="contact-list">
                   <!-- <a><strong>phone</strong> 010-4417-9917</a> -->
-                  <li><strong>e-mail</strong> shase051@gmail.com</li>
+                  <li>
+                    <strong>e-mail</strong> <span>shase051@gmail.com</span>
+                  </li>
                   <li>
                     <strong>git</strong
                     ><a href="https://github.com/HeasunShin" target="_blank">
-                      github.com/HeasunShin</a
+                      <span>github.com/HeasunShin</span></a
                     >
                   </li>
                 </ul>
@@ -824,13 +948,7 @@
         </section>
       </main>
       <!-- 푸터 영역 -->
-      <footer class="footer">
-        <p>
-          본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.
-          <br />
-          ⓒ 2025 Shin, Hea-Sun. All Rights Reserved.
-        </p>
-      </footer>
+      <div data-include="common/include/footer.html"></div>
       <!-- <div class="note-area">
         <a href="./note/index.html" class="note-link" target="_blank">
           <p class="note-title">NOTE</p>
@@ -847,10 +965,21 @@
       </div> -->
       <!-- note-area end -->
     </div>
+    <!-- personal-project Modal -->
+    <div class="project-modal" id="projectModal">
+      <div class="modal-overlay"></div>
+
+      <div class="modal-content">
+        <button class="modal-close" type="button" aria-label="닫기">✕</button>
+
+        <div class="modal-body"></div>
+      </div>
+    </div>
     <div id="top-button" class="top-button">
-      <span class="top-button__icon"
-        ><img src="./images/top_button.png" alt=""
-      /></span>
+      <span class="top-button__icon">
+        <!-- <img src="./images/top_button.png" alt="" /> -->
+        ▲
+      </span>
       <span class="top-button__text">TOP</span>
     </div>
     <!-- 스와이퍼 -->
@@ -862,10 +991,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="./script/header.js" defer></script>
+
     <script src="./script/top.js" defer></script>
-    <script src="./script/hamburger.js" defer></script>
+
     <script src="./script/skill-index.js" defer></script>
-    <script></script>
+    <script src="./script/pp-modal.js"></script>
+    <script src="./common/script/include.js"></script>
+    <script src="./script/header.js"></script>
+    <script src="./script/hamburger.js" defer></script>
+    <!-- <script src="./script/footer.js" defer></script> -->
   </body>
 </html>
