@@ -1,3 +1,5 @@
+"use strict";
+
 // const observeItems = document.querySelectorAll(".observe-item");
 // const observer = new IntersectionObserver(
 //   (observeItems) => {
@@ -13,22 +15,18 @@
 //   // 요소가 절반이 보인 후에 기능을 실행하겠다는 의미
 // );
 // observeItems.forEach((observeItem) => observer.observe(observeItem));
+var observeItems = document.querySelectorAll(".observe-item");
+var observer = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    } else {// entry.target.classList.remove("visible");
+    }
+  });
+}, {
+  threshold: 0.2 // 요소가 20% 이상 보이면 콜백 실행
 
-const observeItems = document.querySelectorAll(".observe-item");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      } else {
-        // entry.target.classList.remove("visible");
-      }
-    });
-  },
-  {
-    threshold: 0.2, // 요소가 20% 이상 보이면 콜백 실행
-  },
-);
-
-observeItems.forEach((item) => observer.observe(item));
+});
+observeItems.forEach(function (item) {
+  return observer.observe(item);
+});
