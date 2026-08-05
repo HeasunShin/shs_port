@@ -473,7 +473,6 @@ main.main section.personal-project .inner .content-area .content .flex-area .fle
   flex-direction: column;
   border: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
-  transition: 0.3s;
   background: rgba(255, 255, 255, 0.02);
 }
 main.main section.personal-project .inner .content-area .content .flex-area .flex-box:hover {
@@ -1236,9 +1235,6 @@ body.modal-open {
   main.main section.work .inner .content-area .content .flex-area .flex-box {
     width: 100%;
   }
-  main.main section.work .inner .content-area .content .flex-area .flex-box:nth-child(2) {
-    margin-top: 40px;
-  }
   main.main section.work .inner .content-area .swiper {
     padding: 0;
   }
@@ -1261,9 +1257,6 @@ body.modal-open {
   }
   main.main section.personal-project .inner .content-area .content .flex-area .flex-box {
     width: 100%;
-  }
-  main.main section.personal-project .inner .content-area .content .flex-area .flex-box:nth-child(2) {
-    margin-top: 40px;
   }
   main.main section.team-project .inner .content-area .content .con-title {
     bottom: 0%;
