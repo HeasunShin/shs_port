@@ -86,13 +86,28 @@ main.main {
           gap: 10px;
           .button {
             background-color: $color-main-dark;
-            // color: #fff;
+            width: 100%;
             padding: 7px 15px;
-            // border-radius: 7px;
+            text-align: center;
           }
           .button2 {
             background-color: $color-main;
             color: $color-main-light;
+          }
+
+          &.button-wrap2 {
+            // flex-direction: column;
+            justify-content: space-between;
+
+            .site-buttons,
+            .sub-buttons {
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              justify-content: space-between;
+              width: 100%;
+              align-items: baseline;
+            }
           }
         }
       }
@@ -761,7 +776,7 @@ main.main {
                     display: inline-flex;
                     align-items: center;
                     gap: 8px;
-
+                    padding: 7px 15px;
                     color: $color-main-light;
 
                     font-size: 15px;

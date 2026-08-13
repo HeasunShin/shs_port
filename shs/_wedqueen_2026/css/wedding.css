@@ -414,6 +414,7 @@ body {
 .top_sec {
   border: 3px solid red;
   width: 100%;
+  position: relative;
   display: flex;
   gap: 20px;
   align-items: flex-start;
@@ -425,7 +426,7 @@ body {
   height: 2800px;
   /* z-index: -999; */
   border: 3px solid rgb(0, 102, 255);
-  flex: 1;
+  flex: none;
   min-width: 0;
 }
 
@@ -686,7 +687,7 @@ body {
 /* 왼쪽 고정 영역 */
 .a_side_wrap {
   flex-shrink: 0;
-  border: 3px solid green;
+  border: 3px solid rgb(128, 0, 96);
   width: 500px;
 }
 .a_side_wrap .a_side_con {
@@ -698,8 +699,12 @@ body {
   gap: 20px;
   padding: 20px;
   background: url(../images/flower.png) no-repeat;
-  position: sticky;
+  width: 500px;
+}
+.a_side_wrap.fixed {
+  position: fixed;
   top: 0;
+  width: 500px;
 }
 
 .app_info_wrap {

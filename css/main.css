@@ -70,11 +70,25 @@ main.main section .inner .content-area .button-wrap {
 }
 main.main section .inner .content-area .button-wrap .button {
   background-color: #dda408;
+  width: 100%;
   padding: 7px 15px;
+  text-align: center;
 }
 main.main section .inner .content-area .button-wrap .button2 {
   background-color: #121212;
   color: #e4e2dc;
+}
+main.main section .inner .content-area .button-wrap.button-wrap2 {
+  justify-content: space-between;
+}
+main.main section .inner .content-area .button-wrap.button-wrap2 .site-buttons,
+main.main section .inner .content-area .button-wrap.button-wrap2 .sub-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
+  width: 100%;
+  align-items: baseline;
 }
 main.main section:nth-child(1),
 main.main section:nth-child(4),
@@ -595,6 +609,7 @@ main.main section.personal-project .inner .content-area .content .flex-area .fle
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  padding: 7px 15px;
   color: #e4e2dc;
   font-size: 15px;
   font-weight: 500;

@@ -23,25 +23,52 @@ $(document).ready(function () {
 
   var conTop = con.offset().top;
   var bot_t = bot.offset().top - wh; // let stop_fix=$(".a_side_con").height();
+  // window.addEventListener("scroll", function () {
+  //   if (window.scrollY >= conTop && window.scrollY <= bot_t) {
+  //     $(".a_side_con").css({
+  //       position: "fixed",
+  //       top: 0,
+  //       left: 0,
+  //       width: "500px",
+  //     });
+  //   } else if (window.scrollY >= bot_t - 300) {
+  //     $(".a_side_con").css({
+  //       position: "absolute",
+  //       bottom: 0,
+  //       left: 0,
+  //       width: "500px",
+  //     });
+  //   } else {
+  //     $(".a_side_con").css({
+  //       position: "relative",
+  //       top: 0,
+  //     });
+  //   }
+  // });
 
   window.addEventListener("scroll", function () {
-    if (window.scrollY >= conTop && this.window.scrollY <= bot_t) {
-      side.classList.add("fixed");
-    } else {
-      side.classList.remove("fixed");
-    }
-
-    if (window.scrollY >= bot_t - 300) {
-      $(".a_side_wrap").css({
-        position: "absolute",
+    if (window.scrollY >= conTop && window.scrollY <= bot_t) {
+      $(".a_side_con").css({
+        position: "fixed",
+        top: 0,
         left: 0,
-        bottom: 0
+        width: "500px"
+      });
+    } else if (window.scrollY > bot_t) {
+      $(".a_side_con").css({
+        position: "absolute",
+        top: "auto",
+        bottom: 0,
+        left: 0,
+        width: "500px"
       });
     } else {
-      $(".a_side_wrap").css({
+      $(".a_side_con").css({
         position: "relative",
+        top: "auto",
+        bottom: "auto",
         left: 0,
-        bottom: 0
+        width: "500px"
       });
     }
   }); // 메인갤러리 영역
