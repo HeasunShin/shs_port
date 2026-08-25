@@ -1,44 +1,54 @@
 $(document).ready(function () {
-  // 배너 영역
+  // ===== 배너 영역 =====
   let num = 0;
   const $banner = $(".ban_con");
+  let bannerInterval;
 
-  // 처음에는 첫 번째 배너만 표시
+  function updateDots(idx) {
+    $(".dot").removeClass("active").eq(idx).addClass("active");
+  }
+
+  function startBanner() {
+    clearInterval(bannerInterval); // 혹시 모를 중복 방지
+    bannerInterval = setInterval(function () {
+      const next = (num + 1) % $banner.length;
+      $banner.eq(num).fadeOut(500);
+      $banner.eq(next).fadeIn(500);
+      num = next;
+      updateDots(num);
+    }, 4000);
+  }
+
+  // 초기 상태 세팅
   $banner.hide().eq(0).show();
+  updateDots(0);
+  startBanner();
 
-  // 배너 전환
-  setInterval(function () {
-    const next = (num + 1) % $banner.length;
+  // dot 클릭 시 해당 배너로 이동 (선택 기능, 원치 않으시면 이 블록 삭제)
+  $(".dot").on("click", function () {
+    const idx = $(this).data("idx");
+    clearInterval(bannerInterval);
+    $banner.eq(num).fadeOut(500);
+    $banner.eq(idx).fadeIn(500);
+    num = idx;
+    updateDots(num);
+    startBanner();
+  });
 
-    // 현재 배너 숨기기
-    $banner.eq(num).fadeOut(1000);
-
-    // 다음 배너 표시
-    $banner.eq(next).fadeIn(1000);
-
-    num = next;
-  }, 4000);
-
-  // PICK 버튼
+  // ===== PICK 버튼 =====
   $(".swiper-slide button").on("click", function () {
     const $button = $(this);
     const pickId = $button.data("pick");
     const name = $button.data("name");
 
-    // 이미 선택된 카드라면 선택 해제
     if ($button.hasClass("picked")) {
       $button.removeClass("picked");
       $("#" + pickId).empty();
       return;
     }
 
-    // 같은 카테고리의 기존 선택 해제
     $button.closest(".swiper").find("button").removeClass("picked");
-
-    // 현재 카드 선택
     $button.addClass("picked");
-
-    // 사이드바에 선택한 업체명 표시
     $("#" + pickId).text(name);
   });
 });

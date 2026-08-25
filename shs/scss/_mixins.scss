@@ -1,0 +1,29 @@
+@use 'variables' as v;
+
+// PC: 스크롤재킹 JS와 커플링되어 있으므로 값 자체는 절대 건드리지 않음
+@mixin pc {
+  @media all and (min-width: v.$bp-pc) {
+    @content;
+  }
+}
+
+// 태블릿: 구조 개선 가능 영역
+@mixin tablet {
+  @media (max-width: v.$bp-tablet-max) and (min-width: v.$bp-tablet-min) {
+    @content;
+  }
+}
+
+// 모바일: 구조 개선 가능 영역
+@mixin mobile {
+  @media (max-width: v.$bp-mobile-max) {
+    @content;
+  }
+}
+
+// 태블릿 + 모바일 공통 (mo_wrap 전체, 중복 제거용)
+@mixin mo-common {
+  @media (max-width: v.$bp-tablet-max) {
+    @content;
+  }
+}

@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nanum Gothic", sans-serif;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+img {
+  width: 100%;
+}
+
+i {
+  font-style: italic;
+}
+
+.eye_wrap_up {
+  position: absolute;
+}
+
+.eyes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  rotate: 15deg;
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
+}
+.eyes .eye {
+  height: 170px;
+  width: 120px;
+  border-radius: 100%;
+  margin: 5px;
+  background: #efffd4;
+  box-shadow: 0 0 3px;
+  position: relative;
+  overflow: hidden;
+  border: #efffd4 solid 3px;
+}
+.eyes .eye .eye-retina {
+  display: inline-block;
+  width: 60%;
+  height: 60%;
+  background: black;
+  border: #efffd4 0 solid;
+  border-radius: 50%;
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  transition-duration: 0.1s;
+}
+.eyes .eye .eye-lash {
+  position: absolute;
+  height: 50%;
+  background: linear-gradient(65deg, #8ec68d, #508b4f);
+  width: 100%;
+  z-index: 1;
+  transition-duration: 0.1s;
+}
+.eyes .eye .up {
+  top: -50%;
+  animation: blinkbottom 4s linear infinite;
+}
+.eyes .eye .down {
+  bottom: -50%;
+  animation: blinktop 4s linear infinite;
+}
+
+@keyframes blinkbottom {
+  0% {
+    top: -50%;
+  }
+  5% {
+    top: 0;
+  }
+  10% {
+    top: -50%;
+  }
+}
+@keyframes blinktop {
+  0% {
+    bottom: -50%;
+  }
+  5% {
+    bottom: 0;
+  }
+  10% {
+    bottom: -50%;
+  }
+}

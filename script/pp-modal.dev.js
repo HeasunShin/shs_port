@@ -155,36 +155,39 @@ var projectData = {
     category: "Website Renewal",
     status: "COMPLETED",
     statusClass: "completed",
-    year: "2023",
+    year: "2023 → 2026",
     images: {
       main: "./images/personal_project_1.png",
-      detail: ["./images/personal_project_1-1.png", "./images/personal_project_1-2.png", "./images/personal_project_1-3.png"]
+      detail: ["./images/personal_project/modal/personal_project_1-1.png", "./images/personal_project/modal/personal_project_1-2.png", "./images/personal_project/modal/personal_project_1-3.png"]
     },
     info: {
       role: "Publisher",
-      duration: "Personal Project",
+      duration: "2023 · 2026",
       contribution: "100%"
     },
     tech: ["HTML", "CSS", "JavaScript", "jQuery", "Swiper"],
     sections: [{
       title: "PROJECT INFO",
-      content: "\n      \uAE30\uC874 \uC6E8\uB529 \uD50C\uB7AB\uD3FC \uC0AC\uC774\uD2B8\uB97C \uBD84\uC11D\uD558\uACE0\n      \uC11C\uBE44\uC2A4 \uCF58\uC149\uD2B8\uC5D0 \uB9DE\uCDB0 \uB9AC\uB274\uC5BC\uD55C \uD504\uB85C\uC81D\uD2B8\uC785\uB2C8\uB2E4.<br><br>\n\n      \uC560\uD50C\uB9AC\uCF00\uC774\uC158 \uD64D\uBCF4 \uBAA9\uC801\uC5D0 \uB9DE\uAC8C\n      \uC628\uB77C\uC778 \uC6E8\uB529 \uBC15\uB78C\uD68C \uCF58\uC149\uD2B8\uB85C\n      UI \uAD6C\uC870\uC640 \uCF58\uD150\uCE20 \uD750\uB984\uC744 \uC7AC\uAD6C\uC131\uD588\uC2B5\uB2C8\uB2E4.\n      "
+      content: "\n      \uCC98\uC74C \uC6F9 \uD37C\uBE14\uB9AC\uC2F1\uC744 \uD559\uC2B5\uD558\uBA70 \uC81C\uC791\uD588\uB358 \uD504\uB85C\uC81D\uD2B8\uB97C\n      \uC2E4\uBB34 \uACBD\uD5D8\uC744 \uC313\uC740 \uD6C4 \uB2E4\uC2DC \uB9AC\uB274\uC5BC\uD55C \uD504\uB85C\uC81D\uD2B8\uC785\uB2C8\uB2E4.<br>\n      \uAE30\uC874\uC758 \uD070 \uAD6C\uC870\uC640 \uCF58\uC149\uD2B8\uB294 \uC720\uC9C0\uD558\uBA74\uC11C\n      \uC2E4\uC81C \uC11C\uBE44\uC2A4\uC5D0 \uAC00\uAE4C\uC6B4 UI\uC640 \uBC18\uC751\uD615 \uAD6C\uC870\uB97C \uC801\uC6A9\uD558\uACE0,\n      \uCF54\uB4DC \uAD6C\uC870\uC640 \uC2A4\uD0C0\uC77C \uD45C\uD604 \uBC29\uC2DD\uC744 \uB2E4\uC2DC \uC815\uB9AC\uD588\uC2B5\uB2C8\uB2E4.\n      "
     }, {
-      title: "Features",
-      content: "\n      \u2022 Swiper \uAE30\uBC18 \uBA54\uC778 \uBC30\uB108 \uAD6C\uD604<br>\n      \u2022 \uC6E8\uB529 \uBC15\uB78C\uD68C \uCF58\uC149\uD2B8 UI \uAD6C\uC131<br>\n      \u2022 \uC11C\uBE44\uC2A4 \uC18C\uAC1C \uC601\uC5ED \uAD6C\uC131<br>\n      \u2022 \uC774\uBCA4\uD2B8 \uBC0F \uD64D\uBCF4 \uCF58\uD150\uCE20 \uAD6C\uC870 \uC124\uACC4\n      "
+      title: "IMPROVEMENT",
+      content: "\n      \u2022 \uBA54\uC778 \uBE44\uC8FC\uC5BC \uBC0F \uC8FC\uC694 UI \uAD6C\uC131 \uAC1C\uC120<br>\n      \u2022 \uC0C9\uC0C1\uACFC \uB808\uC774\uC544\uC6C3\uC744 \uC7AC\uC815\uBE44\uD558\uC5EC \uC2DC\uAC01\uC801 \uC644\uC131\uB3C4 \uAC1C\uC120<br>\n      \u2022 \uB2E4\uC591\uD55C \uD654\uBA74 \uD06C\uAE30\uC5D0 \uB300\uC751\uD558\uB294 \uBC18\uC751\uD615 \uAD6C\uD604<br>\n      \u2022 \uAE30\uC874 \uAD6C\uC870\uB97C \uC720\uC9C0\uD558\uBA74\uC11C \uC2E4\uBB34 \uACBD\uD5D8\uC744 \uBC18\uC601\uD55C \uCF54\uB4DC \uAD6C\uC870 \uAC1C\uC120\n      "
     }, {
-      title: "Planning",
-      content: "\n      \uAE30\uC874 \uC11C\uBE44\uC2A4\uC758 \uD2B9\uC9D5\uC744 \uBD84\uC11D\uD558\uC5EC\n      \uC0AC\uC6A9\uC790\uC5D0\uAC8C \uC11C\uBE44\uC2A4 \uBAA9\uC801\uC774 \uBA85\uD655\uD558\uAC8C \uC804\uB2EC\uB420 \uC218 \uC788\uB3C4\uB85D\n      \uD398\uC774\uC9C0 \uD750\uB984\uC744 \uAE30\uD68D\uD588\uC2B5\uB2C8\uB2E4.\n      "
+      title: "DESIGN",
+      content: "\n      \uAE30\uC874 \uCF58\uC149\uD2B8\uC640 \uB514\uC790\uC778 \uBC29\uD5A5\uC740 \uC720\uC9C0\uD558\uB418\n      \uC0C9\uC0C1 \uC870\uD569\uACFC \uC694\uC18C \uAC04 \uAD00\uACC4\uB97C \uB2E4\uC2DC \uC870\uC815\uD558\uC5EC\n      \uBCF4\uB2E4 \uC815\uB3C8\uB418\uACE0 \uC138\uB828\uB41C \uD654\uBA74\uC744 \uAD6C\uC131\uD588\uC2B5\uB2C8\uB2E4.\n      "
     }, {
-      title: "Troubleshooting",
-      content: "\n      \u2022 \uAE30\uC874 \uB514\uC790\uC778 \uAD6C\uC870 \uBD84\uC11D<br>\n      \u2022 \uCF58\uD150\uCE20 \uBC30\uCE58 \uBC0F UI \uAC1C\uC120<br>\n      \u2022 \uB2E4\uC591\uD55C \uD654\uBA74 \uD06C\uAE30 \uB300\uC751\n      "
+      title: "DEVELOPMENT",
+      content: "\n      \uCC98\uC74C \uC81C\uC791\uD588\uC744 \uB54C\uC758 \uAD6C\uD604 \uBC29\uC2DD\uC744 \uADF8\uB300\uB85C \uBC18\uBCF5\uD558\uAE30\uBCF4\uB2E4\n      \uACBD\uB825 \uC774\uD6C4\uC758 \uD37C\uBE14\uB9AC\uC2F1 \uACBD\uD5D8\uC744 \uBC14\uD0D5\uC73C\uB85C\n      \uAD6C\uC870\uC640 \uC2A4\uD0C0\uC77C\uC744 \uB2E4\uC2DC \uAC80\uD1A0\uD558\uACE0 \uAC1C\uC120\uD588\uC2B5\uB2C8\uB2E4.<br>\n      \uAC19\uC740 \uB514\uC790\uC778 \uD2C0\uC744 \uC720\uC9C0\uD558\uBA74\uC11C\uB3C4\n      \uC2E4\uC81C \uC11C\uBE44\uC2A4\uC5D0 \uC801\uC6A9\uD560 \uC218 \uC788\uB294 \uCF54\uB4DC \uC791\uC131 \uBC29\uC2DD\uACFC\n      \uBC18\uC751\uD615 \uB300\uC751\uC744 \uC911\uC2EC\uC73C\uB85C \uBC1C\uC804\uC2DC\uCF30\uC2B5\uB2C8\uB2E4.\n      "
     }],
     buttons: [{
+      text: "Renewal v1",
+      url: "./shs/_wedqueen/index.html"
+    }, {
+      text: "Renewal v2",
+      url: "./shs/_wedqueen_2026/test.html"
+    }, {
       text: "Planning",
       url: "./shs/_wedqueen/proposal/wedqueen_proposal.pdf"
-    }, {
-      text: "View Site",
-      url: "./shs/_wedqueen/index.html"
     }]
   }
 }; // ================================

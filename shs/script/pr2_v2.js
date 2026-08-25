@@ -1,14 +1,4 @@
 $(document).ready(function () {
-  // if(ww>1279){
-  //     pr_pc();
-  // }
-  // function pr_pc(){}
-  // 새로고침 영역
-  // window.onload=function(){
-  //     setTimeout (function(){
-  //         scrollTo(0,0);
-  //     },100)
-  // }
   // 휠마우스 영역
   let ww = $(window).width();
   let wh = $(window).height();
@@ -38,8 +28,8 @@ $(document).ready(function () {
     }
     if (box_index >= 1 && box_index < 17) {
       $(".moon").css({
-        marginTop: -840,
-        marginLeft: 420,
+        marginTop: -700,
+        marginLeft: 380,
         transitionDuration: "3s",
         rotate: "0deg",
         scale: "calc(1)",
@@ -197,8 +187,8 @@ $(document).ready(function () {
     if (box_index == 0) {
       $(".moon_text,.scroll_down").fadeIn(500);
       $(".moon").css({
-        marginTop: -300,
-        marginLeft: -315,
+        marginTop: -240,
+        marginLeft: -260,
         rotate: "-15deg",
         scale: "calc(1.3)",
         transitionDuration: "3s",
@@ -311,7 +301,7 @@ $(document).ready(function () {
         port_set = setInterval(function () {
           $(".per_port_move_box").animate(
             {
-              left: -550,
+              left: -450,
             },
             3000,
             function () {
@@ -397,26 +387,6 @@ $(document).ready(function () {
     }
   });
 
-  // 메인메뉴 스크롤 영역
-  // let body_wh=box_index*20
-  // $("body").css({
-  //     width: "100%",
-  //     height: body_wh,
-  //     background: "greenyellow",
-  //     zIndex: -999
-  // })
-
-  // $(".scroll").click(function(event){
-  //     console.log(".scroll");
-  //     event.preventDefault();
-  //     $("html,body").animate({scrollTop:$(this.hash).offset().top},500);
-  // })
-  // $(".scroll").click(function(){
-  //     $("#wrap").animate({
-  //         top: -box_index*7
-  //     })
-  // })
-
   // 햄버거 메뉴 영역
   let click = 0;
   $(".ham").click(function () {
@@ -433,11 +403,6 @@ $(document).ready(function () {
       });
     }
   });
-
-  // 메인 영역
-  // $(document).ready(function() {
-  //     $(".line-2").arctext({radius: 700});
-  //   });
 
   // 메인 메뉴 영역
   $(".main_menu_1").click(function () {
@@ -508,14 +473,6 @@ $(document).ready(function () {
     });
   });
 
-  // 섹션_개인리뉴얼 영역
-  // $(".port",this).hover(function(){
-  //     $(".per_1").removeClass("per_1_on");
-  //     $(".per_1",this).addClass("per_1_on");
-  //     $(".per_port_move_box,.port").stop(3000);
-  // },function(){
-  //     $(".per_1").removeClass("per_1_on")
-  // })
   $(".per_port_move_box").hover(
     function () {
       clearInterval(port_set);
@@ -528,7 +485,7 @@ $(document).ready(function () {
   $(".port").hover(
     function () {
       $(".per_port_text", this).css({
-        opacity: 0.9,
+        opacity: 0.8,
         transitionDuration: "1s",
       });
       $(this).css({
@@ -560,90 +517,17 @@ $(document).ready(function () {
     $(".team_text").eq(team_txt).fadeIn(500);
   });
 
-  // $(".team_menu:nth-child(1)").click(function(){
-  //     $(".team_menu").css({
-  //         border:" #ffffff solid 3px",
-  //         color: "rgb(255, 255, 255)"
-  //     })
-  //     $(this).addClass("team_menu_on_1");
-  // });
-
   $(".team_menu").click(function () {
     let team_m = $(this).index();
     $(".team_menu").removeClass("team_menu_on", 200);
     $(this).addClass("team_menu_on", 200);
   });
 
-  // 섹션_기획 영역
-  // $(".pr_box:nth-child(1)").hover(function(){
-  //     $(".center_box img").attr({
-  //         src:"images/moon_b.png"
-  //     })
-  // },function(){
-  //     $(".center_box img").attr({
-  //         src:"./images/moon_3.png"
-  //     })
-  // })
-  // $(".pr_box:nth-child(2)").hover(function(){
-  //     $(".center_box img").attr({
-  //         src:"images/moon_p.png"
-  //     })
-  // },function(){
-  //     $(".center_box img").attr({
-  //         src:"./images/moon_3.png"
-  //     })
-  // })
-  // $(".pr_box:nth-child(3)").hover(function(){
-  //     $(".center_box img").attr({
-  //         src:"images/moon_y.png"
-  //     })
-  // },function(){
-  //     $(".center_box img").attr({
-  //         src:"./images/moon_3.png"
-  //     })
-  // })
-  // $(".pr_box:nth-child(4)").hover(function(){
-  //     $(".center_box img").attr({
-  //         src:"images/moon_r.png"
-  //     })
-  // },function(){
-  //     $(".center_box img").attr({
-  //         src:"./images/moon_3.png"
-  //     })
-  // })
-
-  // 섹션_2 영역
-  // let info_bg=["linear-gradient(90deg, rgba(248,190,103,1) 0%, rgba(238,98,144,1) 100%)",
-  // "linear-gradient(90deg, rgba(75,190,103,1) 0%, rgba(238,198,144,1) 100%)",
-  // "linear-gradient(90deg, rgba(248,190,213,1) 0%, rgba(58,98,144,1) 100%)",
-  // "linear-gradient(90deg, rgba(248,208,103,1) 0%, rgba(238,98,222,1) 100%)",
-  // "linear-gradient(90deg, rgba(66,190,103,1) 0%, rgba(238,111,144,1) 100%)"]
-  // let info_bg=["rgba(38, 255, 255, 0.8)",
-  // "rgba(255, 38, 255, 0.8)",
-  // "rgba(255, 255, 38, 0.8)",
-  // "rgba(38, 255, 255, 0.8)",
-  // "rgba(255, 35, 255, 0.8)"]
-  // $(".info_out_box").css({
-  //     background:function(index){
-  //         return info_bg[index]
-  //     }
-  // });
-
-  // 모바일 영역
-  // 메뉴 색 변경
-  // $(".main_menu_mo>a").click(function(){
-  //     $(this).css({
-  //         color: "greenyellow"
-  //     })
-  // })
-
-  // ww=$(window).width();
-
   function auto() {
     port_set = setInterval(function () {
       $(".per_port_move_box").animate(
         {
-          left: -550,
+          left: -450,
         },
         3000,
         function () {

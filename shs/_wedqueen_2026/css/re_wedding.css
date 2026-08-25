@@ -1,12 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
-@font-face {
-  font-family: "IBMPlexSansKR-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 * {
   margin: 0;
   padding: 0;
@@ -38,45 +31,52 @@ header {
   padding: 0 20px;
 }
 header .main_logo {
-  justify-self: center;
   grid-column: 2;
+  justify-self: center;
   width: 150px;
 }
+header .main_logo a {
+  display: block;
+}
+header .main_logo img {
+  width: 100%;
+  display: block;
+}
 header .sign_area {
-  justify-self: end;
   grid-column: 3;
+  justify-self: end;
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 24px;
 }
-header .sign_area .log_in .login {
+header .sign_area a {
   display: flex;
-  justify-content: left;
-}
-header .sign_area .log_in .login .login_icon {
-  width: 30px;
-}
-header .sign_area .log_in .login .login_text {
-  line-height: 30px;
-  padding-left: 3px;
-  box-sizing: border-box;
+  align-items: center;
+  gap: 5px;
   color: #af9a5e;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
 }
-header .sign_area .join .join_in {
-  display: flex;
-  justify-content: left;
+header .sign_area a .login_icon,
+header .sign_area a .join_icon {
+  width: 26px;
+  height: 26px;
 }
-header .sign_area .join .join_in .join_icon {
-  width: 30px;
+header .sign_area a .login_icon img,
+header .sign_area a .join_icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-header .sign_area .join .join_in .join_text {
-  line-height: 30px;
-  padding-left: 3px;
-  box-sizing: border-box;
-  color: #af9a5e;
+header .sign_area a:hover {
+  opacity: 0.65;
 }
 
-/* 배너 영역 */
 .banner {
+  --banner-side-padding: 70px;
   width: 100%;
   height: 600px;
   position: relative;
@@ -86,13 +86,14 @@ header .sign_area .join .join_in .join_text {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
+  inset: 0;
+  display: block;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: block;
+  /* ==================================================
+     배경
+  ================================================== */
 }
 .banner .ban_con.treatz_back {
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.15) 45%, transparent 75%), url(../images/ban_treatz.png);
@@ -109,16 +110,22 @@ header .sign_area .join .join_in .join_text {
 .banner .ban_con.bill_back {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.07) 45%, transparent 75%), url(../images/bill.png);
 }
+.banner .ban_con {
+  /* ==================================================
+     공통 텍스트 영역
+  ================================================== */
+}
 .banner .ban_con .ban_con_text_wrap {
   width: 100%;
   height: 100%;
   position: absolute;
   box-sizing: border-box;
+  padding: 30px var(--banner-side-padding);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  /* 빌리언즈 */
-  /* 무드 */
-  /* 스테이 윤 */
-  /* 쥬드주얼리 */
+  text-rendering: optimizeLegibility;
+  /* 공통 프레임 */
 }
 .banner .ban_con .ban_con_text_wrap::before {
   content: "";
@@ -127,226 +134,282 @@ header .sign_area .join .join_in .join_text {
   border: 1px solid rgba(255, 255, 255, 0.55);
   pointer-events: none;
 }
+.banner .ban_con .ban_con_text_wrap {
+  /* ==================================================
+     공통 타이포그래피 (1920 기준으로 상향)
+  ================================================== */
+}
+.banner .ban_con .ban_con_text_wrap .eyebrow {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+}
+.banner .ban_con .ban_con_text_wrap .sub_text {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  line-height: 1.4;
+}
+.banner .ban_con .ban_con_text_wrap .main_text {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.2;
+}
+.banner .ban_con .ban_con_text_wrap .point_text {
+  margin: 0;
+  font-size: 75px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1;
+}
+.banner .ban_con .ban_con_text_wrap .caption {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  line-height: 1.6;
+}
+.banner .ban_con .ban_con_text_wrap .notice {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+.banner .ban_con .ban_con_text_wrap .brand_text {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+.banner .ban_con .ban_con_text_wrap .benefit_text {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.4;
+}
+.banner .ban_con .ban_con_text_wrap {
+  /* ==================================================
+     STAY YOON
+  ================================================== */
+}
+.banner .ban_con .ban_con_text_wrap.stay {
+  justify-content: center;
+  gap: 21px;
+  color: #50462c;
+}
+.banner .ban_con .ban_con_text_wrap.stay .eyebrow {
+  width: 175px;
+  padding: 9px 12px;
+  box-sizing: border-box;
+  border: 1px solid #50462c;
+  border-radius: 60px;
+  text-align: center;
+  color: #50462c;
+  background: rgba(255, 255, 255, 0.25);
+}
+.banner .ban_con .ban_con_text_wrap.stay .sub_text {
+  color: #50462c;
+}
+.banner .ban_con .ban_con_text_wrap.stay .main_text {
+  color: #50462c;
+}
+.banner .ban_con .ban_con_text_wrap.stay .caption {
+  color: #50462c;
+}
+.banner .ban_con .ban_con_text_wrap {
+  /* ==================================================
+     TREATZ
+  ================================================== */
+}
 .banner .ban_con .ban_con_text_wrap.treatz {
-  display: flex;
-  flex-direction: column;
   justify-content: flex-end;
-  padding-left: 70px;
+  gap: 29px;
   padding-bottom: 70px;
-  gap: 25px;
   color: #222;
 }
-.banner .ban_con .ban_con_text_wrap.treatz .ban_logo {
-  font-size: 32px;
+.banner .ban_con .ban_con_text_wrap.treatz .brand_logo {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  padding-bottom: 8px;
+  font-size: 37px;
   font-weight: 500;
   letter-spacing: 2px;
-  position: relative;
-  display: inline-block;
-  width: fit-content;
-  padding-bottom: 8px;
+  color: #222;
 }
-.banner .ban_con .ban_con_text_wrap.treatz .ban_logo::after {
+.banner .ban_con .ban_con_text_wrap.treatz .brand_logo::after {
   content: "";
   position: absolute;
   left: 2px;
   bottom: 2px;
   width: 45px;
   height: 2px;
-  background: #ffac38;
+  background: hsl(35, 100%, 61%);
 }
-.banner .ban_con .ban_con_text_wrap.treatz .care_text_wrap {
+.banner .ban_con .ban_con_text_wrap.treatz .treatz_text {
   width: 100%;
-  position: relative;
 }
-.banner .ban_con .ban_con_text_wrap.treatz .care_text_1 {
-  font-size: 42px;
-  font-weight: 400;
+.banner .ban_con .ban_con_text_wrap.treatz .sub_text {
   color: #222;
-  letter-spacing: -1.5px;
-  line-height: 1.25;
 }
-.banner .ban_con .ban_con_text_wrap.treatz .care_text_2 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #2b2b2b;
-  line-height: 1.25;
+.banner .ban_con .ban_con_text_wrap.treatz .main_text {
   margin-top: 4px;
+  color: #2b2b2b;
 }
-.banner .ban_con .ban_con_text_wrap.treatz .care_text_2 span {
-  color: #ffac38;
-  line-height: 1.25;
+.banner .ban_con .ban_con_text_wrap.treatz .main_text span {
+  color: hsl(35, 100%, 61%);
 }
-.banner .ban_con .ban_con_text_wrap.bill {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  gap: 12px;
-  text-align: center;
-}
-.banner .ban_con .ban_con_text_wrap.bill .bill_1 {
-  font-size: 28px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  line-height: 1.3;
-}
-.banner .ban_con .ban_con_text_wrap.bill .bill_2 {
-  font-size: 110px;
-  font-weight: 700;
-  letter-spacing: -4px;
-  line-height: 0.9;
-}
-.banner .ban_con .ban_con_text_wrap.bill .bill_3 {
-  font-size: 24px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  line-height: 1.4;
-}
-.banner .ban_con .ban_con_text_wrap.bill .bill_4 {
-  font-size: 34px;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-  line-height: 1.2;
+.banner .ban_con .ban_con_text_wrap {
+  /* ==================================================
+     MOOD
+  ================================================== */
 }
 .banner .ban_con .ban_con_text_wrap.mood {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding-left: 70px;
-  gap: 12px;
-  color: tomato;
+  gap: 21px;
+  color: #c96e5f;
 }
-.banner .ban_con .ban_con_text_wrap.mood .mood_1 {
+.banner .ban_con .ban_con_text_wrap.mood .eyebrow {
   width: 100%;
-  max-width: 400px;
-  padding: 7px 12px;
-  text-align: center;
-  border: 1px solid tomato;
+  max-width: 440px;
+  padding: 9px 16px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #c96e5f;
   border-radius: 50px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
+  text-align: center;
+  color: #c96e5f;
   background: rgba(255, 255, 255, 0.2);
 }
-.banner .ban_con .ban_con_text_wrap.mood .mood_2 {
-  font-size: 38px;
-  font-weight: 600;
-  letter-spacing: -1px;
-  line-height: 1.2;
+.banner .ban_con .ban_con_text_wrap.mood .sub_text {
+  font-size: 26px;
+  color: #c96e5f;
 }
-.banner .ban_con .ban_con_text_wrap.mood .mood_3 {
+.banner .ban_con .ban_con_text_wrap.mood .point_group {
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
-  justify-content: left;
   align-items: baseline;
   gap: 16px;
 }
-.banner .ban_con .ban_con_text_wrap.mood .big_text {
-  font-size: 90px;
-  font-weight: 700;
-  letter-spacing: -4px;
-  line-height: 1;
+.banner .ban_con .ban_con_text_wrap.mood .point_text {
+  color: #c96e5f;
 }
 .banner .ban_con .ban_con_text_wrap.mood .small_text {
-  font-size: 20px;
+  margin: 0;
+  font-size: 26px;
   font-weight: 600;
   line-height: 1.3;
+  color: #c96e5f;
 }
-.banner .ban_con .ban_con_text_wrap.mood .mood_4 {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: rgba(255, 99, 71, 0.85);
+.banner .ban_con .ban_con_text_wrap.mood .caption {
+  font-size: 19px;
+  color: rgba(201, 110, 95, 0.85);
 }
-.banner .ban_con .ban_con_text_wrap.mood .mood_5 {
+.banner .ban_con .ban_con_text_wrap.mood .notice {
   color: white;
 }
-.banner .ban_con .ban_con_text_wrap.stay {
-  display: flex;
-  flex-direction: column;
+.banner .ban_con .ban_con_text_wrap {
+  /* ==================================================
+     BILLIONS
+  ================================================== */
+}
+.banner .ban_con .ban_con_text_wrap.bill {
   justify-content: center;
-  gap: 18px;
-  padding-left: 70px;
-  color: #50462c;
-}
-.banner .ban_con .ban_con_text_wrap.stay .stay_1 {
-  width: 150px;
-  padding: 8px 10px;
-  border: 1px solid #50462c;
-  border-radius: 60px;
+  align-items: center;
+  gap: 21px;
   text-align: center;
-  color: #50462c;
-  font-size: 12px;
-  font-weight: 600;
+  color: white;
+}
+.banner .ban_con .ban_con_text_wrap.bill .sub_text {
+  font-size: 26px;
   letter-spacing: 1.5px;
-  background: rgba(255, 255, 255, 0.25);
+  color: white;
 }
-.banner .ban_con .ban_con_text_wrap.stay .stay_2 {
-  font-size: 18px;
-  letter-spacing: -0.3px;
-  color: #50462c;
+.banner .ban_con .ban_con_text_wrap.bill .point_text {
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
-.banner .ban_con .ban_con_text_wrap.stay .stay_3 {
-  font-size: 58px;
-  font-weight: 700;
-  color: #50462c;
-  letter-spacing: -2.5px;
-  line-height: 1.15;
-  margin-left: -3px;
+.banner .ban_con .ban_con_text_wrap.bill .caption {
+  font-size: 19px;
+  color: white;
 }
-.banner .ban_con .ban_con_text_wrap.stay .stay_4 {
-  font-size: 18px;
-  font-weight: 400;
-  color: #50462c;
-  letter-spacing: 0;
-  line-height: 1.5;
+.banner .ban_con .ban_con_text_wrap.bill .brand_text {
+  font-size: 39px;
+  color: white;
+}
+.banner .ban_con .ban_con_text_wrap.bill p {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.banner .ban_con .ban_con_text_wrap {
+  /* ==================================================
+     JEWDE
+  ================================================== */
 }
 .banner .ban_con .ban_con_text_wrap.jewde {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  gap: 18px;
-  padding-left: 70px;
-}
-.banner .ban_con .ban_con_text_wrap.jewde .jewde_1 {
-  width: 260px;
-  box-sizing: border-box;
-  border: 1px solid #af9a5e;
-  border-left: none;
-  border-right: none;
-  text-align: center;
-  padding: 7px 10px;
-  letter-spacing: 2px;
-  font-size: 12px;
-}
-.banner .ban_con .ban_con_text_wrap.jewde .jewde_2 {
-  font-size: 58px;
-  font-weight: 700;
-  letter-spacing: -2px;
+  gap: 21px;
   color: #222;
-  line-height: 1.15;
 }
-.banner .ban_con .ban_con_text_wrap.jewde .jewde_3 {
+.banner .ban_con .ban_con_text_wrap.jewde .eyebrow {
+  width: 300px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border-top: 1px solid #af9a5e;
+  border-bottom: 1px solid #af9a5e;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  color: #222;
+}
+.banner .ban_con .ban_con_text_wrap.jewde .main_text {
+  color: #222;
+}
+.banner .ban_con .ban_con_text_wrap.jewde .benefit {
   margin-top: 5px;
 }
-.banner .ban_con .ban_con_text_wrap.jewde .jewde_3 .jewde_3_1 {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+.banner .ban_con .ban_con_text_wrap.jewde .benefit .sub_text {
   margin-bottom: 6px;
   color: #555;
 }
-.banner .ban_con .ban_con_text_wrap.jewde .jewde_3 .jewde_3_2 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #af9a5e;
+.banner .ban_con .ban_con_text_wrap.jewde .benefit_text {
   margin-bottom: 8px;
+  color: #af9a5e;
 }
-.banner .ban_con .ban_con_text_wrap.jewde .jewde_3 .jewde_3_3 {
-  font-size: 12px;
-  line-height: 1.6;
+.banner .ban_con .ban_con_text_wrap.jewde .notice {
   color: #666;
+}
+.banner .banner_dots {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+.banner .banner_dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.banner .banner_dots .dot.active {
+  width: 22px;
+  border-radius: 4px;
+  background: #af9a5e;
 }
 
 /* 메인 영역 */
@@ -354,13 +417,12 @@ header .sign_area .join .join_in .join_text {
   display: flex;
   background: #fdfcf9;
   /* 왼쪽 */
-  /* 오른쪽 */
 }
 .top_sec .side {
   background-image: url(../images/flower.png);
   background-repeat: repeat-y;
   background-size: contain;
-  width: 260px;
+  width: 300px;
   flex-shrink: 0;
   border-right: 1px solid #e8e2d5;
 }
@@ -390,7 +452,6 @@ header .sign_area .join .join_in .join_text {
   width: 100%;
 }
 .top_sec .side .side_inner .my_pick .my_pick_main_text {
-  font-family: "Abril Fatface", cursive;
   font-size: 22px;
   color: #af9a5e;
   letter-spacing: 1px;
@@ -428,6 +489,11 @@ header .sign_area .join .join_in .join_text {
   color: #af9a5e;
   border-bottom: 1px solid #eee;
 }
+.top_sec .side .side_inner .my_pick .my_pick_con .my_pick_right .my_pick_each:empty::before {
+  content: "미선택";
+  color: #ccc;
+  font-weight: 400;
+}
 .top_sec .side .side_inner .my_pick_sub_wrap {
   display: flex;
   gap: 10px;
@@ -453,6 +519,9 @@ header .sign_area .join .join_in .join_text {
   margin-top: 6px;
   color: #444;
 }
+.top_sec {
+  /* 오른쪽 */
+}
 .top_sec .content {
   flex: 1;
   min-width: 0;
@@ -464,18 +533,49 @@ header .sign_area .join .join_in .join_text {
   flex-direction: column;
   min-width: 0;
   width: 100%;
-  padding: 80px 60px;
+  padding: 50px 60px;
+  position: relative;
+}
+.top_sec .content .box:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background: rgba(175, 154, 94, 0.35);
 }
 .top_sec .content .box .box_title_wrap {
   width: 100%;
-  padding: 45px 20px 25px;
+  padding: 35px 10px 25px;
+}
+.top_sec .content .box .box_title_wrap .title_kicker {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #8f793f;
+  margin-bottom: 0px;
 }
 .top_sec .content .box .box_title_wrap h3 {
+  position: relative;
+  display: inline-block;
   font-family: "Abril Fatface", cursive;
   color: #af9a5e;
   font-size: 42px;
   font-weight: 400;
   letter-spacing: 0.5px;
+  margin-left: -3px;
+}
+.top_sec .content .box .box_title_wrap h3::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: -8px;
+  width: 36px;
+  height: 2px;
+  background: #af9a5e;
 }
 .top_sec .content .box .swiper {
   width: 100%;
@@ -491,6 +591,12 @@ header .sign_area .join .join_in .join_text {
   background: #fff;
   border: 1px solid #ebe7df;
   overflow: hidden;
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+.top_sec .content .box .swiper .swiper-slide:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+  border-color: rgba(175, 154, 94, 0.3);
 }
 .top_sec .content .box .swiper .swiper-slide .img_box {
   width: 100%;
@@ -501,7 +607,8 @@ header .sign_area .join .join_in .join_text {
 .top_sec .content .box .swiper .swiper-slide .img_box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   transition: transform 0.6s ease;
 }
@@ -641,6 +748,12 @@ header .sign_area .join .join_in .join_text {
 .top_sec .content .box .button_wrap .view_more_btn:hover::after {
   transform: translateX(4px);
 }
+.top_sec .content .box:nth-child(even) {
+  background: #fdfcf9;
+}
+.top_sec .content .box:nth-child(odd) {
+  background: #fff;
+}
 .top_sec .content .box3 .swiper .swiper-slide {
   position: relative;
 }
@@ -651,7 +764,8 @@ header .sign_area .join .join_in .join_text {
 .top_sec .content .box3 .swiper .swiper-slide .img_box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 .top_sec .content .box3 .swiper .swiper-slide .txt_box {
@@ -673,17 +787,19 @@ header .sign_area .join .join_in .join_text {
 /* 바텀 섹션 영역 */
 .bottom_sec {
   position: relative;
-  /* =========================================
-     리뷰 / 웨딩 TIP
-  ========================================= */
 }
 .bottom_sec .move_line {
   height: 130px;
   display: flex;
   align-items: center;
   overflow: hidden;
-  border-top: 1px solid #eee8dc;
-  border-bottom: 1px solid #eee8dc;
+  background: linear-gradient(90deg, #50462c 0%, #af9a5e 50%, #50462c 100%);
+  border-top: none;
+  border-bottom: none;
+}
+.bottom_sec .move_line .flow-wrap {
+  color: #fff;
+  letter-spacing: 2px;
 }
 .bottom_sec .flow-text {
   display: flex;
@@ -705,56 +821,85 @@ header .sign_area .join .join_in .join_text {
 }
 @keyframes textLoop {
   0% {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
+}
+.bottom_sec {
+  /* =========================================
+     리뷰 / 웨딩 TIP
+  ========================================= */
 }
 .bottom_sec .review_wrap {
   width: 100%;
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-columns: 326px minmax(0, 1fr);
   gap: 45px;
   padding: 60px;
   background: #fff;
-  align-items: start;
-  /* ----------------------------------------
-     카드에 은은한 테두리
-  ---------------------------------------- */
+  align-items: stretch;
 }
 .bottom_sec .review_wrap .review_event {
   width: 100%;
+  height: 100%;
   display: block;
   overflow: hidden;
   position: relative;
 }
 .bottom_sec .review_wrap .review_event img {
   width: 100%;
+  height: 100%;
   display: block;
   aspect-ratio: 4/4.5;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.5s ease;
 }
-.bottom_sec .review_wrap .review_event::after {
+.bottom_sec .review_wrap .review_event::before {
   content: "";
   position: absolute;
   inset: 0;
-  border: 1px solid rgba(175, 154, 94, 0.25);
+  background: linear-gradient(145deg, rgba(175, 153, 94, 0.548) 0%, rgba(80, 70, 44, 0.37) 100%);
+  mix-blend-mode: soft-light;
   pointer-events: none;
-  transition: border-color 0.3s ease;
+  z-index: 1;
 }
 .bottom_sec .review_wrap .review_event:hover img {
   transform: scale(1.04);
 }
-.bottom_sec .review_wrap .review_event:hover::after {
-  border-color: rgba(175, 154, 94, 0.7);
-}
 .bottom_sec .review_wrap .tip_wrap {
   width: 100%;
   min-width: 0;
+}
+.bottom_sec .review_wrap .tip_wrap .tip_header {
+  margin-bottom: 25px;
+}
+.bottom_sec .review_wrap .tip_wrap .tip_header .title_kicker {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #8f793f;
+}
+.bottom_sec .review_wrap .tip_wrap .tip_header h3 {
+  position: relative;
+  display: inline-block;
+  font-family: "Abril Fatface", cursive;
+  color: #af9a5e;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.bottom_sec .review_wrap .tip_wrap .tip_header h3::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: -8px;
+  width: 36px;
+  height: 2px;
+  background: #af9a5e;
 }
 .bottom_sec .review_wrap .tip_box {
   width: 100%;
@@ -768,9 +913,6 @@ header .sign_area .join .join_in .join_text {
   position: relative;
   display: block;
   overflow: hidden;
-  /* ----------------------------------------
-     Hover
-  ---------------------------------------- */
 }
 .bottom_sec .review_wrap .tip .tip_img {
   position: absolute;
@@ -783,7 +925,8 @@ header .sign_area .join .join_in .join_text {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
 .bottom_sec .review_wrap .tip .tip_text {
@@ -803,6 +946,11 @@ header .sign_area .join .join_in .join_text {
   transform: translateY(0);
   transition: background 0.4s ease, color 0.4s ease, transform 0.4s ease;
 }
+.bottom_sec .review_wrap .tip {
+  /* ----------------------------------------
+     Hover
+  ---------------------------------------- */
+}
 .bottom_sec .review_wrap .tip:hover .tip_img img {
   transform: scale(1.08);
   opacity: 0.8;
@@ -810,6 +958,11 @@ header .sign_area .join .join_in .join_text {
 .bottom_sec .review_wrap .tip:hover .tip_text {
   color: #fff;
   background: rgba(175, 154, 94, 0.9);
+}
+.bottom_sec .review_wrap {
+  /* ----------------------------------------
+     카드에 은은한 테두리
+  ---------------------------------------- */
 }
 .bottom_sec .review_wrap .tip::after {
   content: "";
@@ -823,9 +976,6 @@ header .sign_area .join .join_in .join_text {
   border-color: rgba(175, 154, 94, 0.7);
 }
 
-/* ========================================
-   푸터
-======================================== */
 footer {
   width: 100%;
   background: #2f2c27;
@@ -840,7 +990,6 @@ footer .footer_text_wrap {
 footer .footer_text_wrap .footer_box {
   width: 100%;
   /* 회사명 */
-  /* 회사 정보 */
 }
 footer .footer_text_wrap .footer_box .com_name {
   display: flex;
@@ -851,13 +1000,17 @@ footer .footer_text_wrap .footer_box .com_name {
 footer .footer_text_wrap .footer_box .com_name img {
   width: 42px;
   height: 42px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 footer .footer_text_wrap .footer_box .com_name .com_name_text {
   color: #af9a5e;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.3px;
+}
+footer .footer_text_wrap .footer_box {
+  /* 회사 정보 */
 }
 footer .footer_text_wrap .footer_box .com_info {
   font-size: 13px;
@@ -878,6 +1031,100 @@ footer .footer_text_wrap .footer_box .com_info:last-child {
 }
 
 @media (max-width: 1024px) {
+  .banner {
+    --banner-side-padding: 50px;
+    height: 500px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    padding: 30px var(--banner-side-padding);
+    /* 공통 타이포 */
+  }
+  .banner .ban_con .ban_con_text_wrap .eyebrow {
+    font-size: 12px;
+  }
+  .banner .ban_con .ban_con_text_wrap .sub_text {
+    font-size: 18px;
+  }
+  .banner .ban_con .ban_con_text_wrap .main_text {
+    font-size: 42px;
+  }
+  .banner .ban_con .ban_con_text_wrap .point_text {
+    font-size: 54px;
+  }
+  .banner .ban_con .ban_con_text_wrap .caption {
+    font-size: 14px;
+  }
+  .banner .ban_con .ban_con_text_wrap .notice {
+    font-size: 11px;
+  }
+  .banner .ban_con .ban_con_text_wrap .brand_text {
+    font-size: 27px;
+  }
+  .banner .ban_con .ban_con_text_wrap .benefit_text {
+    font-size: 20px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       STAY
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.stay {
+    gap: 15px;
+  }
+  .banner .ban_con .ban_con_text_wrap.stay .eyebrow {
+    width: 140px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       TREATZ
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.treatz {
+    padding-bottom: 55px;
+    gap: 20px;
+  }
+  .banner .ban_con .ban_con_text_wrap.treatz .brand_logo {
+    font-size: 28px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       MOOD
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.mood {
+    gap: 10px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .eyebrow {
+    max-width: 340px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .point_group {
+    gap: 12px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .small_text {
+    font-size: 18px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       BILLIONS
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.bill {
+    gap: 10px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       JEWDE
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde {
+    gap: 15px;
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde .eyebrow {
+    width: 230px;
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde .benefit {
+    margin-top: 2px;
+  }
   .top_sec .content .box .swiper .swiper-slide .txt_box {
     padding: 8px;
   }
@@ -887,13 +1134,11 @@ footer .footer_text_wrap .footer_box .com_info:last-child {
   .top_sec .content .box3 .swiper .swiper-slide .txt_box {
     min-height: 135px;
   }
-
   .bottom_sec .review_wrap {
     grid-template-columns: 220px minmax(0, 1fr);
     gap: 30px;
     padding: 50px 40px;
     /* 리뷰 이벤트 */
-    /* TIP 영역 */
   }
   .bottom_sec .review_wrap .review_event {
     width: 100%;
@@ -902,7 +1147,11 @@ footer .footer_text_wrap .footer_box .com_info:last-child {
     width: 100%;
     height: auto;
     aspect-ratio: auto;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .bottom_sec .review_wrap {
+    /* TIP 영역 */
   }
   .bottom_sec .review_wrap .tip_wrap {
     width: 100%;
@@ -925,7 +1174,8 @@ footer .footer_text_wrap .footer_box .com_info:last-child {
   .bottom_sec .review_wrap .tip .tip_img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .bottom_sec .review_wrap .tip .tip_text {
     min-height: 55px;
@@ -935,10 +1185,149 @@ footer .footer_text_wrap .footer_box .com_info:last-child {
   }
 }
 @media (max-width: 768px) {
+  .banner {
+    --banner-side-padding: 30px;
+    height: 480px;
+  }
+  .banner .ban_con {
+    background-position: center;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    padding: 25px var(--banner-side-padding);
+    /* ------------------------------
+       공통 타이포
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  .banner .ban_con .ban_con_text_wrap .sub_text {
+    font-size: 17px;
+    letter-spacing: -0.4px;
+  }
+  .banner .ban_con .ban_con_text_wrap .main_text {
+    font-size: 36px;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+  }
+  .banner .ban_con .ban_con_text_wrap .point_text {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+  .banner .ban_con .ban_con_text_wrap .caption {
+    font-size: 13px;
+    letter-spacing: -0.2px;
+  }
+  .banner .ban_con .ban_con_text_wrap .notice {
+    font-size: 10px;
+  }
+  .banner .ban_con .ban_con_text_wrap .brand_text {
+    font-size: 25px;
+  }
+  .banner .ban_con .ban_con_text_wrap .benefit_text {
+    font-size: 18px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       STAY
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.stay {
+    justify-content: center;
+    gap: 14px;
+  }
+  .banner .ban_con .ban_con_text_wrap.stay .eyebrow {
+    width: 130px;
+    padding: 7px 8px;
+  }
+  .banner .ban_con .ban_con_text_wrap.stay .caption {
+    max-width: 400px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       TREATZ
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.treatz {
+    justify-content: flex-end;
+    padding-bottom: 45px;
+    gap: 16px;
+  }
+  .banner .ban_con .ban_con_text_wrap.treatz .brand_logo {
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    padding-bottom: 6px;
+  }
+  .banner .ban_con .ban_con_text_wrap.treatz .brand_logo::after {
+    width: 38px;
+  }
+  .banner .ban_con .ban_con_text_wrap.treatz .main_text {
+    margin-top: 3px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       MOOD
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.mood {
+    justify-content: center;
+    gap: 9px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .eyebrow {
+    max-width: 280px;
+    padding: 6px 10px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .point_group {
+    gap: 10px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .point_text {
+    font-size: 46px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .small_text {
+    font-size: 16px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .caption {
+    max-width: 380px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       BILLIONS
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.bill {
+    gap: 9px;
+  }
+  .banner .ban_con .ban_con_text_wrap.bill .point_text {
+    font-size: 50px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       JEWDE
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde {
+    gap: 14px;
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde .eyebrow {
+    width: 210px;
+    padding: 6px 8px;
+    gap: 5px;
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde .benefit {
+    margin-top: 0;
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde .benefit .sub_text {
+    margin-bottom: 4px;
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde .benefit_text {
+    margin-bottom: 5px;
+  }
   .top_sec .content .box .swiper .swiper-slide .txt_box .hall_info {
     align-items: center;
   }
   .top_sec .content .box .swiper .swiper-slide .txt_box .hall_info .hall_info_inbox {
+    width: -moz-fit-content;
     width: fit-content;
     padding-left: 22px;
   }
@@ -950,7 +1339,6 @@ footer .footer_text_wrap .footer_box .com_info:last-child {
     width: 100%;
     padding-left: 22px;
   }
-
   /* 바텀 섹션 영역 */
   .bottom_sec .review_wrap {
     width: 100%;
@@ -960,7 +1348,6 @@ footer .footer_text_wrap .footer_box .com_info:last-child {
     padding: 45px 30px;
     box-sizing: border-box;
     /* 리뷰 이벤트 */
-    /* TIP 영역 */
   }
   .bottom_sec .review_wrap .review_event {
     width: 100%;
@@ -971,7 +1358,11 @@ footer .footer_text_wrap .footer_box .com_info:last-child {
     width: 100%;
     height: auto;
     aspect-ratio: auto;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .bottom_sec .review_wrap {
+    /* TIP 영역 */
   }
   .bottom_sec .review_wrap .tip_wrap {
     width: 100%;
@@ -993,7 +1384,8 @@ footer .footer_text_wrap .footer_box .com_info:last-child {
   .bottom_sec .review_wrap .tip .tip_img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .bottom_sec .review_wrap .tip .tip_text {
     padding: 10px 8px;
@@ -1005,112 +1397,138 @@ footer .footer_text_wrap .footer_box .com_info:last-child {
   }
 }
 @media (max-width: 650px) {
-  /* ========================================
-     배너
-  ======================================== */
-  .banner .ban_con .ban_con_text_wrap.jewde {
-    padding-left: 20px;
-    padding-bottom: 30px;
-    gap: 10px;
-    justify-content: flex-end;
+  .banner {
+    --banner-side-padding: 25px;
+    height: 460px;
   }
-  .banner .ban_con .ban_con_text_wrap.jewde .jewde_1 {
-    width: 170px;
-    border-left: none;
-    border-right: none;
+  .banner .ban_con .ban_con_text_wrap {
+    padding: 22px var(--banner-side-padding);
   }
-  .banner .ban_con .ban_con_text_wrap.jewde .jewde_2 {
-    font-size: 40px;
+  .banner .ban_con .ban_con_text_wrap::before {
+    inset: 12px;
   }
-  .banner .ban_con .ban_con_text_wrap.treatz {
-    padding-left: 20px;
-    padding-top: 30px;
-    gap: 10px;
-    justify-content: flex-start;
+  .banner .ban_con .ban_con_text_wrap .eyebrow {
+    font-size: 10.5px;
+    letter-spacing: 0.9px;
   }
-  .banner .ban_con .ban_con_text_wrap.treatz .ban_logo {
-    font-size: 34px;
-    font-weight: 600;
+  .banner .ban_con .ban_con_text_wrap .sub_text {
+    font-size: 16px;
+    letter-spacing: -0.35px;
   }
-  .banner .ban_con .ban_con_text_wrap.treatz .care_text_1 {
-    font-size: 40px;
+  .banner .ban_con .ban_con_text_wrap .main_text {
+    font-size: 33px;
+    letter-spacing: -1.35px;
+    line-height: 1.2;
   }
-  .banner .ban_con .ban_con_text_wrap.treatz .care_text_2 {
-    font-size: 40px;
+  .banner .ban_con .ban_con_text_wrap .point_text {
+    font-size: 44px;
+    letter-spacing: -1.75px;
   }
-  .banner .ban_con .ban_con_text_wrap.bill {
-    justify-content: flex-start;
-    padding-top: 30px;
+  .banner .ban_con .ban_con_text_wrap .caption {
+    font-size: 12px;
+    line-height: 1.5;
   }
-  .banner .ban_con .ban_con_text_wrap.bill .bill_1 {
-    font-size: 26px;
-    text-align: center;
+  .banner .ban_con .ban_con_text_wrap .notice {
+    font-size: 9.5px;
   }
-  .banner .ban_con .ban_con_text_wrap.bill .bill_2 {
-    font-size: 55px;
+  .banner .ban_con .ban_con_text_wrap .brand_text {
+    font-size: 23px;
   }
-  .banner .ban_con .ban_con_text_wrap.bill .bill_3 {
-    font-size: 26px;
+  .banner .ban_con .ban_con_text_wrap .benefit_text {
+    font-size: 17px;
   }
-  .banner .ban_con .ban_con_text_wrap.bill .bill_4 {
-    font-weight: 800;
-  }
-  .banner .ban_con .ban_con_text_wrap.mood {
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    padding-left: 0;
-  }
-  .banner .ban_con .ban_con_text_wrap.mood .mood_1 {
-    max-width: 300px;
-  }
-  .banner .ban_con .ban_con_text_wrap.mood .mood_2 {
-    font-size: 26px;
-    font-weight: 900;
-  }
-  .banner .ban_con .ban_con_text_wrap.mood .mood_3 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  .banner .ban_con .ban_con_text_wrap.mood .big_text {
-    width: auto;
-    font-size: 40px;
-  }
-  .banner .ban_con .ban_con_text_wrap.mood .small_text {
-    width: auto;
-    font-size: 22px;
-  }
-  .banner .ban_con .ban_con_text_wrap.mood .mood_4 {
-    text-align: center;
-  }
-  .banner .ban_con .ban_con_text_wrap.mood .mood_5 {
-    color: white;
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       STAY
+    ------------------------------ */
   }
   .banner .ban_con .ban_con_text_wrap.stay {
-    padding-left: 20px;
-    gap: 10px;
+    gap: 12px;
   }
-  .banner .ban_con .ban_con_text_wrap.stay .stay_1 {
-    padding: 5px 10px;
+  .banner .ban_con .ban_con_text_wrap.stay .eyebrow {
+    width: 122px;
+    padding: 6px 8px;
   }
-  .banner .ban_con .ban_con_text_wrap.stay .stay_2 {
-    padding-left: 3px;
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       TREATZ
+    ------------------------------ */
   }
-  .banner .ban_con .ban_con_text_wrap.stay .stay_3 {
-    font-size: 40px;
+  .banner .ban_con .ban_con_text_wrap.treatz {
+    padding-bottom: 40px;
+    gap: 14px;
   }
-
+  .banner .ban_con .ban_con_text_wrap.treatz .brand_logo {
+    font-size: 23px;
+    letter-spacing: 1.2px;
+    padding-bottom: 5px;
+  }
+  .banner .ban_con .ban_con_text_wrap.treatz .brand_logo::after {
+    width: 35px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       MOOD
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.mood {
+    gap: 8px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .eyebrow {
+    max-width: 260px;
+    padding: 6px 9px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .point_group {
+    gap: 8px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .point_text {
+    font-size: 42px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .small_text {
+    font-size: 15px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .caption {
+    max-width: 350px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       BILLIONS
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.bill {
+    gap: 8px;
+  }
+  .banner .ban_con .ban_con_text_wrap.bill .point_text {
+    font-size: 46px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       JEWDE
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde {
+    gap: 12px;
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde .eyebrow {
+    width: 200px;
+    padding: 6px 7px;
+    gap: 5px;
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde .benefit {
+    margin-top: 1px;
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde .benefit .sub_text {
+    margin-bottom: 4px;
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde .benefit_text {
+    margin-bottom: 5px;
+  }
   /* ========================================
-     메인
+     메인 (기존 유지)
   ======================================== */
   .top_sec {
     display: flex;
     flex-direction: column;
-    /* 사이드 영역 */
-    /* 콘텐츠 영역 */
   }
   .top_sec .side {
     width: 100%;
@@ -1136,5 +1554,130 @@ footer .footer_text_wrap .footer_box .com_info:last-child {
   header .sign_area {
     gap: 5px;
     flex-direction: column;
+    align-items: flex-start;
   }
-}
+  .banner {
+    --banner-side-padding: 20px;
+    height: 430px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    padding: 20px var(--banner-side-padding);
+    /* ------------------------------
+       공통 타이포
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.7px;
+  }
+  .banner .ban_con .ban_con_text_wrap .sub_text {
+    font-size: 15px;
+    letter-spacing: -0.3px;
+  }
+  .banner .ban_con .ban_con_text_wrap .main_text {
+    font-size: 30px;
+    letter-spacing: -1.2px;
+  }
+  .banner .ban_con .ban_con_text_wrap .point_text {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+  .banner .ban_con .ban_con_text_wrap .caption {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .banner .ban_con .ban_con_text_wrap .notice {
+    font-size: 9px;
+    line-height: 1.4;
+  }
+  .banner .ban_con .ban_con_text_wrap .brand_text {
+    font-size: 22px;
+  }
+  .banner .ban_con .ban_con_text_wrap .benefit_text {
+    font-size: 16px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       STAY
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.stay {
+    gap: 11px;
+  }
+  .banner .ban_con .ban_con_text_wrap.stay .eyebrow {
+    width: 115px;
+    padding: 6px 7px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       TREATZ
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.treatz {
+    padding-bottom: 35px;
+    gap: 12px;
+  }
+  .banner .ban_con .ban_con_text_wrap.treatz .brand_logo {
+    font-size: 22px;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+  }
+  .banner .ban_con .ban_con_text_wrap.treatz .brand_logo::after {
+    width: 32px;
+    height: 1px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       MOOD
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.mood {
+    gap: 7px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .eyebrow {
+    max-width: 240px;
+    padding: 5px 8px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .point_group {
+    gap: 7px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .point_text {
+    font-size: 38px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .small_text {
+    font-size: 14px;
+  }
+  .banner .ban_con .ban_con_text_wrap.mood .caption {
+    max-width: 330px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       BILLIONS
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.bill {
+    gap: 7px;
+  }
+  .banner .ban_con .ban_con_text_wrap.bill .point_text {
+    font-size: 42px;
+  }
+  .banner .ban_con .ban_con_text_wrap {
+    /* ------------------------------
+       JEWDE
+    ------------------------------ */
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde {
+    gap: 11px;
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde .eyebrow {
+    width: 185px;
+    padding: 5px 6px;
+    gap: 4px;
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde .benefit .sub_text {
+    margin-bottom: 3px;
+  }
+  .banner .ban_con .ban_con_text_wrap.jewde .benefit_text {
+    margin-bottom: 4px;
+  }
+}/*# sourceMappingURL=re_wedding.css.map */

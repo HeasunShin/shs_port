@@ -1,0 +1,15 @@
+// ==========================================================================
+// 변수
+// ==========================================================================
+$color-black: #000000;
+$color-white: #ffffff;
+$color-green: greenyellow;
+$color-text: #333333;
+
+$font-base: 'Nanum Gothic', sans-serif;
+
+// 기존 3단 breakpoint 그대로 유지 (PC 뷰포트 로직은 JS와 커플링되어 있어 값 변경 X)
+$bp-pc: 1280px;        // 이 값 이상 = PC(#wrap, 스크롤재킹 JS)
+$bp-tablet-max: 1279px;
+$bp-tablet-min: 681px;
+$bp-mobile-max: 680px;

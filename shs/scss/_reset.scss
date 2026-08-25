@@ -1,0 +1,119 @@
+@use "variables" as v;
+
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: v.$font-base;
+  box-sizing: border-box; // *::before, *::after 규칙과 통합
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: v.$color-text;
+}
+
+img {
+  width: 100%;
+}
+
+i {
+  font-style: italic;
+}
+
+// ==========================================================================
+// 눈알(eye) - eye_d.css, 브레이크포인트 무관
+// ==========================================================================
+.eye_wrap_up {
+  // border: 2px solid red;
+  position: absolute;
+}
+
+.eyes {
+  display: flex;
+  flex-direction: row;
+  // width: 85%;
+  // height: 230px;
+  justify-content: center;
+  // margin-top: -470px;
+  // margin-left: 10px;
+  rotate: 15deg;
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
+
+  .eye {
+    height: 170px;
+    width: 120px;
+    border-radius: 100%;
+    margin: 5px;
+    background: #efffd4;
+    box-shadow: 0 0 3px;
+    position: relative;
+    overflow: hidden;
+    border: #efffd4 solid 3px;
+
+    .eye-retina {
+      display: inline-block;
+      width: 60%;
+      height: 60%;
+      background: black;
+      border: #efffd4 0 solid;
+      border-radius: 50%;
+      position: absolute;
+      top: 70%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      transition-duration: 0.1s;
+    }
+
+    .eye-lash {
+      position: absolute;
+      height: 50%;
+      background: linear-gradient(65deg, #8ec68d, #508b4f);
+      width: 100%;
+      z-index: 1;
+      transition-duration: 0.1s;
+    }
+
+    .up {
+      top: -50%;
+      animation: blinkbottom 4s linear infinite;
+    }
+
+    .down {
+      bottom: -50%;
+      animation: blinktop 4s linear infinite;
+    }
+  }
+}
+
+@keyframes blinkbottom {
+  0% {
+    top: -50%;
+  }
+  5% {
+    top: 0;
+  }
+  10% {
+    top: -50%;
+  }
+}
+
+@keyframes blinktop {
+  0% {
+    bottom: -50%;
+  }
+  5% {
+    bottom: 0;
+  }
+  10% {
+    bottom: -50%;
+  }
+}

@@ -1,0 +1,240 @@
+@use 'mixins';
+
+// ==========================================================================
+// 태블릿+모바일 완전 중복 - 별 위치값 (pc와는 값이 다름)
+// ==========================================================================
+@include mixins.mo-common {
+  .star {
+    &:nth-child(1) { top: -40%; right: -80%; left: initial; animation-duration: 2.6s; }
+    &:nth-child(2) { top: -20%; right: -50%; left: initial; animation-delay: 0.3s; animation-duration: 2.2s; }
+    &:nth-child(3) { top: 0; right: 85%; left: initial; animation-delay: 0.6s; animation-duration: 2s; }
+    &:nth-child(4) { top: 20%; right: -15%; animation-delay: 0.8s; animation-duration: 2.8s; }
+    &:nth-child(5) { top: 40%; right: 54%; animation-delay: 1.5s; animation-duration: 2.5s; }
+    &:nth-child(6) { top: 60%; right: 12%; animation-delay: 2s; animation-duration: 2s; }
+  }
+}
+
+// ==========================================================================
+// 태블릿+모바일 완전 중복 - 햄버거 메뉴 뼈대 (크기/폰트는 각 breakpoint에서 override)
+// ==========================================================================
+@include mixins.mo-common {
+  #wrap { display: none; }
+  html, body { overflow-x: hidden; }
+  #mo_wrap {
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+  }
+  .ham_wrap {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 2%;
+    right: 0.5%;
+    z-index: 999999;
+  }
+  .ham {
+    width: 70px;
+    height: 70px;
+    float: right;
+    position: relative;
+    z-index: 999;
+
+    > img {
+      width: 70%;
+      height: 70%;
+      color: white;
+    }
+  }
+  .ham_menu_wrap {
+    height: 100vh;
+    background: rgb(9, 9, 9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+  }
+  .ham_text_wrap {
+    width: 100%;
+    height: 70vh;
+    margin-top: 150px;
+
+    > a { display: block; }
+  }
+  .ham_menu {
+    width: 100%;
+    color: greenyellow;
+    text-align: center;
+
+    &:nth-child(1), &:nth-child(4) { line-height: 40px; }
+  }
+  section {
+    width: 100vw;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .bg_top_mo { width: 100%; height: 100vh; position: relative; }
+  .sub_topic_mo { width: 100%; height: 25px; font-size: 1rem; color: white; text-align: center; }
+  .main_menu_wrap_mo {
+    width: 100%;
+    height: 160px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 2rem;
+    position: relative;
+    z-index: 9999;
+  }
+  .main_menu_mo > a {
+    color: white;
+    display: block;
+    &:hover { color: greenyellow; }
+  }
+  .name_wrap_mo {
+    width: 100%;
+    height: 5%;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    font-style: oblique;
+  }
+}
+
+// ==========================================================================
+// 별똥별 - pc / tablet / mobile 3개 미디어쿼리에 완전히 동일하게 중복되어 있던 부분
+// PC와 모바일계열(tablet+mobile)의 star 위치값(top/right)이 서로 달라서
+// 위치는 각 breakpoint 파일에 남겨두고, 애니메이션/공통 구조만 여기로 뺌
+// ==========================================================================
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: #fff;
+  border-radius: 50%;
+  animation: animate 2.6s linear infinite;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(315deg) translateY(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(315deg) translateX(-1500px);
+    opacity: 0;
+  }
+}
+
+// 스크롤다운 화살표 바운스 - pc에서만 쓰이지만 애니메이션 자체는 공용화
+.animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.bounce {
+  animation-name: bounce;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.arrow-down::before {
+  content: '\2304';
+  font-style: normal;
+  font-size: 20px;
+  line-height: 0;
+}
+
+// ==========================================================================
+// PORTFOLIO 타이틀 svg 스트로크 애니메이션 - pc(.port_svg) / mobile(.port_svg_mo)
+// 공통 keyframes + delay 패턴만 통합, font-size 등 크기값은 각 breakpoint에서 지정
+// ==========================================================================
+@keyframes port_stroke {
+  0% { stroke-dashoffset: 750; }
+  70% { fill: black; }
+  100% {
+    stroke-dashoffset: 0;
+    fill: black;
+  }
+}
+
+.port_svg_text_on {
+  stroke-dashoffset: 750;
+  stroke-dasharray: 750;
+  animation: port_stroke 1.5s linear;
+  animation-fill-mode: forwards;
+}
+
+.port_svg text,
+.port_svg_mo text {
+  @for $i from 1 through 7 {
+    &:nth-child(#{$i}) {
+      @if $i % 2 == 0 {
+        animation-delay: 2s;
+      } @else {
+        animation-delay: 0.5s + ($i - 1) * 0.5s;
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// ABOUT ME svg 스트로크 애니메이션 (info_svg / info_sub_svg) - PC 전용이지만
+// keyframes 중복이 있어 통합
+// ==========================================================================
+@keyframes stroke {
+  0% { stroke-dashoffset: 750; }
+  70% { fill: black; }
+  100% {
+    stroke-dashoffset: 0;
+    fill: black;
+  }
+}
+
+.text_on {
+  stroke-dashoffset: 750;
+  stroke-dasharray: 750;
+  animation: stroke 1.5s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sub_stroke {
+  0% { stroke-dashoffset: 750; }
+  70% { fill: black; }
+  100% {
+    stroke-dashoffset: 0;
+    fill: black;
+  }
+}
+
+.sub_text_on {
+  stroke-dashoffset: 750;
+  stroke-dasharray: 750;
+  animation: sub_stroke 1.5s linear;
+  animation-fill-mode: forwards;
+}

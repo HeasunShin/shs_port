@@ -313,21 +313,21 @@ const projectData = {
     category: "Website Renewal",
     status: "COMPLETED",
     statusClass: "completed",
-    year: "2023",
+    year: "2023 → 2026",
 
     images: {
       main: "./images/personal_project_1.png",
 
       detail: [
-        "./images/personal_project_1-1.png",
-        "./images/personal_project_1-2.png",
-        "./images/personal_project_1-3.png",
+        "./images/personal_project/modal/personal_project_1-1.png",
+        "./images/personal_project/modal/personal_project_1-2.png",
+        "./images/personal_project/modal/personal_project_1-3.png",
       ],
     },
 
     info: {
       role: "Publisher",
-      duration: "Personal Project",
+      duration: "2023 · 2026",
       contribution: "100%",
     },
 
@@ -337,52 +337,58 @@ const projectData = {
       {
         title: "PROJECT INFO",
         content: `
-      기존 웨딩 플랫폼 사이트를 분석하고
-      서비스 콘셉트에 맞춰 리뉴얼한 프로젝트입니다.<br><br>
-
-      애플리케이션 홍보 목적에 맞게
-      온라인 웨딩 박람회 콘셉트로
-      UI 구조와 콘텐츠 흐름을 재구성했습니다.
+      처음 웹 퍼블리싱을 학습하며 제작했던 프로젝트를
+      실무 경험을 쌓은 후 다시 리뉴얼한 프로젝트입니다.<br>
+      기존의 큰 구조와 콘셉트는 유지하면서
+      실제 서비스에 가까운 UI와 반응형 구조를 적용하고,
+      코드 구조와 스타일 표현 방식을 다시 정리했습니다.
       `,
       },
 
       {
-        title: "Features",
+        title: "IMPROVEMENT",
         content: `
-      • Swiper 기반 메인 배너 구현<br>
-      • 웨딩 박람회 콘셉트 UI 구성<br>
-      • 서비스 소개 영역 구성<br>
-      • 이벤트 및 홍보 콘텐츠 구조 설계
+      • 메인 비주얼 및 주요 UI 구성 개선<br>
+      • 색상과 레이아웃을 재정비하여 시각적 완성도 개선<br>
+      • 다양한 화면 크기에 대응하는 반응형 구현<br>
+      • 기존 구조를 유지하면서 실무 경험을 반영한 코드 구조 개선
       `,
       },
 
       {
-        title: "Planning",
+        title: "DESIGN",
         content: `
-      기존 서비스의 특징을 분석하여
-      사용자에게 서비스 목적이 명확하게 전달될 수 있도록
-      페이지 흐름을 기획했습니다.
+      기존 콘셉트와 디자인 방향은 유지하되
+      색상 조합과 요소 간 관계를 다시 조정하여
+      보다 정돈되고 세련된 화면을 구성했습니다.
       `,
       },
 
       {
-        title: "Troubleshooting",
+        title: "DEVELOPMENT",
         content: `
-      • 기존 디자인 구조 분석<br>
-      • 콘텐츠 배치 및 UI 개선<br>
-      • 다양한 화면 크기 대응
+      처음 제작했을 때의 구현 방식을 그대로 반복하기보다
+      경력 이후의 퍼블리싱 경험을 바탕으로
+      구조와 스타일을 다시 검토하고 개선했습니다.<br>
+      같은 디자인 틀을 유지하면서도
+      실제 서비스에 적용할 수 있는 코드 작성 방식과
+      반응형 대응을 중심으로 발전시켰습니다.
       `,
       },
     ],
 
     buttons: [
       {
-        text: "Planning",
-        url: "./shs/_wedqueen/proposal/wedqueen_proposal.pdf",
+        text: "Renewal v1",
+        url: "./shs/_wedqueen/index.html",
       },
       {
-        text: "View Site",
-        url: "./shs/_wedqueen/index.html",
+        text: "Renewal v2",
+        url: "./shs/_wedqueen_2026/test.html",
+      },
+      {
+        text: "Planning",
+        url: "./shs/_wedqueen/proposal/wedqueen_proposal.pdf",
       },
     ],
   },

@@ -4,12 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pr2</title>
-    <link href="css/pr2_index.css" rel="stylesheet" type="text/css" />
-    <link href="./css/eye_d.css" rel="stylesheet" type="text/css" />
-    <link href="css/pr2_pc.css" rel="stylesheet" type="text/css" />
-    <link href="./css/port_tab.css" rel="stylesheet" type="text/css" />
-    <link href="css/port_mo.css" rel="stylesheet" type="text/css" />
+    <title>pr2_v2</title>
+    <link href="./scss/main.css" rel="stylesheet" type="text/css" />
     <script src="./script/jquery-3.6.4.js"></script>
     <script src="./script/jquery-ui.js"></script>
     <!-- 눈알 스크립트 -->
@@ -23,10 +19,9 @@
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VDDWMRSTH"></script> -->
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <!-- 스트립트 -->
-    <script src="./script/pr2.js"></script>
+    <script src="./script/pr2_v2.js"></script>
   </head>
   <body>
-    <!-- <h2></h2> -->
     <div id="wrap">
       <!-- 메인 영역 -->
       <section class="bg_top">
@@ -97,7 +92,7 @@
               <text x="242" y="50%">U</text>
               <text x="325" y="51%">T</text>
               <text x="420" y="50%">M</text>
-              <text x="550" y="50%">E</text>
+              <text x="520" y="50%">E</text>
             </svg>
             <svg
               class="info_sub_svg"
@@ -120,12 +115,12 @@
               height="50"
               viewBox="0 0 600 50"
             >
-              <text x="280" y="75%">E</text>
-              <text x="310" y="75%">X</text>
-              <text x="340" y="75%">P</text>
-              <text x="370" y="75%">E</text>
-              <text x="400" y="75%">R</text>
-              <text x="430" y="75%">I</text>
+              <text x="290" y="75%">E</text>
+              <text x="320" y="75%">X</text>
+              <text x="350" y="75%">P</text>
+              <text x="380" y="75%">E</text>
+              <text x="410" y="75%">R</text>
+              <text x="440" y="75%">I</text>
               <text x="460" y="75%">E</text>
               <text x="490" y="75%">N</text>
               <text x="520" y="75%">C</text>
@@ -137,11 +132,11 @@
               height="50"
               viewBox="0 0 600 50"
             >
-              <text x="300" y="75%">I</text>
-              <text x="350" y="75%">C</text>
-              <text x="400" y="75%">A</text>
-              <text x="470" y="75%">N</text>
-              <text x="520" y="75%">D</text>
+              <text x="400" y="75%">I</text>
+              <text x="430" y="75%">C</text>
+              <text x="455" y="75%">A</text>
+              <text x="482" y="75%">N</text>
+              <text x="525" y="75%">D</text>
               <text x="550" y="75%">O</text>
             </svg>
             <svg
@@ -150,12 +145,12 @@
               height="50"
               viewBox="0 0 600 50"
             >
-              <text x="250" y="75%">L</text>
-              <text x="300" y="75%">I</text>
-              <text x="350" y="75%">C</text>
-              <text x="400" y="75%">E</text>
-              <text x="470" y="75%">N</text>
-              <text x="520" y="75%">S</text>
+              <text x="410" y="75%">L</text>
+              <text x="435" y="75%">I</text>
+              <text x="450" y="75%">C</text>
+              <text x="475" y="75%">E</text>
+              <text x="500" y="75%">N</text>
+              <text x="530" y="75%">S</text>
               <text x="550" y="75%">E</text>
             </svg>
             <svg
@@ -164,14 +159,14 @@
               height="50"
               viewBox="0 0 600 50"
             >
-              <text x="280" y="75%">C</text>
-              <text x="310" y="75%">H</text>
-              <text x="340" y="75%">A</text>
-              <text x="370" y="75%">R</text>
-              <text x="400" y="75%">A</text>
-              <text x="430" y="75%">C</text>
-              <text x="460" y="75%">T</text>
-              <text x="495" y="75%">I</text>
+              <text x="300" y="75%">C</text>
+              <text x="330" y="75%">H</text>
+              <text x="360" y="75%">A</text>
+              <text x="390" y="75%">R</text>
+              <text x="420" y="75%">A</text>
+              <text x="450" y="75%">C</text>
+              <text x="480" y="75%">T</text>
+              <text x="510" y="75%">I</text>
               <text x="525" y="75%">E</text>
               <text x="550" y="75%">R</text>
             </svg>
@@ -273,160 +268,167 @@
         </div>
         <!-- 섹션_소개 / 개인포폴 영역 --- 개인포폴 --- -->
         <article class="per_port_wrap" id="#scroll_2">
-          <div class="port_content">
-            <svg
-              class="port_svg"
-              width="1920"
-              height="200"
-              viewBox="0 0 1920 200"
-            >
-              <text x="12" y="41%">P</text>
-              <text x="80" y="41%">O</text>
-              <text x="170" y="41%">R</text>
-              <text x="240" y="41%">T</text>
-              <text x="310" y="41%">F</text>
-              <text x="370" y="41%">O</text>
-              <text x="465" y="41%">L</text>
-              <text x="535" y="41%">I</text>
-              <text x="570" y="41%">O</text>
-              <text x="12" y="90%">U</text>
-              <text x="90" y="90%">N</text>
-              <text x="185" y="90%">T</text>
-              <text x="245" y="90%">I</text>
-              <text x="275" y="90%">L</text>
-              <text x="335" y="90%">L</text>
-              <text x="430" y="90%">I</text>
-              <text x="460" y="90%">T</text>
-              <text x="555" y="90%">B</text>
-              <text x="625" y="90%">E</text>
-              <text x="680" y="90%">C</text>
-              <text x="755" y="90%">O</text>
-              <text x="845" y="90%">M</text>
-              <text x="950" y="90%">E</text>
-              <text x="1010" y="90%">S</text>
-              <text x="1115" y="90%">F</text>
-              <text x="1175" y="90%">U</text>
-              <text x="1250" y="90%">L</text>
-              <text x="1305" y="90%">L</text>
-              <text x="1360" y="90%">M</text>
-              <text x="1470" y="90%">O</text>
-              <text x="1565" y="90%">O</text>
-              <text x="1650" y="90%">N</text>
-            </svg>
-          </div>
-          <div class="per_pro">PERSONAL PROJECT</div>
-          <div class="per_port_box">
-            <div class="per_port_move_box">
-              <div class="port">
-                <img src="./images/lifelong.png" alt="늘배움" />
-                <div class="per_port_text">
-                  <div class="site_name">늘배움</div>
-                  <div class="site_line"></div>
-                  <div class="ver">모바일웹 사이트</div>
-                  <div class="site_lang">HTML CSS JS JQ</div>
-                  <div class="site_period">작업기간 : 2주</div>
-                  <div class="site_info">
-                    언제 어디서든 들을 수 있는 온라인 강의<br />
-                    클릭해서 들어갈수 있는 모바일웹 화면이 아닌 언제 어디서든 볼
-                    수 있는 모바일웹 화면의 형식을 구성하고자 함
+          <div class="in_box">
+            <div class="port_content">
+              <svg
+                class="port_svg"
+                width="1920"
+                height="200"
+                viewBox="0 0 1920 200"
+              >
+                <text x="12" y="41%">P</text>
+                <text x="80" y="41%">O</text>
+                <text x="170" y="41%">R</text>
+                <text x="240" y="41%">T</text>
+                <text x="310" y="41%">F</text>
+                <text x="370" y="41%">O</text>
+                <text x="465" y="41%">L</text>
+                <text x="535" y="41%">I</text>
+                <text x="570" y="41%">O</text>
+                <text x="12" y="90%">U</text>
+                <text x="90" y="90%">N</text>
+                <text x="185" y="90%">T</text>
+                <text x="245" y="90%">I</text>
+                <text x="275" y="90%">L</text>
+                <text x="335" y="90%">L</text>
+                <text x="430" y="90%">I</text>
+                <text x="460" y="90%">T</text>
+                <text x="555" y="90%">B</text>
+                <text x="625" y="90%">E</text>
+                <text x="680" y="90%">C</text>
+                <text x="755" y="90%">O</text>
+                <text x="845" y="90%">M</text>
+                <text x="950" y="90%">E</text>
+                <text x="1010" y="90%">S</text>
+                <text x="1115" y="90%">F</text>
+                <text x="1175" y="90%">U</text>
+                <text x="1250" y="90%">L</text>
+                <text x="1305" y="90%">L</text>
+                <text x="1360" y="90%">M</text>
+                <text x="1470" y="90%">O</text>
+                <text x="1565" y="90%">O</text>
+                <text x="1650" y="90%">N</text>
+              </svg>
+            </div>
+            <div class="per_pro">PERSONAL PROJECT</div>
+            <div class="per_port_box">
+              <div class="per_port_move_box">
+                <div class="port">
+                  <img src="./images/lifelong.png" alt="늘배움" />
+                  <div class="per_port_text">
+                    <div class="site_name">늘배움</div>
+                    <div class="site_line"></div>
+                    <div class="ver">모바일웹 사이트</div>
+                    <div class="site_lang">HTML CSS JS JQ</div>
+                    <div class="site_period">작업기간 : 2주</div>
+                    <div class="site_info">
+                      언제 어디서든 들을 수 있는 온라인 강의<br />
+                      클릭해서 들어갈수 있는 모바일웹 화면이 아닌 언제 어디서든
+                      볼 수 있는 모바일웹 화면의 형식을 구성하고자 함
+                    </div>
+                    <div class="button_wrap">
+                      <button>
+                        <a
+                          href="http://ssamsweb.com/602/shs/_lifelongedu/proposal/lifelongedu_proposal.pdf"
+                          target="_blank"
+                          >기획서</a
+                        >
+                      </button>
+                      <button>
+                        <a href="http://www.lifelongedu.go.kr/" target="_blank"
+                          >기존사이트</a
+                        >
+                      </button>
+                      <button>
+                        <a
+                          href="http://ssamsweb.com/602/shs/_lifelongedu"
+                          target="_blank"
+                          >리뉴얼사이트</a
+                        >
+                      </button>
+                    </div>
                   </div>
-                  <button>
-                    <a
-                      href="http://ssamsweb.com/602/shs/_lifelongedu/proposal/lifelongedu_proposal.pdf"
-                      target="_blank"
-                      >기획서</a
-                    >
-                  </button>
-                  <button>
-                    <a href="http://www.lifelongedu.go.kr/" target="_blank"
-                      >기존사이트</a
-                    >
-                  </button>
-                  <button>
-                    <a
-                      href="http://ssamsweb.com/602/shs/_lifelongedu"
-                      target="_blank"
-                      >리뉴얼사이트</a
-                    >
-                  </button>
                 </div>
-              </div>
 
-              <div class="port port_scale">
-                <img src="./images/herb.PNG" alt="허브아일랜드" />
-                <div class="per_port_text">
-                  <div class="site_name">허브아일랜드</div>
-                  <div class="site_line"></div>
-                  <div class="ver">반응형 웹사이트</div>
-                  <div class="site_lang">HTML CSS JS JQ</div>
-                  <div class="site_period">작업기간 : 2주</div>
-                  <div class="site_info">
-                    365일 축제가 열리는 동화속 세상<br />
-                    서브 페이지 같이 보이는 메인 페이지 리뉴얼
+                <div class="port port_scale">
+                  <img src="./images/herb.PNG" alt="허브아일랜드" />
+                  <div class="per_port_text">
+                    <div class="site_name">허브아일랜드</div>
+                    <div class="site_line"></div>
+                    <div class="ver">반응형 웹사이트</div>
+                    <div class="site_lang">HTML CSS JS JQ</div>
+                    <div class="site_period">작업기간 : 2주</div>
+                    <div class="site_info">
+                      365일 축제가 열리는 동화속 세상<br />
+                      서브 페이지 같이 보이는 메인 페이지 리뉴얼
+                    </div>
+                    <div class="button_wrap">
+                      <button>
+                        <a
+                          href="http://ssamsweb.com/602/shs/_herbisland"
+                          target="_blank"
+                          >기획서</a
+                        >
+                      </button>
+                      <button>
+                        <a href="http://herbisland.co.kr/" target="_blank"
+                          >기존사이트</a
+                        >
+                      </button>
+                      <button>
+                        <a
+                          href="http://ssamsweb.com/602/shs/_herbisland"
+                          target="_blank"
+                          >리뉴얼사이트</a
+                        >
+                      </button>
+                    </div>
                   </div>
-                  <button>
-                    <a
-                      href="http://ssamsweb.com/602/shs/_herbisland"
-                      target="_blank"
-                      >기획서</a
-                    >
-                  </button>
-                  <button>
-                    <a href="http://herbisland.co.kr/" target="_blank"
-                      >기존사이트</a
-                    >
-                  </button>
-                  <button>
-                    <a
-                      href="http://ssamsweb.com/602/shs/_herbisland"
-                      target="_blank"
-                      >리뉴얼사이트</a
-                    >
-                  </button>
                 </div>
-              </div>
-              <div class="port border_box">
-                <img
-                  src="./images/per_1_t.png"
-                  class="per_1"
-                  alt="개인리뉴얼_달"
-                />
-              </div>
-              <div class="port">
-                <img src="./images/wedding.png" alt="웨딩의여신" />
-                <!-- <img src="./images/per_1.png" class="per_1"> -->
-                <div class="per_port_text">
-                  <div class="site_name">웨딩의여신</div>
-                  <div class="site_line"></div>
-                  <div class="ver">반응형 웹사이트</div>
-                  <div class="site_lang">HTML CSS JS JQ</div>
-                  <div class="site_period">작업기간 : 2주</div>
-                  <div class="site_info">
-                    온라인 웨딩 박람회<br />
-                    홍보중인 모바일 버전에 맞추어서 기존 웹사이트 리뉴얼
+                <div class="port border_box">
+                  <img
+                    src="./images/per_1_t.png"
+                    class="per_1"
+                    alt="개인리뉴얼_달"
+                  />
+                </div>
+                <div class="port">
+                  <img src="./images/wedding.png" alt="웨딩의여신" />
+                  <!-- <img src="./images/per_1.png" class="per_1"> -->
+                  <div class="per_port_text">
+                    <div class="site_name">웨딩의여신</div>
+                    <div class="site_line"></div>
+                    <div class="ver">반응형 웹사이트</div>
+                    <div class="site_lang">HTML CSS JS JQ</div>
+                    <div class="site_period">작업기간 : 2주</div>
+                    <div class="site_info">
+                      온라인 웨딩 박람회<br />
+                      홍보중인 모바일 버전에 맞추어서 기존 웹사이트 리뉴얼
+                    </div>
+                    <div class="button_wrap">
+                      <button>
+                        <a
+                          href="http://ssamsweb.com/602/shs/_wedqueen/proposal/wedqueen_proposal.pdf"
+                          target="_blank"
+                          >기획서</a
+                        >
+                      </button>
+                      <button>
+                        <a href="https://www.wedqueen.com/" target="_blank"
+                          >기존사이트</a
+                        >
+                      </button>
+                      <button>
+                        <a
+                          href="http://ssamsweb.com/602/shs/_wedqueen"
+                          target="_blank"
+                          >리뉴얼사이트</a
+                        >
+                      </button>
+                    </div>
                   </div>
-                  <button>
-                    <a
-                      href="http://ssamsweb.com/602/shs/_wedqueen/proposal/wedqueen_proposal.pdf"
-                      target="_blank"
-                      >기획서</a
-                    >
-                  </button>
-                  <button>
-                    <a href="https://www.wedqueen.com/" target="_blank"
-                      >기존사이트</a
-                    >
-                  </button>
-                  <button>
-                    <a
-                      href="http://ssamsweb.com/602/shs/_wedqueen"
-                      target="_blank"
-                      >리뉴얼사이트</a
-                    >
-                  </button>
                 </div>
-              </div>
-              <!-- <div class="port border_box">
+                <!-- <div class="port border_box">
                             <img src="./images/per_1_t.png" class="per_1">
                         </div>
                         <div class="port">
@@ -438,6 +440,7 @@
                         <div class="port">
                             <img src="./images/per_1_t.png" class="per_1">
                         </div> -->
+              </div>
             </div>
           </div>
         </article>
@@ -446,181 +449,211 @@
       <section class="tp_wrap" id="#scroll_3">
         <div class="in_box">
           <div class="per_pro">TEAM PROJECT</div>
-          <div class="team_menu_wrap">
-            <div class="team_menu team_menu_on">디지털아이디어</div>
-            <div class="team_menu">펨프레쉬</div>
-            <div class="team_menu">페라리</div>
-            <div class="team_menu">씨네큐브</div>
+          <div class="flex_box">
+            <div class="team_menu_wrap">
+              <div class="team_menu team_menu_on">디지털아이디어</div>
+              <div class="team_menu">펨프레쉬</div>
+              <div class="team_menu">페라리</div>
+              <div class="team_menu">씨네큐브</div>
+            </div>
+            <div class="team_text_wrap">
+              <div class="team_text">TECHNOLOGY IN OUR LIFE</div>
+              <div class="team_text">외면의 아름다움, 내면의 아름다움</div>
+              <div class="team_text">
+                로마스파이더, 이탈리아의 여유로운 일상
+              </div>
+              <div class="team_text">손 쉽게 접근할 수 있는 예술 영화</div>
+            </div>
           </div>
-          <div class="team_text_wrap">
-            <div class="team_text">TECHNOLOGY IN OUR LIFE</div>
-            <div class="team_text">외면의 아름다움, 내면의 아름다움</div>
-            <div class="team_text">로마스파이더, 이탈리아의 여유로운 일상</div>
-            <div class="team_text">손 쉽게 접근할 수 있는 예술 영화</div>
-          </div>
+
           <div class="in_in_box">
             <div class="team_con">
-              <div class="round">
-                <div class="pc_box">
-                  <img src="./images/digital_pc.png" alt="디지털아이디어피씨" />
+              <div class="flex_box">
+                <div class="round">
+                  <div class="pc_box">
+                    <img
+                      src="./images/digital_pc.png"
+                      alt="디지털아이디어피씨"
+                    />
+                  </div>
+                  <div class="mo_box">
+                    <img
+                      src="./images/digital_mo.png"
+                      alt="디지털아이디어모바일"
+                    />
+                  </div>
                 </div>
-                <div class="mo_box">
-                  <img
-                    src="./images/digital_mo.png"
-                    alt="디지털아이디어모바일"
-                  />
-                </div>
-                <img src="./images/pc_mo.png" alt="화면목업" />
-              </div>
-              <img src="./images/moon_light_4.png" alt="달그림자4" />
-              <div class="team_con_text">
-                <div class="project_name">CG스튜디오 사이트 - DIGITAL IDEA</div>
-                <div class="project_ver">반응형웹사이트 / 팀프로젝트(4인)</div>
-                <div class="project_lang">HTML, CSS, Js, Jq</div>
-                <p>
-                  <span>작업기간 </span>
-                  : 2주
-                </p>
 
-                <div class="button_wrap">
-                  <button>
-                    <a
-                      href="http://ssamsweb.com/602/shs/_digitalidea/proposal/digitalidea_proposal.pdf"
-                      target="_blank"
-                      >기획서</a
-                    >
-                  </button>
-                  <button>
-                    <a href="http://www.digitalidea.co.kr/main" target="_blank"
-                      >기존사이트</a
-                    >
-                  </button>
-                  <!-- <button onclick="window.open();">사이트 바로가기</button> -->
-                  <button>
-                    <a
-                      href="http://ssamsweb.com/602/shs/_digitalidea/loading/index.html"
-                      target="_blank"
-                      >리뉴얼사이트</a
-                    >
-                  </button>
+                <div class="team_con_text">
+                  <img src="./images/moon_light_4.png" alt="달그림자4" />
+                  <div class="project_name">
+                    CG스튜디오 사이트 - DIGITAL IDEA
+                  </div>
+                  <div class="project_ver">
+                    반응형웹사이트 / 팀프로젝트(4인)
+                  </div>
+                  <div class="project_lang">HTML, CSS, Js, Jq</div>
+                  <p>
+                    <span>작업기간 </span>
+                    : 2주
+                  </p>
+
+                  <div class="button_wrap">
+                    <button>
+                      <a
+                        href="http://ssamsweb.com/602/shs/_digitalidea/proposal/digitalidea_proposal.pdf"
+                        target="_blank"
+                        >기획서</a
+                      >
+                    </button>
+                    <button>
+                      <a
+                        href="http://www.digitalidea.co.kr/main"
+                        target="_blank"
+                        >기존사이트</a
+                      >
+                    </button>
+                    <!-- <button onclick="window.open();">사이트 바로가기</button> -->
+                    <button>
+                      <a
+                        href="http://ssamsweb.com/602/shs/_digitalidea/loading/index.html"
+                        target="_blank"
+                        >리뉴얼사이트</a
+                      >
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="team_con">
-              <div class="round">
-                <div class="pc_box">
-                  <img src="./images/fem_pc.png" alt="펨프레쉬피씨" />
+              <div class="flex_box">
+                <div class="round">
+                  <div class="pc_box">
+                    <img src="./images/fem_pc.png" alt="펨프레쉬피씨" />
+                  </div>
+                  <div class="mo_box">
+                    <img src="./images/fem_mo.png" alt="펨프레쉬모바일" />
+                  </div>
+                  <!-- <img src="./images/pc_mo.png" alt="화면목업" /> -->
                 </div>
-                <div class="mo_box">
-                  <img src="./images/fem_mo.png" alt="펨프레쉬모바일" />
-                </div>
-                <img src="./images/pc_mo.png" alt="화면목업" />
-              </div>
-              <img src="./images/moon_light_3.png" alt="달그림자3" />
-              <div class="team_con_text">
-                <div class="project_name">여성청결제 사이트 - FEMFRESH</div>
-                <div class="project_ver">반응형웹사이트 / 팀프로젝트(4인)</div>
-                <div class="project_lang">HTML, CSS, Js, Jq</div>
-                <p>
-                  <span>작업기간 </span>
-                  : 2주
-                </p>
-                <div class="button_wrap">
-                  <button>
-                    <a
-                      href="http://ssamsweb.com/602/shs/_femfresh/proposal/femfresh_proposal.pdf"
-                      target="_blank"
-                      >기획서</a
-                    >
-                  </button>
-                  <button>
-                    <a href="http://femfresh.co.kr/" target="_blank"
-                      >기존사이트</a
-                    >
-                  </button>
-                  <button>
-                    <a
-                      href="http://ssamsweb.com/602/shs/_femfresh/index.html"
-                      target="_blank"
-                      >리뉴얼사이트</a
-                    >
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="team_con">
-              <div class="round">
-                <div class="pc_box">
-                  <img src="./images/ferrari_pc.png" alt="페라리피씨" />
-                </div>
-                <div class="mo_box">
-                  <img src="./images/ferrari_mo.png" alt="페라리모바일" />
-                </div>
-                <img src="./images/pc_mo.png" alt="화면목업" />
-              </div>
-              <img src="./images/moon_light_2.png" alt="달그림자2" />
-              <div class="team_con_text">
-                <div class="project_name">
-                  자동차 사이트 - FERRARI, ROMAN SPIDER
-                </div>
-                <div class="project_ver">반응형웹사이트 / 팀프로젝트(4인)</div>
-                <div class="project_lang">HTML, CSS, Js, Jq</div>
-                <p>
-                  <span>작업기간 </span>
-                  : 2주
-                </p>
-                <div class="button_wrap">
-                  <button>
-                    <a
-                      href="http://ssamsweb.com/602/shs/_ferrari/proposal/ferrari_proposal.pdf"
-                      target="_blank"
-                      >기획서</a
-                    >
-                  </button>
-                  <button>
-                    <a
-                      href="https://www.ferrari.com/ko-KR/auto/ferrari-roma-spider"
-                      target="_blank"
-                      >기존사이트</a
-                    >
-                  </button>
-                  <!-- <button onclick="window.open();">사이트 바로가기</button> -->
-                  <button>
-                    <a
-                      href="http://ssamsweb.com/602/shs/_ferrari/index.html"
-                      target="_blank"
-                      >리뉴얼사이트</a
-                    >
-                  </button>
+
+                <div class="team_con_text">
+                  <img src="./images/moon_light_3.png" alt="달그림자3" />
+                  <div class="project_name">여성청결제 사이트 - FEMFRESH</div>
+                  <div class="project_ver">
+                    반응형웹사이트 / 팀프로젝트(4인)
+                  </div>
+                  <div class="project_lang">HTML, CSS, Js, Jq</div>
+                  <p>
+                    <span>작업기간 </span>
+                    : 2주
+                  </p>
+                  <div class="button_wrap">
+                    <button>
+                      <a
+                        href="http://ssamsweb.com/602/shs/_femfresh/proposal/femfresh_proposal.pdf"
+                        target="_blank"
+                        >기획서</a
+                      >
+                    </button>
+                    <button>
+                      <a href="http://femfresh.co.kr/" target="_blank"
+                        >기존사이트</a
+                      >
+                    </button>
+                    <button>
+                      <a
+                        href="http://ssamsweb.com/602/shs/_femfresh/index.html"
+                        target="_blank"
+                        >리뉴얼사이트</a
+                      >
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="team_con">
-              <div class="round">
-                <div class="pc_box">
-                  <img src="./images/cine_pc.jpg" alt="씨네큐브피씨" />
+              <div class="flex_box">
+                <div class="round">
+                  <div class="pc_box">
+                    <img src="./images/ferrari_pc.png" alt="페라리피씨" />
+                  </div>
+                  <div class="mo_box">
+                    <img src="./images/ferrari_mo.png" alt="페라리모바일" />
+                  </div>
+                  <!-- <img src="./images/pc_mo.png" alt="화면목업" /> -->
                 </div>
-                <div class="mo_box">
-                  <img src="./images/cine_mo.jpg" alt="씨네큐브모바일" />
+
+                <div class="team_con_text">
+                  <img src="./images/moon_light_2.png" alt="달그림자2" />
+                  <div class="project_name">
+                    자동차 사이트 - FERRARI, ROMAN SPIDER
+                  </div>
+                  <div class="project_ver">
+                    반응형웹사이트 / 팀프로젝트(4인)
+                  </div>
+                  <div class="project_lang">HTML, CSS, Js, Jq</div>
+                  <p>
+                    <span>작업기간 </span>
+                    : 2주
+                  </p>
+                  <div class="button_wrap">
+                    <button>
+                      <a
+                        href="http://ssamsweb.com/602/shs/_ferrari/proposal/ferrari_proposal.pdf"
+                        target="_blank"
+                        >기획서</a
+                      >
+                    </button>
+                    <button>
+                      <a
+                        href="https://www.ferrari.com/ko-KR/auto/ferrari-roma-spider"
+                        target="_blank"
+                        >기존사이트</a
+                      >
+                    </button>
+                    <!-- <button onclick="window.open();">사이트 바로가기</button> -->
+                    <button>
+                      <a
+                        href="http://ssamsweb.com/602/shs/_ferrari/index.html"
+                        target="_blank"
+                        >리뉴얼사이트</a
+                      >
+                    </button>
+                  </div>
                 </div>
-                <img src="./images/pc_mo.png" alt="화면목업" />
               </div>
-              <img src="./images/moon_light_1.png" alt="달그림자1" />
-              <div class="team_con_text">
-                <div class="project_name">예술영화관 - CINECUBE</div>
-                <div class="project_ver">반응형웹사이트 / 팀프로젝트(4인)</div>
-                <div class="project_lang">HTML, CSS, Js, Jq</div>
-                <p>
-                  <span>작업기간 </span>
-                  : 2주
-                </p>
-                <div class="button_wrap">
-                  <button onclick="window.open()">기획서</button>
-                  <button onclick="window.open()">기존사이트</button>
-                  <button onclick="window.open()">리뉴얼사이트</button>
-                  <!-- <button>
+            </div>
+            <div class="team_con">
+              <div class="flex_box">
+                <div class="round">
+                  <div class="pc_box">
+                    <img src="./images/cine_pc.jpg" alt="씨네큐브피씨" />
+                  </div>
+                  <div class="mo_box">
+                    <img src="./images/cine_mo.jpg" alt="씨네큐브모바일" />
+                  </div>
+                  <!-- <img src="./images/pc_mo.png" alt="화면목업" /> -->
+                </div>
+                <div class="team_con_text">
+                  <img src="./images/moon_light_1.png" alt="달그림자1" />
+                  <div class="project_name">예술영화관 - CINECUBE</div>
+                  <div class="project_ver">
+                    반응형웹사이트 / 팀프로젝트(4인)
+                  </div>
+                  <div class="project_lang">HTML, CSS, Js, Jq</div>
+                  <p>
+                    <span>작업기간 </span>
+                    : 2주
+                  </p>
+                  <div class="button_wrap">
+                    <button onclick="window.open()">기획서</button>
+                    <button onclick="window.open()">기존사이트</button>
+                    <button onclick="window.open()">리뉴얼사이트</button>
+                    <!-- <button>
                                     <a href="http://ssamsweb.com/602/shs/_cinecube_pc/index.html" target="_blank">사이트 바로가기</a>   
                                 </button> -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -1192,9 +1225,7 @@
           <div class="team_con_mo_wrap">
             <div class="team_con_mo">
               <div class="round_mo">
-                <div class="round_img_wrap">
-                  <img src="./images/cine_pc.jpg" alt="씨네큐브모바일" />
-                </div>
+                <img src="./images/cine_pc.jpg" alt="씨네큐브모바일" />
               </div>
               <div class="team_info_wrap">
                 <img src="./images/moon_light_1.png" alt="달그림자1모바일" />
@@ -1246,17 +1277,10 @@
                 target="_blank"
                 class="info_text_mo"
               >
-                EMAIL<br />my_sunyi@naver.com
+                EMAIL<br />shase051@gmail.com
               </a>
             </div>
-            <div class="m_info_mo">
-              <div class="img_wrap_mo">
-                <img src="./images/phone_icon.png" alt="폰아이콘_mo" />
-              </div>
-              <a href="tel:010-4417-9917" target="_blank" class="info_text_mo">
-                PHONE<br />(+82)010-click-click
-              </a>
-            </div>
+
             <div class="m_info_mo">
               <div class="img_wrap_mo">
                 <img
@@ -1265,11 +1289,11 @@
                 />
               </div>
               <a
-                href="http://ssamsweb.com/602/shs/"
+                href="https://heasunshin.github.io/shs_port/"
                 target="_blank"
                 class="info_text_mo"
               >
-                PORTFOLIO<br />http://ssamsweb.com/602/shs/
+                2026 PORTFOLIO<br />https://heasunshin.github.io/shs_port/
               </a>
             </div>
             <a
