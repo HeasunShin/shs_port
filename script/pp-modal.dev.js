@@ -4,6 +4,48 @@
 // Project Data
 // ================================
 var projectData = {
+  teamflow: {
+    title: "TEAMFLOW",
+    subtitle: "React Project Management Web Application",
+    category: "React",
+    status: "IN PROGRESS",
+    statusClass: "progress",
+    year: "2026",
+    images: {
+      main: "./images/personal_project_6.png" // 실제 캡처 이미지가 준비되면 추가
+      // detail: [
+      //   "./images/personal_project/modal/teamflow-1.png",
+      //   "./images/personal_project/modal/teamflow-2.png",
+      // ],
+
+    },
+    info: {
+      role: "Frontend / Full Stack",
+      duration: "Personal Project",
+      contribution: "100%"
+    },
+    tech: ["React", "Vite", "Tailwind CSS", "Node.js", "Express", "SQLite"],
+    sections: [{
+      title: "PROJECT INFO",
+      content: "\n          React\uC640 Tailwind CSS\uB97C \uD559\uC2B5\uD558\uBA70 \uC81C\uC791\uD55C\n          \uD504\uB85C\uC81D\uD2B8 \uAD00\uB9AC \uC6F9 \uC560\uD50C\uB9AC\uCF00\uC774\uC158\uC785\uB2C8\uB2E4.<br> \n\n          \uC6F9 \uC11C\uBE44\uC2A4\uC758 \uC804\uCCB4\uC801\uC778 \uB3D9\uC791 \uAD6C\uC870\uB97C \uC774\uD574\uD558\uACE0,\n          \uD504\uB860\uD2B8\uC5D4\uB4DC UI \uAD6C\uD604\uBD80\uD130 \uC11C\uBC84\uC640 \uB370\uC774\uD130\uBCA0\uC774\uC2A4 \uC5F0\uB3D9\uAE4C\uC9C0\n          \uC6F9 \uC560\uD50C\uB9AC\uCF00\uC774\uC158\uC758 \uB370\uC774\uD130 \uD750\uB984\uC744 \uACBD\uD5D8\uD558\uB294 \uAC83\uC744\n          \uBAA9\uD45C\uB85C \uAC1C\uBC1C\uD588\uC2B5\uB2C8\uB2E4.\n        "
+    }, {
+      title: "FEATURES",
+      content: "\n          \u2022 \uD68C\uC6D0\uAC00\uC785 \uBC0F \uB85C\uADF8\uC778 \uAE30\uB2A5<br>\n          \u2022 \uC0AC\uC6A9\uC790\uBCC4 \uD504\uB85C\uC81D\uD2B8 \uBAA9\uB85D \uC870\uD68C<br>\n          \u2022 \uD504\uB85C\uC81D\uD2B8 \uC0DD\uC131 \uBC0F \uC0AD\uC81C<br>\n          \u2022 \uD504\uB85C\uC81D\uD2B8 \uC9C4\uD589\uB960 \uC218\uC815<br>\n          \u2022 \uC0AC\uC6A9\uC790\uBCC4 \uB370\uC774\uD130 \uAD00\uB9AC\n        "
+    }, {
+      title: "DEVELOPMENT",
+      content: "\n          \u2022 React \uCEF4\uD3EC\uB10C\uD2B8 \uAE30\uBC18 UI \uAD6C\uC131<br>\n          \u2022 Tailwind CSS\uB97C \uD65C\uC6A9\uD55C \uC2A4\uD0C0\uC77C\uB9C1<br>\n          \u2022 \uC0C1\uD0DC \uAD00\uB9AC \uBC0F \uC0AC\uC6A9\uC790 \uC785\uB825 \uCC98\uB9AC<br>\n          \u2022 API\uB97C \uD1B5\uD55C \uC11C\uBC84 \uB370\uC774\uD130 \uC870\uD68C \uBC0F \uC218\uC815<br>\n          \u2022 Express \uC11C\uBC84\uC640 SQLite \uB370\uC774\uD130\uBCA0\uC774\uC2A4 \uC5F0\uB3D9\n        "
+    }, {
+      title: "LEARNING POINT",
+      content: "\n          \uAE30\uC874 \uC6F9 \uD37C\uBE14\uB9AC\uC2F1 \uACBD\uD5D8\uC744 \uBC14\uD0D5\uC73C\uB85C\n          \uC815\uC801\uC778 \uD654\uBA74 \uAD6C\uD604\uC744 \uB118\uC5B4 \uC0AC\uC6A9\uC790 \uB3D9\uC791\uC5D0 \uB530\uB77C\n          \uD654\uBA74\uACFC \uB370\uC774\uD130\uAC00 \uD568\uAED8 \uBCC0\uACBD\uB418\uB294 \uAD6C\uC870\uB97C \uD559\uC2B5\uD588\uC2B5\uB2C8\uB2E4.<br>\n          \uB610\uD55C \uD504\uB860\uD2B8\uC5D4\uB4DC\uC640 \uBC31\uC5D4\uB4DC \uAC04 \uB370\uC774\uD130 \uC804\uB2EC \uACFC\uC815\uC744 \uC774\uD574\uD558\uBA70,\n          UI \uAD6C\uD604\uC744 \uB118\uC5B4 \uC6F9 \uC11C\uBE44\uC2A4\uAC00 \uB3D9\uC791\uD558\uB294 \uC804\uCCB4 \uD750\uB984\uC744\n          \uACBD\uD5D8\uD588\uC2B5\uB2C8\uB2E4.\n        "
+    }],
+    buttons: [{
+      text: "View Site",
+      url: "https://portfolio-react-frontend-9vqc.onrender.com"
+    }, {
+      text: "GitHub",
+      url: "https://github.com/HeasunShin/portfolio-react"
+    }]
+  },
   wordpress: {
     title: "WordPress Magazine CMS",
     subtitle: "기업형 웹진 CMS 구축 프로젝트",

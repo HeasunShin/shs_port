@@ -3,6 +3,93 @@
 // ================================
 
 const projectData = {
+  teamflow: {
+    title: "TEAMFLOW",
+    subtitle: "React Project Management Web Application",
+    category: "React",
+    status: "IN PROGRESS",
+    statusClass: "progress",
+    year: "2026",
+
+    images: {
+      main: "./images/personal_project_6.png",
+
+      // 실제 캡처 이미지가 준비되면 추가
+      // detail: [
+      //   "./images/personal_project/modal/teamflow-1.png",
+      //   "./images/personal_project/modal/teamflow-2.png",
+      // ],
+    },
+
+    info: {
+      role: "Frontend / Full Stack",
+      duration: "Personal Project",
+      contribution: "100%",
+    },
+
+    tech: ["React", "Vite", "Tailwind CSS", "Node.js", "Express", "SQLite"],
+
+    sections: [
+      {
+        title: "PROJECT INFO",
+        content: `
+          React와 Tailwind CSS를 학습하며 제작한
+          프로젝트 관리 웹 애플리케이션입니다.<br> 
+
+          웹 서비스의 전체적인 동작 구조를 이해하고,
+          프론트엔드 UI 구현부터 서버와 데이터베이스 연동까지
+          웹 애플리케이션의 데이터 흐름을 경험하는 것을
+          목표로 개발했습니다.
+        `,
+      },
+
+      {
+        title: "FEATURES",
+        content: `
+          • 회원가입 및 로그인 기능<br>
+          • 사용자별 프로젝트 목록 조회<br>
+          • 프로젝트 생성 및 삭제<br>
+          • 프로젝트 진행률 수정<br>
+          • 사용자별 데이터 관리
+        `,
+      },
+
+      {
+        title: "DEVELOPMENT",
+        content: `
+          • React 컴포넌트 기반 UI 구성<br>
+          • Tailwind CSS를 활용한 스타일링<br>
+          • 상태 관리 및 사용자 입력 처리<br>
+          • API를 통한 서버 데이터 조회 및 수정<br>
+          • Express 서버와 SQLite 데이터베이스 연동
+        `,
+      },
+
+      {
+        title: "LEARNING POINT",
+        content: `
+          기존 웹 퍼블리싱 경험을 바탕으로
+          정적인 화면 구현을 넘어 사용자 동작에 따라
+          화면과 데이터가 함께 변경되는 구조를 학습했습니다.<br>
+          또한 프론트엔드와 백엔드 간 데이터 전달 과정을 이해하며,
+          UI 구현을 넘어 웹 서비스가 동작하는 전체 흐름을
+          경험했습니다.
+        `,
+      },
+    ],
+
+    buttons: [
+      {
+        text: "View Site",
+        url: "https://portfolio-react-frontend-9vqc.onrender.com",
+      },
+      {
+        text: "GitHub",
+        url: "https://github.com/HeasunShin/portfolio-react",
+      },
+    ],
+  },
+
   wordpress: {
     title: "WordPress Magazine CMS",
     subtitle: "기업형 웹진 CMS 구축 프로젝트",
